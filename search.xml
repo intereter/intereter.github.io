@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[怎样搭博客]]></title>
+    <url>%2F2019%2F08%2F24%2F%E6%80%8E%E6%A0%B7%E6%90%AD%E5%8D%9A%E5%AE%A2%2F</url>
+    <content type="text"><![CDATA[本教程为本人经验和总结他人博客而来，使用hexo框架参考大佬总结的关于next主题配置教程：http://eternalzttz.com/hexo-next.html 1.下载和安装必要工具：下载，安装node.js与git,在cmd使用npm安装hexo框架2.使用hexo:1.创建一个用来存储和部署博客的文件夹：blog2.进入到这个文件夹，在cmd敲下命令： hexo init3.这样我们拥有了一个本地的博客文件夹，可以敲下命令： hexo s，在本地地址上预览博客3.完整和丰富博客：1.先认识博客文件夹中的各个文件夹：1.deploy-git: 将博客部署到github后自动生成2.node-modules: 存放安装的包的文件夹3.public :存放各种部署的文件4.source:其中的-post文件夹是存放博客文章的地方，其中的文件会被解析并放到public文件夹中，在source文件夹中，被命名为-开头的文件或文件夹会被忽略，非如此的则会当做-post一样的待遇处理5.-config文件是blog的各种配置文件2.通过修改博客文件夹中的文件，我们可以得到想要的效果####例如修改_config.yml文件中的site,可以改变标题，作者，描述，语言等等 3.给博客改变主题：1.初始化新的博客文件夹后，博客的初始主题是landscape,可以在站点_config.yml查看到博客主题名称2.在hexo的官网上，可以下载主题，下载好后，只要改变站点_config.yml文件中的theme即可4.完整博客：1.在初始化新博客后，主页上只有归档，和主页两项，可以安装新的主题，修改配置文件完整博客2.推荐博客主题：next3.在next主题下完整博客：1.改变布局：在主题配置文件中搜索:Schemes2.侧边栏优化：在主题_config.yml文件中搜索menu,选择想要添加的页面是否注释掉，但之后还要通过 hexo new page “name”生成相应页面3.添加搜索功能：首先，我们在终端进入blog的根目录下，执行以下命令：‘$ npm install hexo-generator-searchdb –save’ 接着，我们进入站点配置文件_config.yml,在最后新增以下内容：search: path: search.xml field: post format: html limit: 10000####### 最后，打开主题配置文件_config.yml,搜索local_search,其值改为true： local_search: enable: true 4.添加头像：准备一张图片，存储入themes/next/source/images/文件夹下，然后在主题配置文件中搜索avatar,修改url为图片地址avatar: # in theme directory(source/images): /images/avatar.gif # in site directory(source/uploads): /uploads/avatar.gif # You can also use other linking images. - url: /images/avatar.gif + url: /images/header.jpg #图片的地址 # If true, the avatar would be dispalyed in circle. rounded: false #设置图片是否为圆形，当图片为正方形时为圆，否则为椭圆 # The value of opacity should be choose from 0 to 1 to set the opacity of the avatar. opacity: 1 #图片的透明度 # If true, the avatar would be rotated with the cursor. rotated: false #设置鼠标移到图片上后头像是否转动4.将博客部署到github上：1.创建一个github仓库，仓库名是用户名.github.io2.在cmd下进入blog文件夹，输入命令:cnpm install –save-hexo-deployer-git3.进入站点_config.yml文件，修改deploy部分：type: git repo: 仓库地址4.接着输入账号和密码即可，这样就部署成功了5.博客添加文章：：hexo new “”：部署到远端： hexo d]]></content>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[articleTest]]></title>
     <url>%2F2019%2F08%2F17%2FarticleTest%2F</url>
     <content type="text"><![CDATA[welcome: 超级无敌可爱居居妹人家好想你啊嘿嘿嘿]]></content>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[泛型]]></title>
+    <url>%2F2019%2F08%2F25%2F%E6%B3%9B%E5%9E%8B%2F</url>
+    <content type="text"><![CDATA[泛型，即宽广的数据类型，用于使某个类，方法，接口，可以使用不同的数据类型，例：1.泛型类 修饰符 class name&lt;?&gt;{}2.泛型方法 修饰符 &lt;?&gt; 数据类型(){ }3.类型擦除：在使用泛型时，若没有指定类型，则默认为object4.类型限定： &lt;? extend type&gt;5.通配符： &lt;? , ?&gt;]]></content>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[抽象类]]></title>
+    <url>%2F2019%2F08%2F25%2F%E6%8A%BD%E8%B1%A1%E7%B1%BB%2F</url>
+    <content type="text"><![CDATA[抽象类：1.含有抽象方法的类一定是抽象类，抽象类不一定含有抽象方法2.用abstract修饰]]></content>
+      <tags>
+        <tag>java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[向上转型和向下转型]]></title>
+    <url>%2F2019%2F08%2F25%2F%E5%90%91%E4%B8%8A%E8%BD%AC%E5%9E%8B%E5%92%8C%E5%90%91%E4%B8%8B%E8%BD%AC%E5%9E%8B%2F</url>
+    <content type="text"><![CDATA[向上转型：父类引用指向子类对象 Father father = new Son();向下转型：指向子类对象的父类引用变成子类引用 Father father = new Son(); if(father instanceof(Son())){ Son father1 = (Son)father; }]]></content>
+      <tags>
+        <tag>面向对象</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[面向对象的三个特点]]></title>
     <url>%2F2019%2F08%2F25%2F%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E7%9A%84%E4%B8%89%E4%B8%AA%E7%89%B9%E7%82%B9%2F</url>
     <content type="text"><![CDATA[多态，继承，封装多态：要求：继承，重写，父类引用指向子类对象继承：构造方法不能被继承，在java中要么使用默认构造方法，要么重载构造方法]]></content>

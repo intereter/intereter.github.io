@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Calendar]]></title>
+    <url>%2F2019%2F08%2F26%2FCalendar%2F</url>
+    <content type="text"><![CDATA[public static void main(String args[]){ //Calendar是抽象类，需要实例化 Calendar calendar = Calendar.getInstance(); System.out.println(calendar.getTime()); //get()方法，返回当前calendar实例的类变量 //calendar的月份从0开始 System.out.println(calendar.get(Calendar.MONTH)); //set()方法，修改当前calendar实例的类变量 calendar.set(Calendar.DATE,27); System.out.println(calendar.getTime()); //getActuaMaximum得到实例当前字段的可能最大值 System.out.println(calendar.getActualMaximum(Calendar.MINUTE)); }]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+      <tags>
+        <tag>Calendar</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[泛型]]></title>
     <url>%2F2019%2F08%2F25%2F%E6%B3%9B%E5%9E%8B%2F</url>
     <content type="text"><![CDATA[泛型，即宽广的数据类型，用于使某个类，方法，接口，可以使用不同的数据类型，例：1.泛型类 修饰符 class name&lt;?&gt;{}2.泛型方法 修饰符 &lt;?&gt; 数据类型(){ }3.类型擦除：在使用泛型时，若没有指定类型，则默认为object4.类型限定： &lt;? extend type&gt;5.通配符： &lt;? , ?&gt;]]></content>

@@ -1,6 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[StringBuilder和StringBuffer]]></title>
+    <url>%2F2019%2F08%2F28%2FStringBuilder%E5%92%8CStringBuffer%2F</url>
+    <content type="text"><![CDATA[1.StringBuilder速度更快，但不支持线程安全2.两者都支持原地修改字符串，而不是生成新的对象 public static void main(String args[]){ StringBuilder test = new StringBuilder(“123”); test.append(“a”); test.append(4); System.out.println(test); test.delete(1,2);//不包括end System.out.println(test); System.out.println(test.subSequence(0,1));//不包括end test.setLength(2);//从前到后截断 System.out.println(test); System.out.println(test.lastIndexOf(“1234”)); }]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[System类的一些方法]]></title>
+    <url>%2F2019%2F08%2F28%2FSystem%E7%B1%BB%E7%9A%84%E4%B8%80%E4%BA%9B%E6%96%B9%E6%B3%95%2F</url>
+    <content type="text"><![CDATA[public static void main(String args[]){ //列出系统的所有属性，getPropertries()返回propertries类 //System.getProperties().list(System.out); //用毫秒为单位得到返回类型为long的当前时间 //System.out.println(System.currentTimeMillis()); int[] test1 = new int[10]; for (int i =0;i&lt;10;i++){ test1[i] = i; } //数组的复制 System.arraycopy(test1,0,test2,0,10); System.out.println(test2[1]); //System.setOut(输出流)将out输入流重定位到该输出流， // print的则是该流的输出位置 //同理和setIn }]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[增强for循环的误区]]></title>
+    <url>%2F2019%2F08%2F28%2F%E5%A2%9E%E5%BC%BAfor%E5%BE%AA%E7%8E%AF%E7%9A%84%E8%AF%AF%E5%8C%BA%2F</url>
+    <content type="text"><![CDATA[增强for循环只是获得当前循环对象的值，不是对象的句柄，因此不能修改对象]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[Calendar]]></title>
     <url>%2F2019%2F08%2F26%2FCalendar%2F</url>
     <content type="text"><![CDATA[public static void main(String args[]){ //Calendar是抽象类，需要实例化 Calendar calendar = Calendar.getInstance(); System.out.println(calendar.getTime()); //get()方法，返回当前calendar实例的类变量 //calendar的月份从0开始 System.out.println(calendar.get(Calendar.MONTH)); //set()方法，修改当前calendar实例的类变量 calendar.set(Calendar.DATE,27); System.out.println(calendar.getTime()); //getActuaMaximum得到实例当前字段的可能最大值 System.out.println(calendar.getActualMaximum(Calendar.MINUTE)); }]]></content>

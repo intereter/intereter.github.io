@@ -54,17 +54,17 @@
   };
 </script>
 
-  <meta name="description" content="1.StringBuilder速度更快，但不支持线程安全2.两者都支持原地修改字符串，而不是生成新的对象    public static void main(String args[]){        StringBuilder test = new StringBuilder(“123”);        test.append(“a”);        test.append(4);">
+  <meta name="description" content="1.StringBuilder速度更快，但不支持线程安全2.两者都支持原地修改字符串，而不是生成新的对象 public static void main(String args[]){     StringBuilder test = new StringBuilder(&amp;quot;123&amp;quot;);     test.append(&amp;quot;a&amp;quot;);     test.appen">
 <meta property="og:type" content="article">
 <meta property="og:title" content="StringBuilder和StringBuffer">
 <meta property="og:url" content="http://yoursite.com/2019/08/28/StringBuilder和StringBuffer/index.html">
 <meta property="og:site_name" content="Intere">
-<meta property="og:description" content="1.StringBuilder速度更快，但不支持线程安全2.两者都支持原地修改字符串，而不是生成新的对象    public static void main(String args[]){        StringBuilder test = new StringBuilder(“123”);        test.append(“a”);        test.append(4);">
+<meta property="og:description" content="1.StringBuilder速度更快，但不支持线程安全2.两者都支持原地修改字符串，而不是生成新的对象 public static void main(String args[]){     StringBuilder test = new StringBuilder(&amp;quot;123&amp;quot;);     test.append(&amp;quot;a&amp;quot;);     test.appen">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-28T14:40:44.636Z">
+<meta property="og:updated_time" content="2019-08-28T14:50:17.325Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="StringBuilder和StringBuffer">
-<meta name="twitter:description" content="1.StringBuilder速度更快，但不支持线程安全2.两者都支持原地修改字符串，而不是生成新的对象    public static void main(String args[]){        StringBuilder test = new StringBuilder(“123”);        test.append(“a”);        test.append(4);">
+<meta name="twitter:description" content="1.StringBuilder速度更快，但不支持线程安全2.两者都支持原地修改字符串，而不是生成新的对象 public static void main(String args[]){     StringBuilder test = new StringBuilder(&amp;quot;123&amp;quot;);     test.append(&amp;quot;a&amp;quot;);     test.appen">
   <link rel="canonical" href="http://yoursite.com/2019/08/28/StringBuilder和StringBuffer/">
 
 
@@ -282,7 +282,7 @@
                 
               
 
-              <time title="创建时间：2019-08-28 22:27:26 / 修改时间：22:40:44" itemprop="dateCreated datePublished" datetime="2019-08-28T22:27:26+08:00">2019-08-28</time>
+              <time title="创建时间：2019-08-28 22:27:26 / 修改时间：22:50:17" itemprop="dateCreated datePublished" datetime="2019-08-28T22:27:26+08:00">2019-08-28</time>
             </span>
           
             
@@ -314,8 +314,19 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>1.StringBuilder速度更快，但不支持线程安全<br>2.两者都支持原地修改字符串，而不是生成新的对象<br>    public static void main(String args[]){<br>        StringBuilder test = new StringBuilder(“123”);<br>        test.append(“a”);<br>        test.append(4);<br>        System.out.println(test);<br>        test.delete(1,2);//不包括end<br>        System.out.println(test);<br>        System.out.println(test.subSequence(0,1));//不包括end<br>        test.setLength(2);//从前到后截断<br>        System.out.println(test);<br>        System.out.println(test.lastIndexOf(“1234”));<br>    }</p>
-
+        <p>1.StringBuilder速度更快，但不支持线程安全<br>2.两者都支持原地修改字符串，而不是生成新的对象</p>
+<pre><code>public static void main(String args[]){
+    StringBuilder test = new StringBuilder(&quot;123&quot;);
+    test.append(&quot;a&quot;);
+    test.append(4);
+    System.out.println(test);
+    test.delete(1,2);//不包括end
+    System.out.println(test);
+    System.out.println(test.subSequence(0,1));//不包括end
+    test.setLength(2);//从前到后截断
+    System.out.println(test);
+    System.out.println(test.lastIndexOf(&quot;1234&quot;));
+}</code></pre>
     </div>
 
     
@@ -340,6 +351,10 @@
             <span class="post-nav-divider"></span>
 
             <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2019/08/28/python爬虫/" rel="prev" title="python爬虫">
+                  python爬虫 <i class="fa fa-chevron-right"></i>
+                </a>
               
             </div>
           </div>
@@ -387,7 +402,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">12</span>
+          <span class="site-state-item-count">17</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -404,7 +419,9 @@
         
           
         
-        <span class="site-state-item-count">1</span>
+          
+        
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -431,7 +448,9 @@
         
           
         
-        <span class="site-state-item-count">6</span>
+          
+        
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

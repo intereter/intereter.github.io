@@ -1,9 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[python正则表达式]]></title>
+    <url>%2F2019%2F08%2F30%2Fpython%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[正则表达式： 用于检查符合某种模式的字符串匹配 python中使用re模块]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+      <tags>
+        <tag>正则表达式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[列表 元组 字典 集合]]></title>
+    <url>%2F2019%2F08%2F29%2F%E5%88%97%E8%A1%A8-%E5%85%83%E7%BB%84-%E5%AD%97%E5%85%B8-%E9%9B%86%E5%90%88%2F</url>
+    <content type="text"><![CDATA[列表1.创建列表： 1.a = [] 2.列表解析式 a = [value for value in range(1,11)] 3.a = list(range(1,11)) 4.使用切片复制 a = b[:]2.对列表操作：添加add 插入insert 删除remove 弹出pop 连接 extend(another list) 排序sort() 得到排序而不是对列表对象直接操作sorted() 反转reverse() 元组 创建元组： () 元组不可修改 字典 创建 ：a ={} 添加键值对 :a[key] = value 删除 : del a[key] 返回键值.keys() 返回值.values() 返回字典中的一个键和值.items() 集合不能使用索引，分片，因为其是无序的]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[python输入输出]]></title>
+    <url>%2F2019%2F08%2F29%2Fpython%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%2F</url>
+    <content type="text"><![CDATA[1.打印： py2: print”” py3:print(“”) [去掉空格：print(“”,end=””) 打印格式化： b = “1{}2{}3{}” print(b.format(1,2,3))]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[python String]]></title>
+    <url>%2F2019%2F08%2F29%2Fpython-String%2F</url>
+    <content type="text"><![CDATA[1.删除字符串中空白：头：lstrip() 尾： rstrip() 两端: strip()]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[python爬虫]]></title>
+    <url>%2F2019%2F08%2F28%2Fpython%E7%88%AC%E8%99%AB%2F</url>
+    <content type="text"><![CDATA[爬虫的定义1.一段程序 2. 模范浏览器浏览网页 3. 自动搜集数据步骤：1.调用模块，爬取网页文件（html)2.使用正则表达式处理文件3.存储数据]]></content>
+      <categories>
+        <category>python</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[StringBuilder和StringBuffer]]></title>
     <url>%2F2019%2F08%2F28%2FStringBuilder%E5%92%8CStringBuffer%2F</url>
-    <content type="text"><![CDATA[1.StringBuilder速度更快，但不支持线程安全2.两者都支持原地修改字符串，而不是生成新的对象 public static void main(String args[]){ StringBuilder test = new StringBuilder(“123”); test.append(“a”); test.append(4); System.out.println(test); test.delete(1,2);//不包括end System.out.println(test); System.out.println(test.subSequence(0,1));//不包括end test.setLength(2);//从前到后截断 System.out.println(test); System.out.println(test.lastIndexOf(“1234”)); }]]></content>
+    <content type="text"><![CDATA[1.StringBuilder速度更快，但不支持线程安全2.两者都支持原地修改字符串，而不是生成新的对象 public static void main(String args[]){ StringBuilder test = new StringBuilder(&quot;123&quot;); test.append(&quot;a&quot;); test.append(4); System.out.println(test); test.delete(1,2);//不包括end System.out.println(test); System.out.println(test.subSequence(0,1));//不包括end test.setLength(2);//从前到后截断 System.out.println(test); System.out.println(test.lastIndexOf(&quot;1234&quot;)); }]]></content>
       <categories>
         <category>java</category>
       </categories>

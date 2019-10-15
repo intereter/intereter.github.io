@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[css学习]]></title>
+    <url>%2F2019%2F10%2F15%2Fcss%E5%AD%A6%E4%B9%A0%2F</url>
+    <content type="text"><![CDATA[1. //创建//css的三种方法：外部&lt;内部&lt;内联（慎用内联）. css 选择器 ： id,class3. css 控制背景：1.背景图片：平铺：repete 来充满避免背景图片没有容器大size 控制大小attachment: 控制是否滑动，fixed不滑动4.css控制链接格式a:link(未点击) visited(点击后) hover(鼠标移动到链接上) active(点击时)]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[微信小程序]]></title>
+    <url>%2F2019%2F09%2F16%2F%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%2F</url>
+    <content type="text"><![CDATA[1. 全局配置文件：app.json1. pages：用于添加页面2. tabBars:添加底部按钮2. 页面配置：page.json3. 前端开发要阅读文档即可4. 前端：wx:keywx:for={}绑定一个数组 wx:for-item绑定当前数组的一个变量名每个页面有id,就是加载时的options中]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[css]]></title>
+    <url>%2F2019%2F09%2F08%2Fcss%2F</url>
+    <content type="text"><![CDATA[1.概念：css，即层叠样式表，是一种语言，可用来设定html中标签的各式2.css的引用： 内嵌样式表：style = 文档内嵌入：在&lt;\head&gt;标签内设定&lt;\style&gt;标签，还可以使用类型选择器 外部文档调用：在&lt;\head&gt;标签中链接3.类型选择器： 1.*：全部属性 2.类： 在需要套用格式的标签中套用class = 3.id 4.标签属性 5。根据属性选择：例如href4.类型选择器中可以修改的属性：颜色，字体，边框（边框可以简写属性,可以给某个标签设置边框，默认style是none,即不显示 learncss –&gt; *{ font: size 30px; color:darkorange } .class1{ color:darkslategray; } #l1{ color: blue } test fuck fuck u sss 5.css设置文本格式： 1.设置对齐方式：text-align 2.direction对中文无效. 3.设置间距：text-spacing,word-spacing 4.行高：line-height 5.首行缩进：test-indent 6.字体样式：font-family 7.改变字体大小写：text-transform6.css过渡： 1.使用标签的hover: p:hover{} 2.设置触发过渡的时间：transition-delay 3.设置动画时间：transition-duration 4.设置采用延迟过渡的属性：transition-propertry]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[web 的基础知识]]></title>
+    <url>%2F2019%2F09%2F03%2Fweb-%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
+    <content type="text"><![CDATA[1. web:1. web资源：动态（程序生成数据，有交互功能），静态（数据不变）2. web应用：多个web资源放到同一个目录，要想供外界使用，就放到web服务器上]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[静态链表]]></title>
+    <url>%2F2019%2F09%2F02%2F%E9%9D%99%E6%80%81%E9%93%BE%E8%A1%A8%2F</url>
+    <content type="text"><![CDATA[概念 ： c语言中，使用数组结构的，结合顺序和非顺序特点的数据结构 逻辑结构 ： 先初始化一个超大数组（结构体的数组，结构体包括两个变量：data ,cur(指向下一个节点的数组序号)，0号节点是备用链表的头 创建：创建这个数组，然后每个节点的默认data是-1，cur是i+1（最后一个节点的cur是0） 初始化（其实应该是从备用列表中，取一个新节点到可用链表中（可用链表和备用链表在一个数组中），除了0号节点）： int mallocarr(*arr){ int i = arr[0];//此时0号节点指向的是备用节点的第一位 if(arr[0]){ arr[0].cur = arr[i].cur } return i; }]]></content>
+      <categories>
+        <category>数据结构</category>
+      </categories>
+      <tags>
+        <tag>链表</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[python IO]]></title>
     <url>%2F2019%2F09%2F01%2Fpython-IO%2F</url>
     <content type="text"><![CDATA[打开文件： #读取 f = open(url,’r’) #写入（覆盖） f = open(url.’w’) ##这样就是创建新文件 #追加 f = open(url,’a’) 一次性读：read 创建新的文件目录： import os os.mkdirs(ur)]]></content>

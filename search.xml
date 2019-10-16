@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[如何使图片居中]]></title>
+    <url>%2F2019%2F10%2F16%2F%E5%A6%82%E4%BD%95%E4%BD%BF%E5%9B%BE%E7%89%87%E5%B1%85%E4%B8%AD%2F</url>
+    <content type="text"><![CDATA[设置 且Center中要设置width,否则无效 设置]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>css</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[css学习]]></title>
     <url>%2F2019%2F10%2F15%2Fcss%E5%AD%A6%E4%B9%A0%2F</url>
-    <content type="text"><![CDATA[1. //创建//css的三种方法：外部&lt;内部&lt;内联（慎用内联）. css 选择器 ： id,class3. css 控制背景：1.背景图片：平铺：repete 来充满避免背景图片没有容器大size 控制大小attachment: 控制是否滑动，fixed不滑动4.css控制链接格式a:link(未点击) visited(点击后) hover(鼠标移动到链接上) active(点击时)]]></content>
+    <content type="text"><![CDATA[div标签控制其他元素位置1. //创建//css的三种方法：外部&lt;内部&lt;内联（慎用内联）. css 选择器 ： id,class3. css 控制背景：1.背景图片：平铺：repete 来充满避免背景图片没有容器大size 控制大小attachment: 控制是否滑动，fixed不滑动4.css控制链接格式a:link(未点击) visited(点击后) hover(鼠标移动到链接上) active(点击时)5. css盒子模型：盒子总宽度：（border:边框+padding:内边距+width:内容宽度) 当我们设置一个块时，还要考虑外边距(margin)，即块与浏览器的距离。所有的html标签可以看做盒子6. css嵌套： p{} (所有p标签) .t{}(所有class为t) .t p{} (所有class为t的元素内的p元素) p.t{} (所有class为t的p元素)7. css 显示1.隐藏的方法： p.hidden(visibilty: hidde):隐藏但仍占有空间，p.hidden(display:none):隐藏，不占空间2.display:block,in-line8. css 定位： 使用position, z-index决定了显示的前后位置9. css float : 控制元素当窗口大小不够时的浮动方向]]></content>
       <categories>
         <category>web</category>
       </categories>

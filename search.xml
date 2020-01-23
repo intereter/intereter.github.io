@@ -1,6 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[程序员岗位及详解]]></title>
+    <url>%2F2020%2F01%2F23%2F%E7%A8%8B%E5%BA%8F%E5%91%98%E5%B2%97%E4%BD%8D%E5%8F%8A%E8%AF%A6%E8%A7%A3%2F</url>
+    <content type="text"></content>
+      <categories>
+        <category>基础知识</category>
+      </categories>
+      <tags>
+        <tag>岗位</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[learnjs]]></title>
+    <url>%2F2019%2F10%2F26%2Flearnjs%2F</url>
+    <content type="text"><![CDATA[写在前头： js的作用：验证输入，改变样式，图像（需要给定id来找到元素），触发事件 js的来源：body,head中的中，如果从外部引用则 js显示数据： 弹出警告框： windows.alert() 修改html元素 ： document.getElementById(“ID”).innerHTML=””写到页面： document.write 基本： 定义变量 var …. 定义数组 var a = new Array() js中所有事物都是对象 全局变量是windows对象 html绑定的事件： onclick 点击 onmouseover 在元素上移动鼠标 onmouseout 移开鼠标 onload 加载 undefined 和 null 的区别： undefined类型是undefined，表示一个变量未赋值 null类型是object,表示该变量现在指向一个空值，可以用赋值null来释放内存 js数据类型在： JavaScript 中有 5 种不同的数据类型： string number boolean object function 3 种对象类型： Object Date Array 2 个不包含任何值的数据类型： null undefined]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>js</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[如何使图片居中]]></title>
     <url>%2F2019%2F10%2F16%2F%E5%A6%82%E4%BD%95%E4%BD%BF%E5%9B%BE%E7%89%87%E5%B1%85%E4%B8%AD%2F</url>
     <content type="text"><![CDATA[设置 且Center中要设置width,否则无效 设置]]></content>
@@ -250,6 +272,11 @@
       <tags>
         <tag>博客</tag>
       </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[articlesb]]></title>
+    <url>%2F2019%2F08%2F19%2Farticlesb%2F</url>
+    <content type="text"></content>
   </entry>
   <entry>
     <title><![CDATA[articleTest]]></title>

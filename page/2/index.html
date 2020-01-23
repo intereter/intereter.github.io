@@ -252,6 +252,209 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/01/python类与实例/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/09/01/python类与实例/" class="post-title-link" itemprop="url">python类与实例</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-09-01 09:16:07 / 修改时间：09:44:11" itemprop="dateCreated datePublished" datetime="2019-09-01T09:16:07+08:00">2019-09-01</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li><p>创建一个类<br> class name():</p>
+<pre><code># (继承对象，可以多继承)</code></pre></li>
+<li><p>必须有 def <em>/</em>init__(self):</p>
+</li>
+<li><p>要限制外界访问类的某个变量，可以使变量名开头为双下划线__</p>
+</li>
+<li><p>可以直接为实例对象添加属性和方法：</p>
+<pre><code>s = name()
+s.score = 90</code></pre><p> 也可以直接为类添加属性和方法，但可以使用<strong>slots</strong>来限定实例对象能添加的属性名字</p>
+<pre><code>class name():
+    def __init__():
+        __slots__ = (&quot;name&quot;) #绑定的变量名只能是name</code></pre></li>
+<li><p>获取对象的所有属性和方法：<br> dir()</p>
+</li>
+<li><p>防止外界直接查看或修改实例的属性： 构造get,set方法，还可以用@propetry修饰它们，使这些方法可以像属性一样调用，前提是方法名一致<br> class Student(object):</p>
+<p> @property<br> def score(self):</p>
+<pre><code>return self._score</code></pre><p> @score.setter<br> def score(self, value):</p>
+<pre><code>if not isinstance(value, int):
+    raise ValueError(&apos;score must be an integer!&apos;)
+if value &lt; 0 or value &gt; 100:
+    raise ValueError(&apos;score must between 0 ~ 100!&apos;)
+self._score = value</code></pre></li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/31/python生成器/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/08/31/python生成器/" class="post-title-link" itemprop="url">python生成器</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2019-08-31 21:06:55 / 修改时间：21:11:22" itemprop="dateCreated datePublished" datetime="2019-08-31T21:06:55+08:00">2019-08-31</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>what is generator???<br>一种惰性的计算机制，只有调用next（generator)时才会计算调用其中元素<br>定义一个生成器：</p>
+<ol>
+<li>(x for x in range(0,11))</li>
+<li>def name():<br> for i in range(0,11):<pre><code>yield i</code></pre>使用生成器：<br>a = name()<br>next(a) ## 调用其中一个元素，从投至尾</li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/31/python-is-and/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -971,212 +1174,11 @@
   </article>
 
     
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/28/StringBuilder和StringBuffer/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/dogHead.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/08/28/StringBuilder和StringBuffer/" class="post-title-link" itemprop="url">StringBuilder和StringBuffer</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-28 22:27:26 / 修改时间：22:50:17" itemprop="dateCreated datePublished" datetime="2019-08-28T22:27:26+08:00">2019-08-28</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>1.StringBuilder速度更快，但不支持线程安全<br>2.两者都支持原地修改字符串，而不是生成新的对象</p>
-<pre><code>public static void main(String args[]){
-    StringBuilder test = new StringBuilder(&quot;123&quot;);
-    test.append(&quot;a&quot;);
-    test.append(4);
-    System.out.println(test);
-    test.delete(1,2);//不包括end
-    System.out.println(test);
-    System.out.println(test.subSequence(0,1));//不包括end
-    test.setLength(2);//从前到后截断
-    System.out.println(test);
-    System.out.println(test.lastIndexOf(&quot;1234&quot;));
-}</code></pre>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/08/28/System类的一些方法/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/dogHead.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/08/28/System类的一些方法/" class="post-title-link" itemprop="url">System类的一些方法</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-08-28 22:08:51 / 修改时间：22:10:06" itemprop="dateCreated datePublished" datetime="2019-08-28T22:08:51+08:00">2019-08-28</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <pre><code>public static void main(String args[]){
-    //列出系统的所有属性，getPropertries()返回propertries类
-    //System.getProperties().list(System.out);
-    //用毫秒为单位得到返回类型为long的当前时间
-    //System.out.println(System.currentTimeMillis());
-    int[] test1 = new int[10];
-    for (int i =0;i&lt;10;i++){
-        test1[i] = i;
-    }
-    //数组的复制
-    System.arraycopy(test1,0,test2,0,10);
-    System.out.println(test2[1]);
-    //System.setOut(输出流)将out输入流重定位到该输出流，
-    // print的则是该流的输出位置
-    //同理和setIn
-}</code></pre>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1212,7 +1214,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">30</span>
+          <span class="site-state-item-count">33</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1237,7 +1239,9 @@
         
           
         
-        <span class="site-state-item-count">5</span>
+          
+        
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -1270,7 +1274,11 @@
         
           
         
-        <span class="site-state-item-count">9</span>
+          
+        
+          
+        
+        <span class="site-state-item-count">11</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -1293,7 +1301,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>

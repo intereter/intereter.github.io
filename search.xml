@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[看这里！]]></title>
+    <url>%2F2020%2F01%2F25%2F%E7%9C%8B%E8%BF%99%E9%87%8C%EF%BC%81%2F</url>
+    <content type="text"><![CDATA[祝张慧小朋友新年快乐，希望她永远聪明可爱，温柔大方，健健康康]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[程序员岗位及详解]]></title>
     <url>%2F2020%2F01%2F23%2F%E7%A8%8B%E5%BA%8F%E5%91%98%E5%B2%97%E4%BD%8D%E5%8F%8A%E8%AF%A6%E8%A7%A3%2F</url>
     <content type="text"><![CDATA[前端 后端 全栈 运维 测试 大数据 游戏 研究我的想法： 后端到大数据 （我是全菜工程师！！！！） 一.来自codesheep对于前后端的讲解：1.前后端趋同，都在向工程化走2.前后端需求岗位量都差不多3.前端入门快，但和后端一样，都逐渐复杂4.自学后端容易因为业务量不足（访问流量不足）遇到技术无法提高的瓶颈]]></content>
@@ -260,7 +265,7 @@
   <entry>
     <title><![CDATA[java语言概述]]></title>
     <url>%2F2019%2F08%2F25%2Fjava%E8%AF%AD%E8%A8%80%E6%A6%82%E8%BF%B0%2F</url>
-    <content type="text"><![CDATA[1.特点：面向对象，一次编译，到处运行2.应用：web, android,嵌入式，软件开发（不常用）3.java虚拟机： 即JVM， java程序先编译成为字节码，再通过对应不同平台的jvm解释成机器码，实现了一次编译，到处运行4.java的不同版本：j2se(标准版)，j2ee(企业版)，j2me(微型版，主要用于嵌入式)5.什么是api: api是一种通用概念，java的api即java本身提供的许多强大的类，也叫做java类库6.数据类型：3整型(short,int,long),字节型(byte),2浮点型(float,double),布尔型,复合数据类型7.变量类型：基本类型（如基本数据类型的变量），直接为变量分配存储空间。引用类型（类，数组，接口），先分配引用空间，后分配数据空间8.string:字符串，长度不可变，使用”+”是生成新的字符串,常用方法length(),charAt(),是否包含方法：contains()，替换方法:replace(),分割方法:split()9.stringBuilder和stringBuffer方法另起：1.数组有length这个属性，string有length()2.equals() :默认使用 ==来判断对象是否相同，而 == 只是判断对象的地址是否相同3.HashCode ：返回对象的hash值，常用于确定对象的存储地址或确定对象在散列表中的位置，两个对象hashcode相同，equals()不一定相同，equals()相同，hashcode一定相同]]></content>
+    <content type="text"><![CDATA[1.特点：面向对象，一次编译，到处运行2.应用：web, android,嵌入式，软件开发（不常用）3.java虚拟机： 即JVM， java程序先编译成为字节码，再通过对应不同平台的jvm解释成机器码，实现了一次编译，到处运行。因此java是解释型语言（早期的，现在使用即时编译器？ 编译成特定系统编码），而编译型语言在运行前要编译生成对应的编译文件，使用编译文件运行4.java的不同版本：j2se(标准版)，j2ee(企业版)，j2me(微型版，主要用于嵌入式)5.什么是api: api是一种通用概念，java的api即java本身提供的许多强大的类，也叫做java类库6.数据类型：3整型(short,int,long),字节型(byte),2浮点型(float,double),布尔型,复合数据类型7.变量类型：基本类型（如基本数据类型的变量），直接为变量分配存储空间。引用类型（类，数组，接口），先分配引用空间，后分配数据空间8.string:字符串，长度不可变，使用”+”是生成新的字符串,常用方法length(),charAt(),是否包含方法：contains()，替换方法:replace(),分割方法:split()9.stringBuilder和stringBuffer方法10.什么是applet:在网页上运行的java程序另起：1.数组有length这个属性，string有length()2.equals() :默认使用 ==来判断对象是否相同，而 == 只是判断对象的地址是否相同3.HashCode ：返回对象的hash值，常用于确定对象的存储地址或确定对象在散列表中的位置，两个对象hashcode相同，equals()不一定相同，equals()相同，hashcode一定相同另起： 术语： jdk : java development kit : 编写java程序的程序员使用的软件 jre : java runtime environment : 运行java程序的用户使用的软件 sdk : 描述98到06的jdk]]></content>
       <tags>
         <tag>java</tag>
       </tags>
@@ -277,14 +282,5 @@
     <title><![CDATA[articlesb]]></title>
     <url>%2F2019%2F08%2F19%2Farticlesb%2F</url>
     <content type="text"></content>
-  </entry>
-  <entry>
-    <title><![CDATA[articleTest]]></title>
-    <url>%2F2019%2F08%2F17%2FarticleTest%2F</url>
-    <content type="text"><![CDATA[welcome: 超级无敌可爱居居妹人家好想你啊嘿嘿嘿]]></content>
-      <tags>
-        <tag>test1</tag>
-        <tag>test2</tag>
-      </tags>
   </entry>
 </search>

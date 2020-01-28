@@ -252,6 +252,615 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/27/chapter5继承/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/01/27/chapter5继承/" class="post-title-link" itemprop="url">chapter5继承</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-27 17:28:31 / 修改时间：22:30:18" itemprop="dateCreated datePublished" datetime="2020-01-27T17:28:31+08:00">2020-01-27</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>5.1<br>一.超类和子类：<br>   超类就是父类，也叫基类<br>二.继承了什么：<br>   子类继承了父类的域和方法，但父类的私有域是不能直接访问的，需要通过父类的域访问方法得到</p>
+<pre><code>//Manager类继承了Employee
+public int getSalary(){
+    int salary = super.getSalary()+bonus;//使用super调用超类
+    return salary;
+}</code></pre><p>三.子类构造器：<br>   在子类构造中，若没有显式的调用父类的构造器，则默认调用父类的默认构造器（无参数）。若父类没有这样的构造器，则会报错</p>
+<pre><code>Manager(....,int bonus){
+    super(....);
+    this.bonus = bonus;
+}</code></pre><p>四.多态：<br>   指一个对象变量可以指向超类，也可以指向子类，这叫多态。<br>   根据对象变量实际指向的类型调用方法，这叫动态绑定。<br>   超类的引用可以指向子类，但子类的引用不能指向父类<br>五.final类和方法：<br>   用final修饰的类不能被继承，用final修饰的方法子类不能够覆盖<br>六.强制类型转换：<br>   一个超类的引用指向子类的对象，可以将这个引用转为子类的引用<br>七.父类引用指向子类对象，可以调用子类对象的方法吗？<br>   除了构造方法，其他都不能。其既不能访问子类对象的特有域，也不能使用子类的方法，除非进行强制类型转换<br>八.protected:同一个包内，子类能够访问</p>
+<p>5.2 Object:所有类的超类<br>一.equals方法：<br>   在Object类中，equals方法默认是比较两者的引用，若引用相等则返回true.<br>   在实际应用中，仅仅比较引用是没有意义的。修改的equals方法应该先比较引用是否指向相同的对象，然后比较引用所指向的对象是否为空，再比较两者对象是否同属一个class,最后依次比较两者中各项。<br>   子类的equals方法应该先调用父类的equals方法</p>
+<pre><code>//显式参数是object类，比较使用object的equals
+boolean equals(Object other){
+    if(this == other){
+        return true;
+    }
+    if(other == null){
+        return false;
+    }
+    if(getClass()!=other.getClass()){
+        return false;
+    }
+    Employee otherobject = (Employee)other;
+    return Object.equals(this.name,otherobject.name)&amp;&amp;this.salary==otherobject.salary;
+}</code></pre><p>二.toString方法：<br>   返回对象的字符串表示。通常java的默认类都实现了这个方法。在如</p>
+<pre><code>String str = &quot;&quot; + Employee; //默认调用了Employee的toString方法
+//在print的时候也是</code></pre><p>   java中数组的字符串表示用Array.toString(arrayname) 或Array.deepToString(arrayname)得到</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/27/chapter4对象与类/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/01/27/chapter4对象与类/" class="post-title-link" itemprop="url">chapter4对象与类</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-27 11:32:23 / 修改时间：17:29:01" itemprop="dateCreated datePublished" datetime="2020-01-27T11:32:23+08:00">2020-01-27</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>一. 类：构造对象的模板，构造对象称为类的实例化<br>二. 封装：数据隐藏，关键在于类中的方法不能直接访问其他类的实例域<br>三. 用户自定义类：</p>
+<ol>
+<li>构造器：<br>每个类可有1个或多个构造器，构造器无返回值</li>
+<li>封装：<br>关键在于数据域设为private,访问和修改数据域的方法另设，且不返回引用对象而返回对象的clone</li>
+<li>final修饰<br>对于数值来说，数值不可再修改。对于一个引用，它不会再指向其他对象，但其指向的对象仍然可以修改</li>
+<li>static:<br>静态域：用static修饰的域为类所拥有，例： Math.PI<br>静态方法： 用于不能向对象实施操作的方法，这种方法只能访问静态域<br>工厂方法： 返回一个类的实例的静态方法</li>
+<li>方法参数：<br>对于java,参数的调用是值调用，若调用的是引用，则在方法中初始化得到的参数是参数的拷贝值，拷贝值与引用参数指向同一个对象，但交换拷贝值不能达成交换参数所指向的对象的目的</li>
+<li>对象构造：<br>重载： 方法名相同，参数不同（方法名，参数称为方法签名）。重载后的方法可以返回不同类型返回值<br>显式域初始化： 在构造前，为所有域赋初值是一种很好的习惯<br>调用另一个构造器：<br> Test(String s){<pre><code>this(1,s);//用this（）调用另一个构造器</code></pre> }<br> 初始化的顺序： 在类第一次被调用时，静态域被初始化。类在被初始化的时候，先将所有域初始化为默认值，然后按声明顺序初始化各域，接着执行构造器</li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/27/chapter3命令行参数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/01/27/chapter3命令行参数/" class="post-title-link" itemprop="url">chapter3命令行参数</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-27 11:18:16 / 修改时间：11:19:53" itemprop="dateCreated datePublished" datetime="2020-01-27T11:18:16+08:00">2020-01-27</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <pre><code>java Testclass -h world</code></pre><p>表示在main方法中args[] 数组中，args[0] = -h, 1 = world</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/26/chapter3拷贝/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/01/26/chapter3拷贝/" class="post-title-link" itemprop="url">chapter3拷贝</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-26 23:27:42" itemprop="dateCreated datePublished" datetime="2020-01-26T23:27:42+08:00">2020-01-26</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-27 00:13:50" itemprop="dateModified" datetime="2020-01-27T00:13:50+08:00">2020-01-27</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>拷贝有深拷贝与浅拷贝，浅拷贝仅仅拷贝值（对于值类型）和内存地址（对于引用型），深拷贝拷贝所有的成员变量<br>浅拷贝： 使用=复制，arraycopy<br>深拷贝：改写后的clone</p>
+<pre><code>class Dog implements  Cloneable{
+    String name;
+    protected Object clone(){
+        Dog dog =null;
+        try {
+            dog = (Dog)super.clone();
+        }catch (Exception e){
+        }
+        return  dog;
+    }
+}
+class Test2 implements Cloneable{
+    int x;
+    private Dog dog = new Dog();
+    void setDog(String name){
+        this.dog.name = name;
+    }
+    String getname(){
+        return dog.name;
+    }
+    Test2(int x){
+        this.x = x;
+    }
+    protected Object clone() {
+        Test2 t = null;
+        try {
+            t = (Test2) super.clone();
+            t.dog = (Dog) dog.clone();
+        } catch (Exception e) {
+        }
+        return t;
+    }
+}public class TestCopy {
+
+    public  static  void  main(String args[]){
+        TestCopy testCopy = new TestCopy();
+        //使用=是对于对象的浅拷贝，仅仅复制了对象的内存地址
+        Test2 t1 =  new Test2(1);
+        Test2 t2 ;
+        t2 = t1;
+        t2.x = 2;
+        //System.out.printf(&quot;%d %d&quot;,t1.x,t2.x);
+        //修改clone方法后实现深拷贝（直接使用未修改的clone,即没有 t.dog = (Dog) dog.clone();）
+        //（也是浅拷贝，因为直接使用clone只是复制了对象的成员变量的内存地址）
+        Test2 t3 = new Test2(3);
+        t3.setDog(&quot;3&quot;);
+        Test2 t4 = (Test2) t3.clone();
+        t4.x = 4;
+        t4.setDog(&quot;4&quot;);
+        System.out.printf(&quot;t3 x: %d dogname %s,t4 x: %d dogname %s&quot;,t3.x,t3.getname(),t4.x,t4.getname());
+    }
+}</code></pre>
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/26/chapter3大实数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/01/26/chapter3大实数/" class="post-title-link" itemprop="url">chapter3大实数</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-26 21:52:54 / 修改时间：21:55:58" itemprop="dateCreated datePublished" datetime="2020-01-26T21:52:54+08:00">2020-01-26</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <pre><code>BigInteger integer  = BigInteger.valueOf(1);//创造一个数值等于1的整型大实数
+add,substract,devide,multiply(BigInteger)
+//BigDecimal</code></pre>
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/26/chapter3输入与输出/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/01/26/chapter3输入与输出/" class="post-title-link" itemprop="url">chapter3输入与输出</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-26 20:36:04 / 修改时间：21:28:05" itemprop="dateCreated datePublished" datetime="2020-01-26T20:36:04+08:00">2020-01-26</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>一.输入<br>输入使用Scanner或Console类，两者均在java.util包中，其中Console类可以用来输入密码（对于Scanner类输入有显回的原因）,使用：<br>    import java.util.*<br>    Scanner scan = new Scanner(Sysytem.in);//与标准输入流绑定<br>    String word = scan.next;//读一个单词，以空白符分隔符<br>    String line = scan.nextLine;//以换行为分隔符<br>    while(scan.hasNext())….<br>    //还有nextInt,nextDouble等方法<br>    Console console = System.console;<br>    char a[] = console.readPassword();<br>二.格式化<br>    String str = String.format(“hello,%s”,test);<br>    System.out.print(“1$f”,new Date());//将Date()中第一个参数以浮点数形式输出</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/25/看这里！/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -602,571 +1211,6 @@
   </article>
 
     
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/10/15/css学习/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/dogHead.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/10/15/css学习/" class="post-title-link" itemprop="url">css学习</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-10-15 22:30:31" itemprop="dateCreated datePublished" datetime="2019-10-15T22:30:31+08:00">2019-10-15</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-16 23:21:28" itemprop="dateModified" datetime="2019-10-16T23:21:28+08:00">2019-10-16</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/web/" itemprop="url" rel="index"><span itemprop="name">web</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="div标签控制其他元素位置"><a href="#div标签控制其他元素位置" class="headerlink" title="div标签控制其他元素位置"></a>div标签控制其他元素位置</h1><h2 id="1-创建-css的三种方法：外部-lt-内部-lt-内联（慎用内联）"><a href="#1-创建-css的三种方法：外部-lt-内部-lt-内联（慎用内联）" class="headerlink" title="1. //创建//css的三种方法：外部&lt;内部&lt;内联（慎用内联）"></a>1. //创建//css的三种方法：外部&lt;内部&lt;内联（慎用内联）</h2><h2 id="css-选择器-：-id-class"><a href="#css-选择器-：-id-class" class="headerlink" title=". css 选择器 ： id,class"></a>. css 选择器 ： id,class</h2><h2 id="3-css-控制背景："><a href="#3-css-控制背景：" class="headerlink" title="3. css 控制背景："></a>3. css 控制背景：</h2><h3 id="1-背景图片："><a href="#1-背景图片：" class="headerlink" title="1.背景图片："></a>1.背景图片：</h3><h3 id="平铺：repete-来充满避免背景图片没有容器大"><a href="#平铺：repete-来充满避免背景图片没有容器大" class="headerlink" title="平铺：repete 来充满避免背景图片没有容器大"></a>平铺：repete 来充满避免背景图片没有容器大</h3><h3 id="size-控制大小"><a href="#size-控制大小" class="headerlink" title="size 控制大小"></a>size 控制大小</h3><h3 id="attachment-控制是否滑动，fixed不滑动"><a href="#attachment-控制是否滑动，fixed不滑动" class="headerlink" title="attachment: 控制是否滑动，fixed不滑动"></a>attachment: 控制是否滑动，fixed不滑动</h3><h2 id="4-css控制链接格式"><a href="#4-css控制链接格式" class="headerlink" title="4.css控制链接格式"></a>4.css控制链接格式</h2><h3 id="a-link-未点击-visited-点击后-hover-鼠标移动到链接上-active-点击时"><a href="#a-link-未点击-visited-点击后-hover-鼠标移动到链接上-active-点击时" class="headerlink" title="a:link(未点击)  visited(点击后)  hover(鼠标移动到链接上) active(点击时)"></a>a:link(未点击)  visited(点击后)  hover(鼠标移动到链接上) active(点击时)</h3><h2 id="5-css盒子模型：盒子总宽度：（border-边框-padding-内边距-width-内容宽度-当我们设置一个块时，还要考虑外边距-margin-，即块与浏览器的距离。所有的html标签可以看做盒子"><a href="#5-css盒子模型：盒子总宽度：（border-边框-padding-内边距-width-内容宽度-当我们设置一个块时，还要考虑外边距-margin-，即块与浏览器的距离。所有的html标签可以看做盒子" class="headerlink" title="5. css盒子模型：盒子总宽度：（border:边框+padding:内边距+width:内容宽度) 当我们设置一个块时，还要考虑外边距(margin)，即块与浏览器的距离。所有的html标签可以看做盒子"></a>5. css盒子模型：盒子总宽度：（border:边框+padding:内边距+width:内容宽度) 当我们设置一个块时，还要考虑外边距(margin)，即块与浏览器的距离。所有的html标签可以看做盒子</h2><h2 id="6-css嵌套：-p-所有p标签-t-所有class为t-t-p-所有class为t的元素内的p元素-p-t-所有class为t的p元素"><a href="#6-css嵌套：-p-所有p标签-t-所有class为t-t-p-所有class为t的元素内的p元素-p-t-所有class为t的p元素" class="headerlink" title="6. css嵌套： p{} (所有p标签)  .t{}(所有class为t)  .t p{} (所有class为t的元素内的p元素)  p.t{}  (所有class为t的p元素)"></a>6. css嵌套： p{} (所有p标签)  .t{}(所有class为t)  .t p{} (所有class为t的元素内的p元素)  p.t{}  (所有class为t的p元素)</h2><h2 id="7-css-显示"><a href="#7-css-显示" class="headerlink" title="7. css 显示"></a>7. css 显示</h2><h3 id="1-隐藏的方法：-p-hidden-visibilty-hidde-隐藏但仍占有空间，p-hidden-display-none-隐藏，不占空间"><a href="#1-隐藏的方法：-p-hidden-visibilty-hidde-隐藏但仍占有空间，p-hidden-display-none-隐藏，不占空间" class="headerlink" title="1.隐藏的方法： p.hidden(visibilty: hidde):隐藏但仍占有空间，p.hidden(display:none):隐藏，不占空间"></a>1.隐藏的方法： p.hidden(visibilty: hidde):隐藏但仍占有空间，p.hidden(display:none):隐藏，不占空间</h3><h3 id="2-display-block-in-line"><a href="#2-display-block-in-line" class="headerlink" title="2.display:block,in-line"></a>2.display:block,in-line</h3><h2 id="8-css-定位：-使用position-z-index决定了显示的前后位置"><a href="#8-css-定位：-使用position-z-index决定了显示的前后位置" class="headerlink" title="8. css 定位： 使用position, z-index决定了显示的前后位置"></a>8. css 定位： 使用position, z-index决定了显示的前后位置</h2><h2 id="9-css-float-控制元素当窗口大小不够时的浮动方向"><a href="#9-css-float-控制元素当窗口大小不够时的浮动方向" class="headerlink" title="9. css float : 控制元素当窗口大小不够时的浮动方向"></a>9. css float : 控制元素当窗口大小不够时的浮动方向</h2>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/16/微信小程序/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/dogHead.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/16/微信小程序/" class="post-title-link" itemprop="url">微信小程序</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-09-16 23:14:49" itemprop="dateCreated datePublished" datetime="2019-09-16T23:14:49+08:00">2019-09-16</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-10-15 23:43:51" itemprop="dateModified" datetime="2019-10-15T23:43:51+08:00">2019-10-15</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/微信小程序/" itemprop="url" rel="index"><span itemprop="name">微信小程序</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="1-全局配置文件：app-json"><a href="#1-全局配置文件：app-json" class="headerlink" title="1. 全局配置文件：app.json"></a>1. 全局配置文件：app.json</h1><h2 id="1-pages：用于添加页面"><a href="#1-pages：用于添加页面" class="headerlink" title="1. pages：用于添加页面"></a>1. pages：用于添加页面</h2><h2 id="2-tabBars-添加底部按钮"><a href="#2-tabBars-添加底部按钮" class="headerlink" title="2. tabBars:添加底部按钮"></a>2. tabBars:添加底部按钮</h2><h1 id="2-页面配置："><a href="#2-页面配置：" class="headerlink" title="2. 页面配置："></a>2. 页面配置：</h1><h2 id="page-json"><a href="#page-json" class="headerlink" title="page.json"></a>page.json</h2><h1 id="3-前端开发要阅读文档即可"><a href="#3-前端开发要阅读文档即可" class="headerlink" title="3. 前端开发要阅读文档即可"></a>3. 前端开发要阅读文档即可</h1><h1 id="4-前端："><a href="#4-前端：" class="headerlink" title="4. 前端："></a>4. 前端：</h1><h2 id="wx-key"><a href="#wx-key" class="headerlink" title="wx:key"></a>wx:key</h2><h2 id="wx-for-绑定一个数组-wx-for-item绑定当前数组的一个变量名"><a href="#wx-for-绑定一个数组-wx-for-item绑定当前数组的一个变量名" class="headerlink" title="wx:for={}绑定一个数组 wx:for-item绑定当前数组的一个变量名"></a>wx:for={}绑定一个数组 wx:for-item绑定当前数组的一个变量名</h2><h2 id="每个页面有id-就是加载时的options中"><a href="#每个页面有id-就是加载时的options中" class="headerlink" title="每个页面有id,就是加载时的options中"></a>每个页面有id,就是加载时的options中</h2>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/08/css/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/dogHead.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/08/css/" class="post-title-link" itemprop="url">css</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-09-08 19:08:39" itemprop="dateCreated datePublished" datetime="2019-09-08T19:08:39+08:00">2019-09-08</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-10 23:18:20" itemprop="dateModified" datetime="2019-09-10T23:18:20+08:00">2019-09-10</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/web/" itemprop="url" rel="index"><span itemprop="name">web</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>1.概念：css，即层叠样式表，是一种语言，可用来设定html中标签的各式<br>2.css的引用：<br>    内嵌样式表：style =<br>    文档内嵌入：在&lt;\head&gt;标签内设定&lt;\style&gt;标签，还可以使用类型选择器<br>    外部文档调用：在&lt;\head&gt;标签中链接<br>3.类型选择器：<br>    1.*：全部属性<br>    2.类： 在需要套用格式的标签中套用class =<br>    3.id<br>    4.标签属性<br>    5。根据属性选择：例如href<br>4.类型选择器中可以修改的属性：颜色，字体，边框（边框可以简写属性,可以给某个标签设置边框，默认style是none,即不显示<br>        <!DOCTYPE html><br>    <html lang="en"><br>    <head><meta name="generator" content="Hexo 3.9.0"><br>        <meta charset="UTF-8"><br>        <title>learncss</title><br>        <style type="text/css">–&gt;<br>            *{<br>                font: size 30px;<br>                color:darkorange<br>            }<br>            .class1{<br>                color:darkslategray;<br>            }<br>            #l1{<br>                color: blue<br>            }<br>        </style><br>    </head><br>    <body><br>    <a style="font-size: 10px">test</a><br>    <p>fuck</p><br>    <p class="class1">fuck <u>u</u></p><br>    <p id="l1">sss</p><br>    </body><br>    </html></p>
-<p>5.css设置文本格式：<br>    1.设置对齐方式：text-align<br>    2.direction对中文无效.<br>    3.设置间距：text-spacing,word-spacing<br>    4.行高：line-height<br>    5.首行缩进：test-indent<br>    6.字体样式：font-family<br>    7.改变字体大小写：text-transform<br>6.css过渡：<br>    1.使用标签的hover:     p:hover{}<br>    2.设置触发过渡的时间：transition-delay<br>    3.设置动画时间：transition-duration<br>    4.设置采用延迟过渡的属性：transition-propertry</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/03/web-的基础知识/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/dogHead.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/03/web-的基础知识/" class="post-title-link" itemprop="url">web 的基础知识</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-09-03 23:22:17 / 修改时间：23:42:32" itemprop="dateCreated datePublished" datetime="2019-09-03T23:22:17+08:00">2019-09-03</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/web/" itemprop="url" rel="index"><span itemprop="name">web</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h3 id="1-web"><a href="#1-web" class="headerlink" title="1. web:"></a>1. web:</h3><h4 id="1-web资源：动态（程序生成数据，有交互功能），静态（数据不变）"><a href="#1-web资源：动态（程序生成数据，有交互功能），静态（数据不变）" class="headerlink" title="1. web资源：动态（程序生成数据，有交互功能），静态（数据不变）"></a>1. web资源：动态（程序生成数据，有交互功能），静态（数据不变）</h4><h4 id="2-web应用：多个web资源放到同一个目录，要想供外界使用，就放到web服务器上"><a href="#2-web应用：多个web资源放到同一个目录，要想供外界使用，就放到web服务器上" class="headerlink" title="2. web应用：多个web资源放到同一个目录，要想供外界使用，就放到web服务器上"></a>2. web应用：多个web资源放到同一个目录，要想供外界使用，就放到web服务器上</h4>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/02/静态链表/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/dogHead.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/02/静态链表/" class="post-title-link" itemprop="url">静态链表</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-09-02 21:50:56 / 修改时间：22:00:16" itemprop="dateCreated datePublished" datetime="2019-09-02T21:50:56+08:00">2019-09-02</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据结构/" itemprop="url" rel="index"><span itemprop="name">数据结构</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li>概念 ： c语言中，使用数组结构的，结合顺序和非顺序特点的数据结构</li>
-<li>逻辑结构 ： 先初始化一个超大数组（结构体的数组，结构体包括两个变量：data ,cur(指向下一个节点的数组序号)，0号节点是备用链表的头</li>
-<li>创建：创建这个数组，然后每个节点的默认data是-1，cur是i+1（最后一个节点的cur是0）</li>
-<li>初始化（其实应该是从备用列表中，取一个新节点到可用链表中（可用链表和备用链表在一个数组中），除了0号节点）： <pre><code>int mallocarr(*arr){
-    int i = arr[0];//此时0号节点指向的是备用节点的第一位
-    if(arr[0]){
-        arr[0].cur = arr[i].cur
-    }
-return i;
-}</code></pre></li>
-</ol>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/09/01/python-IO/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/dogHead.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2019/09/01/python-IO/" class="post-title-link" itemprop="url">python IO</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2019-09-01 10:09:13 / 修改时间：10:46:31" itemprop="dateCreated datePublished" datetime="2019-09-01T10:09:13+08:00">2019-09-01</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/python/" itemprop="url" rel="index"><span itemprop="name">python</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li>打开文件：<br> #读取<br> f = open(url,’r’)<br> #写入（覆盖）<br> f = open(url.’w’)  ##这样就是创建新文件<br> #追加<br> f = open(url,’a’)</li>
-<li>一次性读：read </li>
-<li>创建新的文件目录：<br> import os<br> os.mkdirs(ur)</li>
-</ol>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </section>
 
   
@@ -1207,7 +1251,7 @@ return i;
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">33</span>
+          <span class="site-state-item-count">39</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1265,9 +1309,7 @@ return i;
         
           
         
-          
-        
-        <span class="site-state-item-count">9</span>
+        <span class="site-state-item-count">8</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>

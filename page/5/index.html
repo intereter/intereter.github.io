@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="拒绝庸俗，爱是真理">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Intere">
+<meta property="og:url" content="http://yoursite.com/page/5/index.html">
+<meta property="og:site_name" content="Intere">
+<meta property="og:description" content="拒绝庸俗，爱是真理">
+<meta property="og:locale" content="zh-CN">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Intere">
+<meta name="twitter:description" content="拒绝庸俗，爱是真理">
+  <link rel="canonical" href="http://yoursite.com/page/5/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>Intere</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Intere</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-wrapper">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content page-home">
+            
+  <section id="posts" class="posts-expand">
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/28/chapter6接口，lambda表达式与内部类/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/01/28/chapter6接口，lambda表达式与内部类/" class="post-title-link" itemprop="url">chapter6接口，lambda表达式与内部类</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-28 17:21:17" itemprop="dateCreated datePublished" datetime="2020-01-28T17:21:17+08:00">2020-01-28</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-29 17:34:56" itemprop="dateModified" datetime="2020-01-29T17:34:56+08:00">2020-01-29</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>6.1接口<br>一.接口是对于类的表现形式。<br>接口可以多implement<br>接口默认为public,其中的方法默认为public,含有的常量默认为<br>public static final ,不含有实例域与静态方法。其中的方法称为抽象方法。但在java 8 中，可以在接口中添加默认方法（也叫扩展方法,必须用default修饰），其是在接口中可实现的，也可为静态的</p>
+<pre><code>interface Test(){
+    default static void test(){
+        ...
+    }
+}</code></pre><p>二.接口的特性：<br>接口不是类，不能直接new,但可以声明接口的变量，这个变量可以指向类的实例</p>
+<pre><code>Test t = new Employee();</code></pre><p>可以用instanceof 判断某个对象是否实现了某个接口，也可以用来判断某个对象是否属于某个类（具有继承关系的也属于，子类属于父类，父类不属于子类）</p>
+<p>6.3lambda表达式<br>一.lambda表达式是什么：<br>   一个可传递的代码块，可以看作函数，通常是用于延长执行的代码块<br>二.lambda表达式的编写：<br>   包括参数，代码块，自由变量</p>
+<pre><code>(event) -&gt;{
+    do...
+}</code></pre><p>三.注意：<br>   lambda表达式只能处理不变的变量，如以下是不合法的</p>
+<pre><code>for(i=0;i&lt;10;i++){
+    ActionListenner litener = event-&gt;{
+        System.out.print(i);//i改变了，这样的操作不合法
+    }
+}</code></pre><p>四.lambda表达式用来做什么：<br>   用于转换为函数式接口。一些接口只有一个方法，这个方法是未实现的，传入一个lambda表达式则可以生成这样一个接口变量。如上面的ActionListener就是一个接口。这个接口可以传到其他地方生成对象，例如计时器等等</p>
+<p>6.4内部类<br>一.私有的内部类：<br>  在调用方法时可以在外部类内创建；<br>二.非私有的内部类：<br>  可以在外部类的作用域外创建</p>
+<pre><code>Outer outer = new Outer();
+Outer.inner inner =  outer.new Inner();</code></pre><p>三.注意：<br>   内部类不含有静态方法，所有静态量必须是final的（因为不同的外部类可能会有不同的内部类，对于static，我们希望它是内部类唯一的，设置为final使它不能被修改）<br>四.匿名内部类<br>   举例：监听器指向一个匿名内部类：</p>
+<pre><code>ActionListenner  listenner = new ActionListenner(){
+    Method and par...
+}</code></pre><p>具体实现规则：</p>
+<pre><code>Supertype s = new Supertype(....超的构造参数){
+    //匿名内部类由于没有名字，不能实现构造器
+    //其中的方法，域是对Supertype的扩展
+    //Supertype可以是接口，也可以是一个类
+}</code></pre><p>   举例：在某些方法需要一个对象时，也可以向这个方法传递一个匿名对象</p>
+<p>五.静态内部类：</p>
+<ol>
+<li>只有内部类可以定义为静态的</li>
+<li>静态内部类不能对外围类有引用，因此可以定义为静态的</li>
+<li>静态内部类可以有静态方法和静态类，非静态的内部类不可以有</li>
+<li>静态方法返回的对象必须是静态类的对象</li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/27/chapter5继承/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/01/27/chapter5继承/" class="post-title-link" itemprop="url">chapter5继承</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-27 17:28:31" itemprop="dateCreated datePublished" datetime="2020-01-27T17:28:31+08:00">2020-01-27</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-03 16:08:43" itemprop="dateModified" datetime="2020-02-03T16:08:43+08:00">2020-02-03</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>5.1<br>一.超类和子类：<br>   超类就是父类，也叫基类<br>二.继承了什么：<br>   子类继承了父类的非private的域和非private的方法，但父类的私有域是不能直接访问的，需要通过父类的域访问方法得到<br>   子类不继承父类的构造器</p>
+<pre><code>//Manager类继承了Employee
+public int getSalary(){
+    int salary = super.getSalary()+bonus;//使用super调用超类
+    return salary;
+}</code></pre><p>三.子类构造器：<br>   在子类构造中，若没有显式的调用父类的构造器，则默认调用父类的默认构造器（无参数）。若父类没有这样的构造器，则会报错</p>
+<pre><code>Manager(....,int bonus){
+    super(....);
+    this.bonus = bonus;
+}</code></pre><p>四.多态：<br>   指一个对象变量可以指向超类，也可以指向子类，这叫多态。<br>   根据对象变量实际指向的类型调用方法，这叫动态绑定。<br>   超类的引用可以指向子类，但子类的引用不能指向父类<br>五.final类和方法：<br>   用final修饰的类不能被继承，用final修饰的方法子类不能够覆盖<br>六.强制类型转换：<br>   一个超类的引用指向子类的对象（称为子类向上转型），可以将这个引用转为子类的引用<br>七.父类引用指向子类对象，可以调用子类对象的方法吗？<br>   除了构造方法，其他都不能。其既不能访问子类对象的特有域，也不能使用子类的方法，除非进行强制类型转换<br>八.protected:同一个包内，子类能够访问</p>
+<p>5.2 Object:所有类的超类<br>一.equals方法：<br>   在Object类中，equals方法默认是比较两者的引用，若引用相等则返回true.<br>   在实际应用中，仅仅比较引用是没有意义的。修改的equals方法应该先比较引用是否指向相同的对象，然后比较引用所指向的对象是否为空，再比较两者对象是否同属一个class,最后依次比较两者中各项。<br>   子类的equals方法应该先调用父类的equals方法</p>
+<pre><code>//显式参数是object类，比较使用object的equals
+boolean equals(Object other){
+    if(this == other){
+        return true;
+    }
+    if(other == null){
+        return false;
+    }
+    if(getClass()!=other.getClass()){
+        return false;
+    }
+    Employee otherobject = (Employee)other;
+    return Object.equals(this.name,otherobject.name)&amp;&amp;this.salary==otherobject.salary;
+}</code></pre><p>二.toString方法：<br>   返回对象的字符串表示。通常java的默认类都实现了这个方法。在如</p>
+<pre><code>String str = &quot;&quot; + Employee; //默认调用了Employee的toString方法
+//在print的时候也是</code></pre><p>   java中数组的字符串表示用Array.toString(arrayname) 或Array.deepToString(arrayname)得到</p>
+<p>5.7.反射：<br>一.Class类：<br>   java为每个实例所对应的类型都生成了一个标识Class类。<br>   一个class对象表示一种类型，不一定是类。</p>
+<pre><code>Emplyoee e = new Manager();//
+System.out.print(e.getClass.getName);//返回 Manager</code></pre>
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/27/chapter4对象与类/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/01/27/chapter4对象与类/" class="post-title-link" itemprop="url">chapter4对象与类</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-27 11:32:23 / 修改时间：17:29:01" itemprop="dateCreated datePublished" datetime="2020-01-27T11:32:23+08:00">2020-01-27</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>一. 类：构造对象的模板，构造对象称为类的实例化<br>二. 封装：数据隐藏，关键在于类中的方法不能直接访问其他类的实例域<br>三. 用户自定义类：</p>
+<ol>
+<li>构造器：<br>每个类可有1个或多个构造器，构造器无返回值</li>
+<li>封装：<br>关键在于数据域设为private,访问和修改数据域的方法另设，且不返回引用对象而返回对象的clone</li>
+<li>final修饰<br>对于数值来说，数值不可再修改。对于一个引用，它不会再指向其他对象，但其指向的对象仍然可以修改</li>
+<li>static:<br>静态域：用static修饰的域为类所拥有，例： Math.PI<br>静态方法： 用于不能向对象实施操作的方法，这种方法只能访问静态域<br>工厂方法： 返回一个类的实例的静态方法</li>
+<li>方法参数：<br>对于java,参数的调用是值调用，若调用的是引用，则在方法中初始化得到的参数是参数的拷贝值，拷贝值与引用参数指向同一个对象，但交换拷贝值不能达成交换参数所指向的对象的目的</li>
+<li>对象构造：<br>重载： 方法名相同，参数不同（方法名，参数称为方法签名）。重载后的方法可以返回不同类型返回值<br>显式域初始化： 在构造前，为所有域赋初值是一种很好的习惯<br>调用另一个构造器：<br> Test(String s){<pre><code>this(1,s);//用this（）调用另一个构造器</code></pre> }<br> 初始化的顺序： 在类第一次被调用时，静态域被初始化。类在被初始化的时候，先将所有域初始化为默认值，然后按声明顺序初始化各域，接着执行构造器</li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/27/chapter3命令行参数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/01/27/chapter3命令行参数/" class="post-title-link" itemprop="url">chapter3命令行参数</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-27 11:18:16 / 修改时间：11:19:53" itemprop="dateCreated datePublished" datetime="2020-01-27T11:18:16+08:00">2020-01-27</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <pre><code>java Testclass -h world</code></pre><p>表示在main方法中args[] 数组中，args[0] = -h, 1 = world</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/26/chapter3拷贝/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/01/26/chapter3拷贝/" class="post-title-link" itemprop="url">chapter3拷贝</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-26 23:27:42" itemprop="dateCreated datePublished" datetime="2020-01-26T23:27:42+08:00">2020-01-26</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-01-27 00:13:50" itemprop="dateModified" datetime="2020-01-27T00:13:50+08:00">2020-01-27</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>拷贝有深拷贝与浅拷贝，浅拷贝仅仅拷贝值（对于值类型）和内存地址（对于引用型），深拷贝拷贝所有的成员变量<br>浅拷贝： 使用=复制，arraycopy<br>深拷贝：改写后的clone</p>
+<pre><code>class Dog implements  Cloneable{
+    String name;
+    protected Object clone(){
+        Dog dog =null;
+        try {
+            dog = (Dog)super.clone();
+        }catch (Exception e){
+        }
+        return  dog;
+    }
+}
+class Test2 implements Cloneable{
+    int x;
+    private Dog dog = new Dog();
+    void setDog(String name){
+        this.dog.name = name;
+    }
+    String getname(){
+        return dog.name;
+    }
+    Test2(int x){
+        this.x = x;
+    }
+    protected Object clone() {
+        Test2 t = null;
+        try {
+            t = (Test2) super.clone();
+            t.dog = (Dog) dog.clone();
+        } catch (Exception e) {
+        }
+        return t;
+    }
+}public class TestCopy {
+
+    public  static  void  main(String args[]){
+        TestCopy testCopy = new TestCopy();
+        //使用=是对于对象的浅拷贝，仅仅复制了对象的内存地址
+        Test2 t1 =  new Test2(1);
+        Test2 t2 ;
+        t2 = t1;
+        t2.x = 2;
+        //System.out.printf(&quot;%d %d&quot;,t1.x,t2.x);
+        //修改clone方法后实现深拷贝（直接使用未修改的clone,即没有 t.dog = (Dog) dog.clone();）
+        //（也是浅拷贝，因为直接使用clone只是复制了对象的成员变量的内存地址）
+        Test2 t3 = new Test2(3);
+        t3.setDog(&quot;3&quot;);
+        Test2 t4 = (Test2) t3.clone();
+        t4.x = 4;
+        t4.setDog(&quot;4&quot;);
+        System.out.printf(&quot;t3 x: %d dogname %s,t4 x: %d dogname %s&quot;,t3.x,t3.getname(),t4.x,t4.getname());
+    }
+}</code></pre>
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/26/chapter3大实数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/01/26/chapter3大实数/" class="post-title-link" itemprop="url">chapter3大实数</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-26 21:52:54 / 修改时间：21:55:58" itemprop="dateCreated datePublished" datetime="2020-01-26T21:52:54+08:00">2020-01-26</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <pre><code>BigInteger integer  = BigInteger.valueOf(1);//创造一个数值等于1的整型大实数
+add,substract,devide,multiply(BigInteger)
+//BigDecimal</code></pre>
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/26/chapter1在终端中操作数据库/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/01/26/chapter1在终端中操作数据库/" class="post-title-link" itemprop="url">chapter1在终端中操作Mysql</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-26 21:52:54" itemprop="dateCreated datePublished" datetime="2020-01-26T21:52:54+08:00">2020-01-26</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-02-19 21:55:27" itemprop="dateModified" datetime="2020-02-19T21:55:27+08:00">2020-02-19</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>如何查找每一个科目最高分的学生姓名?<br>如何查找每一个学生的sno,cno,grade列？</p>
+<p>add : 添加表中的字段  insert: 添加表中内容<br>drop: 删除表或删除数据库 delete: 删除某一行<br>change: 修改字段形式 update: 更新某一行内容</p>
+<ol>
+<li><p>登录数据库服务器：<br>   mysql -uroot-p</p>
+</li>
+<li><p>显示所有数据库中的库：<br> show databases;</p>
+</li>
+<li><p>选择数据库：<br> use databasename;</p>
+</li>
+<li><p>查询当前所在表中的数据：<br> select * from excelname;<br> select name , id from tablename;<br> select distinct fieldname from tablename;//查询表中所有不重复的某字段<br> select * from score where degree between 60 and 80;//60到80的闭区间<br> select * from score where degree in (85,86,87);//degree为85或86或87的记录<br> select * from score order by value1 asc;,value2 desc//升序查询，降序是desc,查询按照value1升序，value2降序（优先：value1）</p>
+</li>
+<li><p>显示当前库中所有表：<br> show tables;</p>
+</li>
+<li><p>创建表：<br> create table tablename(各字段<br> check(条件)//创建表的约束<br> );<br> //记录是表中的一行，字段是组成记录的元素</p>
+</li>
+<li><p>删除表：</p>
+<p> drop table tablename;</p>
+</li>
+<li><p>查看某个表：</p>
+<p> describe tablename;<br> select function();//mysql中可以使用select查询字段，函数，表达式（计算表达式），常量</p>
+</li>
+<li><p>向表中插入字段：</p>
+<p> //第一种，支持插入多个字段,支持子查询<br> insert into tablename values(value1),<br> (value2);<br> //第二种，不支持同时插入多个字段，不支持子查询<br> insert into tablename set 字段1=…,字段2=..</p>
+</li>
+<li><p>删除字段：<br>delete from tablename where …;//可以roll back,假如删除了自增长的字段，字段添加时从断电开始<br>truncate table tablename;//清空表，不能带where,且不能roll back，假如删除了自增长的字段，字段从头开始</p>
+</li>
+<li><p>更新字段:<br>update tablename set field1=,filed2= … where ….;//修改单表中符合条件的某一行中的某个字段值</p>
+</li>
+<li><p>向表结构中添加多个字段：<br>alter table tablename add fieldname fieldtype…</p>
+</li>
+<li><p>or and not</p>
+</li>
+<li><p>统计：count<br>select count(*) from tablename where…..;//统计</p>
+</li>
+<li><p>最大值：max<br>select id from tablename where(degree = select max(degree) from tablename);</p>
+</li>
+<li><p>limit 0,1:表示从第0个数字开始查，最多查1个</p>
+</li>
+<li><p>avg();//平均值</p>
+</li>
+<li><p>group by field;//分组</p>
+</li>
+<li><p>where 与 having的区别<br>where用于聚合前查询的条件，having 用于聚合后，having后的条件可以使用聚合函数<br>select id from score group by lessonname having count(num)&gt;2;</p>
+</li>
+<li><p>模糊查询：like(); not like();</p>
+<p>like ‘k%’;//查询以k开头的字符串<br>like ‘%oo%’;//查询包含oo的字符串</p>
+</li>
+<li><p>union :将多个select查询结果放到一个集合中，默认删去重复的，若为 union all则包含重复值</p>
+</li>
+<li><p>any(): 任意一个  all(): 所有</p>
+</li>
+<li><p>使用as取别名</p>
+<p>select sname, ssex,sbirthday from student union select tname, tsex,tbirthday from teacher;<br>//得到表的字段名为sname, ssex,sbirthday<br>//使用as<br>select sname as name, ssex as name,sbirthday as name from student union select tname, tsex,tbirthday from teacher;</p>
+</li>
+<li><p>复制表数据做条件查询</p>
+<p>select * from score a where degree &lt; (select avg(degree) from score b where a.cno = b. cno);</p>
+</li>
+<li><p>将某个表中的数据复制到另一个表</p>
+<p>insert into table1 (fieldname1,….) select field1,… from table2;</p>
+</li>
+<li><p>拼接字符串：</p>
+<p>select concat(lastname,firstname) as 姓名 from …</p>
+</li>
+<li><p>不等于： &lt;&gt;   安全等于  &lt;=&gt; , 可以判断NULL值</p>
+</li>
+<li><p>substr(str,pos);//截取字符串，字符串位置pos从1 开始<br>instr(str1,str2);//返回str2在str1中的起始索引位置，找不到则返回0<br>trim(‘str’from ‘str2’);//从str2中去除前后的str1<br>lapd();//左填充<br>replace()’</p>
+</li>
+<li><p>数学函数</p>
+<p>round();//四舍五入<br>ceil();//向上取整<br>floor();//向下取整<br>truncate(number,位数);//截断保留几位<br>mod();//取余</p>
+</li>
+<li><p>时间函数</p>
+<p>now();//现在的日期+时间<br>curdate();//现在的日期<br>curtime();//现在的时间</p>
+</li>
+<li><p>if</p>
+<p>select if(10&gt;5,’大’,’小’);//第一个条件满足，返回第一个值，否则第二个</p>
+</li>
+<li><p>case:</p>
+<p>case 要判断的值<br>when 值 = ? then 要显示的值或语句;//</p>
+<p>case<br>when 条件 then ……;</p>
+</li>
+<li><p>单行函数：将一个数据进行处理，返回一个值<br>分组函数：将虚拟表看做一个组，处理一组数据，返回一个值</p>
+</li>
+<li><p>分组查询：<br>分组前查询：查询原始表中有的数据，条件使用where<br>分组后查询：查询原始表中没有的数据，条件使用having</p>
+</li>
+<li><p>exists();//返回是否存在</p>
+</li>
+<li><p>分页查询：<br>select .. from … limit start,调数;</p>
+</li>
+<li><p>联合查询：union</p>
+</li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/26/chapter3输入与输出/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/01/26/chapter3输入与输出/" class="post-title-link" itemprop="url">chapter3输入与输出</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-26 20:36:04 / 修改时间：21:28:05" itemprop="dateCreated datePublished" datetime="2020-01-26T20:36:04+08:00">2020-01-26</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>一.输入<br>输入使用Scanner或Console类，两者均在java.util包中，其中Console类可以用来输入密码（对于Scanner类输入有显回的原因）,使用：<br>    import java.util.*<br>    Scanner scan = new Scanner(Sysytem.in);//与标准输入流绑定<br>    String word = scan.next;//读一个单词，以空白符分隔符<br>    String line = scan.nextLine;//以换行为分隔符<br>    while(scan.hasNext())….<br>    //还有nextInt,nextDouble等方法<br>    Console console = System.console;<br>    char a[] = console.readPassword();<br>二.格式化<br>    String str = String.format(“hello,%s”,test);<br>    System.out.print(“1$f”,new Date());//将Date()中第一个参数以浮点数形式输出</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/25/看这里！/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/01/25/看这里！/" class="post-title-link" itemprop="url">看这里！</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-25 17:31:03 / 修改时间：17:33:12" itemprop="dateCreated datePublished" datetime="2020-01-25T17:31:03+08:00">2020-01-25</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h1 id="祝张慧小朋友新年快乐，希望她永远聪明可爱，温柔大方，健健康康"><a href="#祝张慧小朋友新年快乐，希望她永远聪明可爱，温柔大方，健健康康" class="headerlink" title="祝张慧小朋友新年快乐，希望她永远聪明可爱，温柔大方，健健康康"></a>祝张慧小朋友新年快乐，希望她永远聪明可爱，温柔大方，健健康康</h1>
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/01/23/程序员岗位及详解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/01/23/程序员岗位及详解/" class="post-title-link" itemprop="url">程序员岗位及详解</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-01-23 11:07:09 / 修改时间：12:56:43" itemprop="dateCreated datePublished" datetime="2020-01-23T11:07:09+08:00">2020-01-23</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/基础知识/" itemprop="url" rel="index"><span itemprop="name">基础知识</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>前端 后端 全栈 运维 测试 大数据 游戏 研究<br>我的想法： 后端到大数据  （我是全菜工程师！！！！）</p>
+<p>一.来自codesheep对于前后端的讲解：<br>1.前后端趋同，都在向工程化走<br>2.前后端需求岗位量都差不多<br>3.前端入门快，但和后端一样，都逐渐复杂<br>4.自学后端容易因为业务量不足（访问流量不足）遇到技术无法提高的瓶颈</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span><a class="page-number" href="/page/6/">6</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/6/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/dogHead.JPG"
+      alt="intere">
+  <p class="site-author-name" itemprop="name">intere</p>
+  <div class="site-description motion-element" itemprop="description">拒绝庸俗，爱是真理</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">10</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+
+        </div>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">intere</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.3.0</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        <span>0%</span>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.3.0"></script><script src="/js/motion.js?v=7.3.0"></script>
+<script src="/js/schemes/pisces.js?v=7.3.0"></script>
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+</body>
+</html>

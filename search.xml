@@ -1,9 +1,409 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[注解]]></title>
+    <url>%2F2020%2F03%2F22%2F%E6%B3%A8%E8%A7%A3%2F</url>
+    <content type="text"><![CDATA[什么是注解官方解释：Java 注解用于为 Java 代码提供元数据。作为元数据，注解不直接影响你的代码执行，但也有一些类型的注解实际上可以用于这一目的。Java 注解是从 Java5 开始添加到 Java 的。 形象解释：注解好像一个标签。这个标签可以贴在类，方法，甚至一个变量上。贴上了这个标签的类或方法拥有了标签内的属性，如果是一个变量(值类型)，那么它的值是注解中对应参数的值 注解内有什么： 属性。即成员变量。但是没有方法 实现： 反射机制 注解怎么用 定义注解: @interface test{ }注解可以用来修饰注解，这种注解称为元注解。java中有@Retention、@Documented、@Target、@Inherited、@Repeatable 注解也可以被引用 TestAnnotation testAnnotation = Test.class.getAnnotation(TestAnnotation.class);// TestAnnotation是一个注解注解不是代码的一部分！ (大佬的博客更详细)[https://blog.csdn.net/briblue/article/details/73824058]]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[计网第四章编码]]></title>
+    <url>%2F2020%2F03%2F12%2F%E8%AE%A1%E7%BD%91%E7%AC%AC%E5%9B%9B%E7%AB%A0%E7%BC%96%E7%A0%81%2F</url>
+    <content type="text"><![CDATA[4.1数字到数字转换：涉及的三种技术：线路编码，块编码，扰动 4.1.1 线路编码： 指数字数据转换为数字信号的过程 特性：r(每个信号元素承载的数据元素的个数(位数))数字速率：N,比特率数据速率：S,波特率， S = c * N / r = B min带宽： B,是波特率影响了带宽而不是比特率基线： 接收方接受信号时，接受信号的功率的运行时平均值。 长的0或1字符串会引起基线偏移，使接收方不能正确的解码直流成分：DC成分。频率很低的部分 4.1.2 线路编码方案： NRZ: 不归零，单极性编码 NRZ - L ： 0，高电平， 1 低电平。 NRZ - I： 有跳变，位值是1，无跳变，位值是0 。 平均信号速率： N/2。 长0或1没有自同步。含DC RZ：1是高电平，0是低电平，1到0的中间电平为0。 平均信号速率：N/2 双相编码：r = 1/2 , S ave = N曼彻斯特：结合RZ, NRZ-L。位中间跳变，0是高，1是低差分曼彻斯特： 结合RZ, NRZ-I。 位中间跳变，在位值开始时，0跳变，1不跳变 双极性编码：AMI: 0，电平为0， 1，电平交替正负。伪三元： 1，电平为0. 0，电平交替正负 多电平方案(即信号元素包含多电平)：mBnT: 前两位表示数据模式，m为模式长度，B表示2进制。n是信号模式的长度(有几个信号？)， T表示一个信号有3个电平4D- PAM5：5个电平：-2，-1,0,1，2， 四路传输 多线路传输：MLT-3是其中的一种，三线路传输10m: 曼彻斯特编码100m: MLT-31000m: 4D-PAM5 4.1.3块编码：把m个bit变成n个作为一个块传输(增加冗余位，m&lt; n)。 即分组，置换，组合。 通常是组合编码后再使用其他的线性传输 4B/5B编码 ：用5位组置换4位组，结合NRZ，解决连续0过多的问题，5位中最多只有3个连续0.(包含不超过一个前导0，两个后缀0) 8B/10B: 高5位用5B/6B,低4位用3B/4B 4.1.4扰动 B8ZS(双极性8零替换)8个0替换成 000VB0VB(v与0之前第一个电平极性相同，B相反，V,B间也会比较极性) HD83: 4个连续0替换为000V或B00V(最后一次替换后到当前替换有几个非0极性，奇数个则当前是000V,否则B00V) 4-2 模拟到数字转换4.2.1脉冲码调制(PCM：把模拟信号转换成数字信号的最通用技术):三步骤：采样，量化，编码成位流 采样：每隔Ts(采样周期)采样，采样速率(周期的导数)至少是信号中所含最高频率的两倍(2 fmax:奈奎斯特速率)。对于低通信号，最高频率是 0 + B 量化：量化等级： L (量化等级说明了每个样本有 log2 L位)量化的dalta: dalta = (max - min)/L，样本值量化时取值取最接近的n * dalta量化误差： 量化值与实际值之差。量化误差对SNRdb的影响 SNRdb = 6.02nb + 1.76 db, nb是量化值的编码位数 L = 2的nb次方 通过采样，量化，得比特率 为 f * log2 L( f表示1s采样几次， log2 L 表示1次采几位)]]></content>
+      <categories>
+        <category>计网</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[nio]]></title>
+    <url>%2F2020%2F03%2F10%2Fmiannio%2F</url>
+    <content type="text"><![CDATA[简介： new io ,新的io api，面向缓冲区而不是面向流 nio使用 channel发送和接受数据 核心组件： channel(管道) , bufffer(就像小火车) , selector. 可以把数据写到channel,buffer中，selector用于选择通道 serverSocketChannel(监听链接请求) 和 socketChannel(Tcp的数据读写) Buffer:属性： capacity(容量，缓冲区大小) limit(限制，缓冲区操作数据大小限制)position(缓冲区正在操作数据的位置) mark()标记当前position，使用reset()返回标记处allocate()获取缓冲区put():写入get(byte数组):读出到byte数组flip():切换到读数据模式rewind():把buffer变成原来未读的样子clear():清空缓冲区，但里面的数据依然存在，只是被遗忘了 channel:read(buffer)将通道数据读到缓冲区中 在Java NIO体系中，SocketChannel是用于TCP网络连接的套接字接口，相当于Java网络编程中的Socket套接字接口。]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[http基础知识]]></title>
+    <url>%2F2020%2F03%2F10%2Fmianhttp%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
+    <content type="text"><![CDATA[服务器，客户端都是一组程序]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[maven初学]]></title>
+    <url>%2F2020%2F03%2F09%2Fmaven%E5%88%9D%E5%AD%A6%2F</url>
+    <content type="text"><![CDATA[命名规范：groupid: 隶属组织.项目名artifactID: 表示该模块是于该项目的哪个模块，构建名必须是小写字母，没有其他字符]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>maven</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[springbootchapter1简介]]></title>
+    <url>%2F2020%2F03%2F09%2Fspringbootchapter1%E7%AE%80%E4%BB%8B%2F</url>
+    <content type="text"><![CDATA[简介：基于spring框架的再封装,spring技术栈的整合 优点：快速创建独立运行的spring项目及主流框架集合使用嵌入式的servlet容器(servlet原理？)starter自动依赖和版本控制大量的自动配置无需配置xml 微服务(一种架构风格)一个应用由一组微小服务构成，每一个服务是一个独立的，可替换的软件单元，它们之间通过http互通]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>spring boot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[jdbcchapter5DAO]]></title>
+    <url>%2F2020%2F03%2F09%2Fjdbcchapter5DAO%2F</url>
+    <content type="text"><![CDATA[定义： 一种模式，包括Data Accessor 和 Data Object? 一个完整的DAO模式： 数据库连接类，封装了对数据库的操作 VO类，对应的数据库中的表，每个bean的属性都是其中的元素 DAO接口，定义了数据库操作的接口 DAO实现类，实现DAO接口 DAO工厂类，用于获取DAO实现类的实例]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[jdbcchapter4事务]]></title>
+    <url>%2F2020%2F03%2F09%2Fjdbcchapter4%E4%BA%8B%E5%8A%A1%2F</url>
+    <content type="text"><![CDATA[自动提交的操作：DDL断开数据库连接后]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>jdbc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[jdbcchapter3jdbccrud操作]]></title>
+    <url>%2F2020%2F03%2F04%2Fjdbcchapter3jdbccrud%E6%93%8D%E4%BD%9C%2F</url>
+    <content type="text"><![CDATA[疑问：每次批处理crud都要获取连接和断开？频繁获取连接是否会降低效率 为什么不用statement类：会造成sql语句注入sql语句拼接，麻烦 什么是crud:c: create r: read u: update d: delete 使用preparedStatement类（Statement的子类）： public class LearnCreate { public static void main(String args[]){ LearnCreate learnCreate = new LearnCreate(); learnCreate.connectest(); } //测试插入，不过方法名懒得改了 void connectest(){ try { Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;); String url = &quot;jdbc:mysql://localhost:3306/learnjdbc?user=root&amp;password=&amp;serverTimezone=UTC&quot;; try { //1.连接 Connection connection = DriverManager.getConnection(url); //System.out.print(connection); //2.预编译preparedStatement String sql = &quot;insert into person(id,name)values(?,?)&quot;;//??是占位符 //获得sql的预编译PreparedStatement PreparedStatement preparedStatement = connection.prepareStatement(sql); //3.填充占位符 //parameterindex是索引号，与sql语句中依次填写的顺序一致 preparedStatement.setInt(1,0); preparedStatement.setString(2,&quot;hh&quot;); //通用：setObject //例如封装通用方法时 void update(string sql, Object ... args){ for(int i=0;i &lt; args.length; i++){ preparedStatements.setObject(i+1, args[ i ]); //索引从1开始 } } //4.执行 preparedStatement.execute(); //5.关闭资源 if (preparedStatement!=null){ preparedStatement.close(); } if (connection!=null){ connection.close(); } } catch (SQLException e) { e.printStackTrace(); } } catch (ClassNotFoundException e) { e.printStackTrace(); } } } //测试查询：有返回的结果集，对象名是ResultSet //与前面步骤一致，连接，预编译sql语句，但不使用excecute ResultSet result = preparedStatements.excecuteQuery; 一个表中通用的查询： ResultSet result = preparedStatements.excecuteQuery; //结果集的元数据，包含结果集的列数，列名等信息 ResultSetMetaData metadata = result.get ResultSetMetaData(); int columncount = metadata.getcolumncount(); //next方法，返回布尔值，判断结果集此行是否存在，存在则返回true，指针下移 if(result.next){ //最好使用一个对象来封装对应查询表的属性值 //结果是返回这个对象 Customer cust = new Customer(); for(int i=0;i &lt; columncount;i++){ Object columnvalue = result.getObject(i+1); String columnname = metadata.getColumnname(i+1); //使用列名反射，填充对象中对应的属性值 Field field = Customer.Class.getDeclaredField(columnname); field.setAccessible(true); field.set(cust,columnvalue);//设置值 } return cust; } 不同表中通用的查询： //使用泛型返回 // &lt; T&gt;: 泛型参数申明 &lt; T &gt; T getQuery(Class&lt; T&gt; clazz , String sql , Object … args){ } Blob类型(二进制文件)操作 四种Blob: TinyBlob(255bit) Blob(65k) MediumBlob(16M) LongBlob(4G)//前面写的都是最大容量 存储文件过大会使数据库性能下降 操作Blob //setBlob()插入//读取与保存：采用二进制文件读取与保存的方法Blob blob = resultSet.getBlob(“valuename”);InputStream in = blob.getBinaryStream(); 批量操作：使用Batch //使用前：在url中添加?rewriteBatchedStatements=true //执行完sql语句后再提交而不是自动提交，提高速率 connection.setAutoCommit(false); ps = connection.preparedStatement(sql);//预编译 … ps.setObject(..);//填充 ps.addBatch(); if… ps.excecuteBatch();//执行 ps.clearBatch();//清空 … connection.commit();]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>jdbc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[jdbcchapter2数据库连接]]></title>
+    <url>%2F2020%2F03%2F04%2Fjdbcchapter2%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%2F</url>
+    <content type="text"><![CDATA[优点： 配置文件和代码分开，解耦 打包方便 连接步骤： 通过配置文件获得四个基本量： 用户名，密码，url，驱动名 Inputstream in = MainClassName.getClassLoader.getresource(配置文件url);Properties p = new Properties();p.load(in);String user = p.getProperties(username);…//String url = “jdbc:mysql://localhost:3306/dbname?useSSL=false&amp;//serverTimezone=UTC”; 注册驱动: Class.forname(driver); 连接： Connection conn = DriverManerger.getConnection(url);]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>jdbc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[jdbcchapter1jdbc概述和程序编写]]></title>
+    <url>%2F2020%2F03%2F02%2Fjdbcchapter1jdbc%E6%A6%82%E8%BF%B0%E5%92%8C%E7%A8%8B%E5%BA%8F%E7%BC%96%E5%86%99%2F</url>
+    <content type="text"><![CDATA[什么是jdbc: 一组java的，独立于所有数据库的，用于使用java语言操作数据库的api 程序编写步骤： 导入java.sql包 附加相应数据库厂商的驱动 加载驱动程序 创建connection对象： 连接数据库 创建statement对象： 操作 创建resultset对象： 返回操作结果 关闭statement,connection]]></content>
+      <categories>
+        <category>web</category>
+      </categories>
+      <tags>
+        <tag>jdbc</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[计网chapter1绪论]]></title>
+    <url>%2F2020%2F02%2F29%2F%E8%AE%A1%E7%BD%91chapter1%E7%BB%AA%E8%AE%BA%2F</url>
+    <content type="text"><![CDATA[1.1 数据通信数据通信是,具有4个特点。数据通信系统包括5个部分。数据表示有。数据流有3中方式__。1.2 网络1.2.1 分布式处理1.2.2 网络具有3个准则：性能，可靠性，安全性。性能可以通过吞吐量和延迟来度量。1.2.3 物理结构：包括连接类型和拓扑结构。1.2.4 网络分类与模型 1.3 因特网是一种互联网]]></content>
+      <categories>
+        <category>计网</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter21mysql性能]]></title>
+    <url>%2F2020%2F02%2F26%2Fchapter21mysql%E6%80%A7%E8%83%BD%2F</url>
+    <content type="text"><![CDATA[限制性能的原因： explain： 作用：模拟mysql优化器执行你的sql语句，从而知道性能瓶颈 使用：explain + 执行语句 id:id相同，由上至下执行。id不同，id越大的优先度越高。 seclect type: 查询类别primary: 查询中包含子查询，则在最外层的被标记为primarysubquery: 子查询中的第一个查询DEPENDENT SUBQUERY：子查询中的第一个SELECT，而外面的查询。即子查询依赖于外层查询的结果。UNION: 表示此查询为UNION的第二或后续的查询DEPENDENT UNION: UNION中的第二个或后面的查询语句，位于外面的查询UNION RESULT: UNION的结果 table: 这次查询的数据来自与那一张表 type：显示查询使用了哪一种连接类型性能：system&gt;const&gt;eq_ref&gt;ref&gt;range&gt;index&gt;allall: 全表扫描system：表只有一行记录const: 表示通过索引查询一次就找到了。通常是查询主键或unique的eq_ref：唯一性索引扫描，索引是uniqueref: 非唯一性索引扫描，会返回符合某个条件的所有行range: 某个范围内的查询，一般是使用了between,in,&gt;,&lt;等index: 全索引扫描。什么时候是全索引扫描： 搜索某个带索引的字段值。 possible keys 和keyposiible keys: 返回查询字段上存在的索引(只是返回，这些索引在实际使用中可能并没有使用)key : 返回查询中实际使用的索引。当使用覆盖索引时，possible keys中不显示索引，key返回覆盖索引名(覆盖索引：当查询时只用从索引中得到数据而不需要从数据库中得到，就是覆盖索引) key_len:返回使用的索引的最大可能长度，并非实际使用值 ref:显示哪一列或哪个常量被和索引一块使用来查询 rows： 估计查询得到结果大概需要查询的行数 extra:额外信息using filesort: mysql自行使用了文件排序using temporary: 使用了临时表]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter20mysql索引]]></title>
+    <url>%2F2020%2F02%2F26%2Fchapter20mysql%E7%B4%A2%E5%BC%95%2F</url>
+    <content type="text"><![CDATA[索引语法 什么是索引：是帮助mysql高效获得数据的排序的快速查找的数据结构（满足特定算法）。目的在于提高查询效率，可以类比字典(会影响到order by)。索引往往以索引文件的形式存储在磁盘上 优势：提高查询效率，降低排序成本 劣势：索引占用空间，且更新数据还需更新索引 分类：单值索引：一个索引只含单个列，一个表可以含有多个单值索引(一张表最多不要超过5给单值索引)唯一索引：索引列的值必须唯一，但可以为空(什么叫索引列的值，一个值？)复合索引：一个索引包含多个列 什么时候时候建索引： 建立主键自动建立索引 需要频繁查询的字段 建立复合索引而不是单值索引 查询中排序或分组或统计的字段建立索引 查询中与其他表建立关联的字段建立索引 不适合建索引： 重复性高的列 记录太少的表 经常更新的]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter19mysqljoin]]></title>
+    <url>%2F2020%2F02%2F26%2Fchapter19mysqljoin%2F</url>
+    <content type="text"></content>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter18mysql性能下降原因与sql执行加载顺序]]></title>
+    <url>%2F2020%2F02%2F26%2Fchapter18mysql%E6%80%A7%E8%83%BD%E4%B8%8B%E9%99%8D%E5%8E%9F%E5%9B%A0%E4%B8%8Esql%E6%89%A7%E8%A1%8C%E5%8A%A0%E8%BD%BD%E9%A1%BA%E5%BA%8F%2F</url>
+    <content type="text"><![CDATA[性能下降： 查询语句写的不好 关联表太多 索引问题 服务器调优和各参数设置 加载顺序： from on(连接条件) join where group by having select distinct order by limit]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter17mysql逻辑架构]]></title>
+    <url>%2F2020%2F02%2F26%2Fchapter17mysql%E9%80%BB%E8%BE%91%E6%9E%B6%E6%9E%84%2F</url>
+    <content type="text"><![CDATA[connector mysql server: connection pool &amp; parser(程序分析) &amp; optimizer(优化器) &amp;cache engine file system(文件i/o)]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter16mysql分支结构]]></title>
+    <url>%2F2020%2F02%2F24%2Fchapter16mysql%E5%88%86%E6%94%AF%E7%BB%93%E6%9E%84%2F</url>
+    <content type="text"><![CDATA[分类： case ,if , 循环 case 结构： case when … then 要返回的值 when .. else.. end case; 循环 //跳出： leave 标签名 //进行下一次循环： iterate //while:先执行后判断 a: while 条件 do ... end while a; //a是while的标签名 //repeat:先判断后执行 label: repeat 循环体 until ... end repeat label; //死循环 label: loop 循环体 end loop label;]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter15mysql函数]]></title>
+    <url>%2F2020%2F02%2F24%2Fchapter15mysql%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[函数与存储过程的区别：函数有且仅有一个返回，存储过程可以有多个 创建函数 create function name (参数列表) returns 返回值类型 begin .. end]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter14mysql存储过程]]></title>
+    <url>%2F2020%2F02%2F24%2Fchapter14mysql%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B%2F</url>
+    <content type="text"><![CDATA[什么是存储过程：一组复杂的mysql语句的封装，可以被外界调用 存储过程的创建: delimiter 结束符号(为了与;区别开) create procedure name(参数列表) begin sql语句 end结束符号 //参数列表： //参数模式 参数名 参数类型 in name type //参数模式: in: 参数可以作为输入 out:参数可以作为返回值 inout:上述结合 存储过程的调用: call(参数列表) 删除： drop procedure name;]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter13mysql变量]]></title>
+    <url>%2F2020%2F02%2F24%2Fchapter13mysql%E5%8F%98%E9%87%8F%2F</url>
+    <content type="text"><![CDATA[变量分类：系统变量（全局，会话）,自定义变量（用户变量，局部变量） 系统变量： 查看所有系统变量 show global variables;//查看所有全局变量show session variables;//查看所有会话变量，不写session默认查看会话变量show global|session variables;//查看所有系统变量 查看指定变量 select @@变量名; 修改变量值 set @@变量名 = ; 自定义变量： 用户变量： //作用范围：一个会话//创建并初始化set @变量名 = ；//1select @变量名:= ;//2//查看select @变量名; 局部变量： //作用范围：一个事务。//定义/声明必须在begin,end中的第一句话//初始化：setbegin;declare m int default 1;// declare type default value;set m = …;end;]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter12视图]]></title>
+    <url>%2F2020%2F02%2F24%2Fchapter12mysql%E8%A7%86%E5%9B%BE%2F</url>
+    <content type="text"><![CDATA[mysql视图的定义： //view,一种虚拟的表，只保存了逻辑语句的空间。封装了各种查询逻辑，方便得到查询结果 create view v as select * from tablename;//创建了一个视图 select * from v;//使用视图 创建视图 create view viewname as 查询语句; 修改视图 //1 create or replace view viewname as 查询语句; //2 alter view viewname as 查询语句; 查看，删除 show.. drop view viewname; 视图内容的修改 insert;//增 delete;//删 update;//改 //对视图的修改会导致其关系到的表的修改，但是有一些视图是不能修改的，比如 //常量视图，使用子查询得到的视图，使用join得到的视图。 //一般不对视图修改]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter11mysql语言分类]]></title>
+    <url>%2F2020%2F02%2F19%2Fchapter11mysql%E8%AF%AD%E8%A8%80%E5%88%86%E7%B1%BB%2F</url>
+    <content type="text"><![CDATA[SQL（Structure Query Language）结构化查询语言 DQL（data query language）数据查询语言 select操作 DML（data manipulation language）数据操作语言，主要是数据库增删改三种操作 DDL（data defination language）数据库定义语言，主要是建表、删除表、修改表字段等操作 DCL（data control language）数据库控制语言，如commit，revoke之类的，在默认状态下，只有sysadmin,dbcreator,db_owner或db_securityadmin等人员才有权力执行DCL]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[计算机组织与体系结构chapter1]]></title>
+    <url>%2F2020%2F02%2F19%2F%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E7%BB%87%E4%B8%8E%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84chapter1%2F</url>
+    <content type="text"><![CDATA[计算机系统组成：软件系统，硬件系统 硬件系统： 早期的冯诺依曼结构：以运算器为中心 冯诺依曼特点： 二进制编写指令。。。 北桥：集成高速接口与内存处理器南桥：集成低速接口]]></content>
+      <categories>
+        <category>计算机组织与体系结构</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[读书笔记:如何阅读一本书]]></title>
+    <url>%2F2020%2F02%2F16%2F%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0-%E5%A6%82%E4%BD%95%E9%98%85%E8%AF%BB%E4%B8%80%E6%9C%AC%E4%B9%A6%2F</url>
+    <content type="text"><![CDATA[##最重要的是，你通过阅读得到的知识，可以转化成怎样的措施和生活建议，可以用来做什么和怎么做。关键时阅读完这本书后，以后你会怎么做 第一章阅读的活力与艺术：内容： 阅读分为为了获得咨询阅读或消遣而阅读，还有为了增进理解而阅读。为了增进理解阅读需要我们去主动阅读，主动阅读需要观察力，记忆，分析，想象。主动阅读时一个主动学习的过程。 阅读的层次 基础阅读：基本的阅读，明白文中的句子在说什么，要求是能认字就行。 检视阅读：在有限时间内，快速了解一本书表象上给你的知识。 分析阅读：深度分析一本书，将一本书变成你自己的。然而要注意的是，有些书值得这么做，有些仅仅值得浅尝辄止。 主题阅读：在一个主题上阅读多本书 检视阅读： 两种检视阅读：有系统的略读或粗读 与 粗浅的阅读 检视阅读的帮助：告诉你一本书值不值得分析阅读。告诉你一本书的大概。 有系统的阅读：第一步，先读书名和序，给这本书分类。第二步，读书的目录，在心里留下一个大概框架。第三步，读一读索引和出版者介绍。完成以上三步，可大概知道是否需要继续往下读。第四步，四处翻一翻，留意书的脉络是怎样递进的，绝对不要错过作者最后的总结 粗浅的阅读：暂时放下不理解的地方。 什么时候使用检视阅读： 想要大概了解一本书，知道其是否值得读时。阅读一本难懂的书时。]]></content>
+      <categories>
+        <category>读书笔记</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter10mysql索引]]></title>
+    <url>%2F2020%2F02%2F15%2Fchapter10mysql%E7%B4%A2%E5%BC%95%2F</url>
+    <content type="text"><![CDATA[什么是索引： 创建索引后，拥有索引的字段，mysql会在其内部创建该索引中每一项的“指针”。当搜索某一行 where name = ‘mike’; 若name这一字段创建了索引，则只需要从该列搜索，不需要遍历每一列。增大搜索速度，但增长了更新的时间 设置索引 create index indexname on tablename(fieldname); create table tablename( index[ idnexname ] (fieldname); ) primary key是索引]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter9mysql通配符]]></title>
+    <url>%2F2020%2F02%2F15%2Fchapter9mysql%E9%80%9A%E9%85%8D%E7%AC%A6%2F</url>
+    <content type="text"><![CDATA[通配符 描述 % 替代 0 个或多个字符 _ 替代一个字符 like ‘_oogle’; [charlist] 字符列中的任何单一字符 [^charlist] 或[!charlist] 不在字符列中的任何单一字符]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter8mysql事务]]></title>
+    <url>%2F2020%2F02%2F12%2Fchapter8mysql%E4%BA%8B%E5%8A%A1%2F</url>
+    <content type="text"><![CDATA[什么是事务：一个完整的不可拆分的工作流程。每一个语句成功时事务才算成功，有一个失败则失败。分类：显式与隐式 自动提交：mysql中默认隐式事务，即自动提交,即每一句话都看作一个事务，是不能回滚的 roll back;//无效 select @@autocommit;//得到 @@autocommit = 1; set autocommit = 0;//关闭自动提交，显式事务开启 //任何操作后输入commit才真正有效 commit;//这之后roll back无效 使用begin 或 start transaction 手动开启事务。处于begin或。。的后方语句组成一个事务，可以回滚（就算默认事务开启） begin; update….; update….; commit;//提交，事务结束，不可以回滚 事务的四大特征：A： 原子性，事务是最小的单位C： 一致性，要求事务中所有语句成功事务才成功I: 隔离性，事务之间隔离D： 持久性，事务一旦结束就不能回滚 事务的隔离性： read uncommitted(读未提交,副作用：脏读，不可重复读，幻读)a 操作事务，事务未提交，但是b可以看到操作的结果 read committed(读已提交，即不可重复读，幻读) repeatable read(可重复读，mysql默认级别，副作用：幻读)确保事务可以多次从一个字段读取相同的值，当这个事务a在操作时，禁止其他事务对这个字段进行更新 serializable(串行化，无以上三个副作用，当一个事务中对于数据库操作时，这个操作完成了，其他数据库的写操作才会继续进行) 查看隔离性级别： //8.0select @@global.transaction_isolation;//系统级别select @@transaction_isolation;//会话级别//5.xselect @@global.tx_isolation;select @@tx_isolation; 设置隔离级别 set global transcation_isolation level read uncommitted; 副作用脏读：一个事务可以读取其他事务未提交的操作不可重复读：一个事务从开始到提交前，所做任何操作其他事务是无法查看的。而更新某个字段的操作可以查看，即a修改了某个字段，b查看该字段发现该字段与之前不同幻读：事务a读取表中某字段，然后事务b插入了某些行，则a再次读取时发现多了几行 隔离级别越高，性能越差 savepoint; do…; savepoint a; do ….; rollback to a;//回滚到保存点a]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter7mysql连接]]></title>
+    <url>%2F2020%2F02%2F12%2Fchapter7mysql%E8%BF%9E%E6%8E%A5%2F</url>
+    <content type="text"><![CDATA[内连接： inner join 或join //表示两张表通过一定的条件查询并连接 select * from person join card on person.id = card.id;// on后是条件 左外连接： left outer join 或 left join //表示两张表中左边表都查询得出，右边符合条件才得出，而连接时，右边没有则为null select * from person left join card on person.id = card.id; 右外连接： right join 全外连接： full join //mysql不支持 full join. //full join 表示连接两个表中所有，不符合条件的也都用null补上]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter6子查询]]></title>
+    <url>%2F2020%2F02%2F11%2Fchapter6%E5%AD%90%E6%9F%A5%E8%AF%A2%2F</url>
+    <content type="text"><![CDATA[查询班级号为 95011的学生成绩的平均分 //score表中没有班级号，从student表中选取学生编号（score表中有学生编 //号） select avg(degree) from score where sno in (select sno from student where class = &apos;95011&apos;) group by cno;]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter5多表查询]]></title>
+    <url>%2F2020%2F02%2F10%2Fchapter5%E5%A4%9A%E8%A1%A8%E6%9F%A5%E8%AF%A2%2F</url>
+    <content type="text"><![CDATA[使用where table1.id = table2.id;并联查询]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter4数据库的设计范式]]></title>
+    <url>%2F2020%2F02%2F10%2Fchapter4%E6%95%B0%E6%8D%AE%E5%BA%93%E7%9A%84%E8%AE%BE%E8%AE%A1%E8%8C%83%E5%BC%8F%2F</url>
+    <content type="text"><![CDATA[第一范式：所有字段都是不可拆分的原子值（1NF） 第二范式：在满足第一范式的条件下，除了主键字段以外的字段都必须依赖于主键字段（用拆表实现） 第三范式：在满足第二范式的条件下，除了主键列的其他列之间不能有传递关系]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter3数据库中的约束]]></title>
+    <url>%2F2020%2F02%2F10%2Fchapter3%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E7%9A%84%E7%BA%A6%E6%9D%9F%2F</url>
+    <content type="text"><![CDATA[主键约束：添加上该约束的字段必须在创建记录时时唯一且非空的(非NULL) //添加主键约束 一张表只能有一个主键约束 create table user(id int primarykey) //也可这么写： primary key(id,name) 代表id,name两个的组合时唯一和非空的,其中任一字段不为空，这叫做联合主键 //在建表后添加和删除或修改约束 //添加 alter table tablename add primary key(id); //删除 alter table tablename drop primary key; //修改 alter table tablename change(或者是primary) primary key(id); 自增约束：添加上该约束的字段，在向table中添加记录时，该字段可不用填写，会自动增长 create table user(id int primarykey auto_increment); 唯一约束： unique 非空约束： not null 默认约束：当插入记录时，如果没有填入字段，则使用默认修饰的字段会填入默认值 create table tablename( id int default 10;//默认值为10 ) 外键约束 foreign key(副表中的一个字段) references 主表name (主表中的一个字段) //1.主表中的一个字段的值如果被副表所依赖，该值不能删去 //2.副表中依赖主表某个字段的字段，添加的字段值只能是父表中已经有的值]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter2数据库中常用数据类型]]></title>
+    <url>%2F2020%2F02%2F10%2Fchapter2%E6%95%B0%E6%8D%AE%E5%BA%93%E4%B8%AD%E5%B8%B8%E7%94%A8%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%2F</url>
+    <content type="text"><![CDATA[数值类型 字符串 日期/时间]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[数据库介绍与分类]]></title>
+    <url>%2F2020%2F02%2F09%2F%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BB%8B%E7%BB%8D%E4%B8%8E%E5%88%86%E7%B1%BB%2F</url>
+    <content type="text"><![CDATA[数据库分为两类：关系型与非关系型 关系型：关系型将数据结构归为简单的二元关系（二维表格形式），对数据的操作就是多个表格的分类，合并，连接，选取，例如：mysql,oracle 非关系型分为： 键值存储 列存储 文档存储：数据项的最小单位是文档（例如MongoDB） 图形数据库 搬运大佬的博客]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter14并发]]></title>
+    <url>%2F2020%2F02%2F06%2Fchapter14%E5%B9%B6%E5%8F%91%2F</url>
+    <content type="text"><![CDATA[14.1 线程与进程 什么是线程：一个任务就是一个线程。线程之间共享数据。进程是一个程序的实例，进程独享数据，一个进程包含多个线程 线程是计算机中最小的调度单位。一个线程就是一串指令流，进程是计算机中的最小资源分配单位，在计算机中不活动，只作为线程的容器 进程间的通讯:同一台计算机的进程通讯称为Icp,不同的计算机间的进程通讯要通过网络，且要遵守一些协议如Http 14.2 并行与并发 什么是并发(concurrent)：线程轮流使用cpu的做法称为并发。多个线程其实是线性调度cpu的 什么是并行： 多核cpu中的不同核心同时做多个不同线程 14.3 线程应用 同步调用:得到结果后才能向下运行 异步调用：不需要得到结果也能向下运行 14.4 创建线程 Thread t = new Thread(){ public void run(){} } t.setName(“”)；//为线程设一个名字 t.start(); 把线程和线程要执行的任务分开 //runnable传入thread中的作用：赋给一个target变量，其调用run方法 Runnable r =new Runnable(){ public void run(){}//要执行的任务 } Thread t = new Thread(r，”name”);//传入 在方法中使用lambda简化Runnable是一个只有一个抽象方法的接口。在java中，这样的接口叫FuctionnalInterface,只要传入一个lambda表达式就可以生成一个接口对象。 //1 Thread t = new Thread(()-&gt;{ public void run(){} }) //2 Runnable r =()-&gt;{ public void run(){}//要执行的任务 } Thread t = new Thread(r，”name”);//传入 使用FutureTask与Thread配合FutureTask 相当于升级的Runnable,其运行时可以有返回值。而Runnable终的run方法是void(不能使用lambda表达式方法体中返回值？？？) //FutureTask是泛型，需要传入一个callable接口或直接使用lambda表达式 FutureTask ft = new FutrueTask&lt;&gt;(new Callable(){ public Intergeter call(){ return 1; } }) Thread t = new Thread(ft,”t1”); t.start(); int i = ft.get();//get方法得到返回值，但t1线程和总线程有什么关系？？？ //主线程main和t1并行执行，当主线程执行到ft.get()时，其等待t线程的返回 使用jconsole监控本地或远程的进程：一个可以监控java进程的工具,win+r输入jconsole打开 14.5线程运行原理 栈与栈帧：虚拟机内存有堆，栈。栈对应一个线程，每次该线程调用某个方法时，就会为这个方法创建一个栈帧，栈就是由一个个栈帧组成的，栈帧中包含了方法调用时的变量。栈是一个后进先出的数据结构，调用方法结束后，回到调用这个方法的地方，释放该方法所占用的栈帧。栈帧包括局部变量表，返回地址，锁记录，操作数栈//方法调用存在栈里，对象存在堆里 运行时详细：运行一个java程序的过程虚拟机先加载主类，将其中的方法的字节码放到方法区中。在运行main方法的过程中，先加载main方法的栈帧，然后程序计数器逐一运行main方法的每一行代码，当有调用其他方法时，在生成新的栈帧。 14.6常见方法 start和run的区别 //为什么要调用start而不直接调用run? //调用start是启动一个线程（不是立刻启动，而是进入就绪，具体启动实践由任务调度器决定） //start只能调用依次，多次调用抛出IllegalThreadStateException sleep与yield //调用sleep将让线程从Running进入Timed waiting阻塞状态 Thread.sleep(time);//在t1线程中调用Thread.sleep()让t1进入等待 t1.interupt();//打断t1的睡眠，将其唤醒,将抛出InteruptedExcption //睡眠结束后的线程不会立刻得到执行 //调用yield让线程从Running进入Runnable(就绪)状态 //yield与sleep的区别：yield方法无参数，其是将时间片的使用权让给其他线程，可能出现无其他线程而调用yield方法的线程继续运行的 //状况，而sleep是让线程必须休眠多少时间 Thread.yield(); 设置线程优先级：优先级高的线程将获得更多的时间片，执行时间会更长。但当cpu是空闲时，优先级是没什么用的（什么叫空闲？？） t1.setPriority(1);//优先级为1 join方法：让某个线程在主线程中调用join，即让该线程执行完毕后主线程才继续向下运行 System.out.println(“t1 join”); t1.join();//t1.join(time) 表示最大等待t1结束的时间 System.out.println(“t1 join end”); interupt用法：打断线程。可以打断正常运行的线程（使这个正在运行的线程的打断标记值为true,但这个线程不会停止，应根据打断标记自行决定），也可以打断休眠或waiting的线程（唤醒，标记值仍为false,想要停止，就自行在捕捉异常中再打断一次） //优雅的停止线程 //使用interupt 两阶段停止 14.7 守护线程在jvm中刚启动时，除了主线程，其他都是守护线程。主线程中创建的线程默认是普通线程。守护线程与普通线程的区别在于，主线程结束后，若为普通线程，则程序在普通线程结束后结束，若为守护线程，则守护线程无论是否允许完毕都结束。 //可以使用setDeamon(true)将线程设置为守护线程]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter13部署java应用程序]]></title>
+    <url>%2F2020%2F02%2F05%2Fchapter13%E9%83%A8%E7%BD%B2java%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%2F</url>
+    <content type="text"><![CDATA[13.1jar文件 jar文件是java类与其他文件的打包集合（图片，清单文件等。清单文件是描述jar文件归档特征的文件）。以压缩包为结构，jar为后缀名。可以用压缩包压缩，也可以用jdk自带的jar制作 2 应用首选项的存储： 怎样存储应用文件的配置信息？可以使用Propertries类。其实现了Map接口，用字符串映射的方式存储配置，常用方法如下： Propertries p = new Propertries(); p.setPropertries(“title”,””); p.stored(out,”注释”);//out是输出流。这个是将配置存储的操作 p.load(in,”注释”);//读取配置]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter9集合]]></title>
+    <url>%2F2020%2F02%2F04%2Fchapter9%E9%9B%86%E5%90%88%2F</url>
+    <content type="text"><![CDATA[9.1java集合框架 集合的接口与实现分离:l两个基本接口collection与map collection接口 迭代器：迭代器能修改集合包括方法：next(); hasNext();remove();//删除上次调用next()得到的元素。必须调用了next()才能调用remove();add();//链表的add通常在表尾添加，迭代器的add在当前遍历到的位置上添加（即使用上一次使用next()得到的位置） //删除相邻元素Iterator iter = capicity.Iterator();iter.next();iter.remove();iter.next();iter.remove(); forEachRemaining();//参数为lambda表达式，调用这个方法的迭代器中的每个元素都会调用这个表达式 实现了迭代器接口的集合都可以使用for:each循环 9.2具体的集合： 链表：LinkedList类，对于迭代器listInterator。实现了双向链表 数组列表：ArrayList, 非线程安全。vector是线程安全的 散列集：HashSet. 树集：treeSet序的集合 9.3映射： Map分为HashMap和TreeMap(排序，实现了SortedMap接口，具有方法firstKey与lastKey分布返回最大键值与最小键值)//getOrdefault方法//map.getOrdefault(key,defaultvalue)//查找map中对应key的value,若key不存在，返回defayultvalue(参数)，通常用于频度 基本操作：put(key);//插入get(key);//获取，若key不存在返回null 映射视图：返回的映射的视图可以删除里面的元素，对应原映射中的元素会被删除。但不能往映射视图里添加元素 keyset();//返回key的集合values();//返回value的集合entryset();//返回键值对集合 废弃的键值删除一个键值在最后一次被调用后，垃圾回收器不会自动删除它。因此处理这些废弃项很重要弱散列？？？ 9.4视图 视图：可以对映射操作的，实现了set接口的集合 同步视图：对于要求的线程安全，不对集合实现线程安全的类，而是实现线程安全的视图]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter8泛型程序设计]]></title>
+    <url>%2F2020%2F01%2F31%2Fchapter8%E6%B3%9B%E5%9E%8B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%2F</url>
+    <content type="text"><![CDATA[写在前面：类型参数 ：T参数类型 ：T的类型类型变量 ：T value; value就是泛型变量参数化类型变量：使用泛型的变量8.2定义简单泛型类 class Pair&lt;T,E&gt;{ T value ..... //T称为类型参数 E value2 ..... }8.3泛型方法： 泛型方法可以定义在普通类和泛型类中： class Normal{ void test &lt;T&gt;(T value){ } } //在调用test时，可以加上尖括号T，也可不加。编译器会自动通过圆括号内参数类型判断8.4类型变量的限定： //通过extends继承限制 void test&lt;T extends Comparable&gt;(T ...) //这样test方法的参数都必须是Comparable的子类，意味都实现了CompareAble void tete &lt;T extends Comparable &amp; Serieable&gt;(T...) //指泛型同时满足这两个类型8.5泛型代码和虚拟机？？ 类型擦除： 在java的编译器中没有泛型。只有普通的类和方法。泛型在编译期间会被擦除掉相关信息，被替换成原始类型，即参数为Object或Object的子类（看extends的限制） class Test&lt; T extends String &gt;{} //编译器中的限定类型为String 翻译泛型表达式： 泛型先翻译为原始类型（限定类型），然后强制转换 翻译泛型方法？ 8.6约束与局限性： 不能用基本类型实例化类型参数,应用对应包装器类型 不能使用instanceof 查询某个变量是否属于某个泛型类，不能强制转换。使用getClass得到一个泛型类的类型，例如 Pair&lt; String &gt;p;p.getClass()返回的都是 Pair&amp;ltT&amp;gt 不能创建参数化类型的数组 （为什么我也不清楚，因为类型擦除导致的不安全？什么是参数化类型：被参数化的类型，例如8.2中的value），要收集参数类型应该使用List Pair&lt; String &gt;[] table = Pair&lt; String &gt;[10];//Error 不能实例化类型变量： 什么是类型变量 (就是T) ？ T test = new T();//Error 不能实例化泛型数组 静态方法可以使用泛型，但不能是构建类的泛型class Pair&lt; T &gt;{ static void &lt; T &gt;Pair &lt; T &gt;test(){}//这里的Pair不是构建得到的Pair} 8.7通配符： 子类型通配符： pair&lt;? extends …&gt; //只能进行读操作，不能写pair&lt;? super …&gt; //只能写，不能读]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter7异常，断言和日志]]></title>
+    <url>%2F2020%2F01%2F30%2Fchapter7%E5%BC%82%E5%B8%B8%EF%BC%8C%E6%96%AD%E8%A8%80%E5%92%8C%E6%97%A5%E5%BF%97%2F</url>
+    <content type="text"><![CDATA[7.1异常：一.异常分类： 异常都是Throwable的子类，分为： Error:资源耗尽或内部错误 Exception: I/O Exception Runtime Exception : 包括访问空指针，数组越界，错误的类型转换。都是程序编写者自己的错误Error和Runtime Exception称为非受查异常，其他未受查异常 二.声明受查异常： 通常在可能抛出受查异常的方法使用throws声明可能抛出的异常（不是方法一定抛出异常） public FileInputStream(String name) throws FileNotFoundException{ if(){ throw new ...Exception();//抛出异常。一旦一个方法抛出异常，则这个方法不会返回到调用者 } } 如果子类覆盖了超类的方法，则这个子类方法抛出的异常不能比父类的更通用。若父类方法不抛出异常，则该子类方法也不能抛出异常 三.创建异常类： 创建的异常必须继承于已有的异常，习惯上包括两个构造器。一个是默认的无参数构造器，另一个是含有String参数的构建包含异常详细信息的异常的构造器： class FileFormatException extends IOException{ public FileFormatException(){ } public FileFormatException(String message){ } }四.捕获异常： try,catch,finally语句。可以用多个catch捕获多种异常]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter6接口，lambda表达式与内部类]]></title>
+    <url>%2F2020%2F01%2F28%2Fchapter6%E6%8E%A5%E5%8F%A3%EF%BC%8Clambda%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%8E%E5%86%85%E9%83%A8%E7%B1%BB%2F</url>
+    <content type="text"><![CDATA[6.1接口一.接口是对于类的表现形式。接口可以多implement接口默认为public,其中的方法默认为public,含有的常量默认为public static final ,不含有实例域与静态方法。其中的方法称为抽象方法。但在java 8 中，可以在接口中添加默认方法（也叫扩展方法,必须用default修饰），其是在接口中可实现的，也可为静态的 interface Test(){ default static void test(){ ... } }二.接口的特性：接口不是类，不能直接new,但可以声明接口的变量，这个变量可以指向类的实例 Test t = new Employee();可以用instanceof 判断某个对象是否实现了某个接口，也可以用来判断某个对象是否属于某个类（具有继承关系的也属于，子类属于父类，父类不属于子类） 6.3lambda表达式一.lambda表达式是什么： 一个可传递的代码块，可以看作函数，通常是用于延长执行的代码块二.lambda表达式的编写： 包括参数，代码块，自由变量 (event) -&gt;{ do... }三.注意： lambda表达式只能处理不变的变量，如以下是不合法的 for(i=0;i&lt;10;i++){ ActionListenner litener = event-&gt;{ System.out.print(i);//i改变了，这样的操作不合法 } }四.lambda表达式用来做什么： 用于转换为函数式接口。一些接口只有一个方法，这个方法是未实现的，传入一个lambda表达式则可以生成这样一个接口变量。如上面的ActionListener就是一个接口。这个接口可以传到其他地方生成对象，例如计时器等等 6.4内部类一.私有的内部类： 在调用方法时可以在外部类内创建；二.非私有的内部类： 可以在外部类的作用域外创建 Outer outer = new Outer(); Outer.inner inner = outer.new Inner();三.注意： 内部类不含有静态方法，所有静态量必须是final的（因为不同的外部类可能会有不同的内部类，对于static，我们希望它是内部类唯一的，设置为final使它不能被修改）四.匿名内部类 举例：监听器指向一个匿名内部类： ActionListenner listenner = new ActionListenner(){ Method and par... }具体实现规则： Supertype s = new Supertype(....超的构造参数){ //匿名内部类由于没有名字，不能实现构造器 //其中的方法，域是对Supertype的扩展 //Supertype可以是接口，也可以是一个类 } 举例：在某些方法需要一个对象时，也可以向这个方法传递一个匿名对象 五.静态内部类： 只有内部类可以定义为静态的 静态内部类不能对外围类有引用，因此可以定义为静态的 静态内部类可以有静态方法和静态类，非静态的内部类不可以有 静态方法返回的对象必须是静态类的对象]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[chapter5继承]]></title>
     <url>%2F2020%2F01%2F27%2Fchapter5%E7%BB%A7%E6%89%BF%2F</url>
-    <content type="text"><![CDATA[5.1一.超类和子类： 超类就是父类，也叫基类二.继承了什么： 子类继承了父类的域和方法，但父类的私有域是不能直接访问的，需要通过父类的域访问方法得到 //Manager类继承了Employee public int getSalary(){ int salary = super.getSalary()+bonus;//使用super调用超类 return salary; }三.子类构造器： 在子类构造中，若没有显式的调用父类的构造器，则默认调用父类的默认构造器（无参数）。若父类没有这样的构造器，则会报错 Manager(....,int bonus){ super(....); this.bonus = bonus; }四.多态： 指一个对象变量可以指向超类，也可以指向子类，这叫多态。 根据对象变量实际指向的类型调用方法，这叫动态绑定。 超类的引用可以指向子类，但子类的引用不能指向父类五.final类和方法： 用final修饰的类不能被继承，用final修饰的方法子类不能够覆盖六.强制类型转换： 一个超类的引用指向子类的对象，可以将这个引用转为子类的引用七.父类引用指向子类对象，可以调用子类对象的方法吗？ 除了构造方法，其他都不能。其既不能访问子类对象的特有域，也不能使用子类的方法，除非进行强制类型转换八.protected:同一个包内，子类能够访问 5.2 Object:所有类的超类一.equals方法： 在Object类中，equals方法默认是比较两者的引用，若引用相等则返回true. 在实际应用中，仅仅比较引用是没有意义的。修改的equals方法应该先比较引用是否指向相同的对象，然后比较引用所指向的对象是否为空，再比较两者对象是否同属一个class,最后依次比较两者中各项。 子类的equals方法应该先调用父类的equals方法 //显式参数是object类，比较使用object的equals boolean equals(Object other){ if(this == other){ return true; } if(other == null){ return false; } if(getClass()!=other.getClass()){ return false; } Employee otherobject = (Employee)other; return Object.equals(this.name,otherobject.name)&amp;&amp;this.salary==otherobject.salary; }二.toString方法： 返回对象的字符串表示。通常java的默认类都实现了这个方法。在如 String str = &quot;&quot; + Employee; //默认调用了Employee的toString方法 //在print的时候也是 java中数组的字符串表示用Array.toString(arrayname) 或Array.deepToString(arrayname)得到]]></content>
+    <content type="text"><![CDATA[5.1一.超类和子类： 超类就是父类，也叫基类二.继承了什么： 子类继承了父类的非private的域和非private的方法，但父类的私有域是不能直接访问的，需要通过父类的域访问方法得到 子类不继承父类的构造器 //Manager类继承了Employee public int getSalary(){ int salary = super.getSalary()+bonus;//使用super调用超类 return salary; }三.子类构造器： 在子类构造中，若没有显式的调用父类的构造器，则默认调用父类的默认构造器（无参数）。若父类没有这样的构造器，则会报错 Manager(....,int bonus){ super(....); this.bonus = bonus; }四.多态： 指一个对象变量可以指向超类，也可以指向子类，这叫多态。 根据对象变量实际指向的类型调用方法，这叫动态绑定。 超类的引用可以指向子类，但子类的引用不能指向父类五.final类和方法： 用final修饰的类不能被继承，用final修饰的方法子类不能够覆盖六.强制类型转换： 一个超类的引用指向子类的对象（称为子类向上转型），可以将这个引用转为子类的引用七.父类引用指向子类对象，可以调用子类对象的方法吗？ 除了构造方法，其他都不能。其既不能访问子类对象的特有域，也不能使用子类的方法，除非进行强制类型转换八.protected:同一个包内，子类能够访问 5.2 Object:所有类的超类一.equals方法： 在Object类中，equals方法默认是比较两者的引用，若引用相等则返回true. 在实际应用中，仅仅比较引用是没有意义的。修改的equals方法应该先比较引用是否指向相同的对象，然后比较引用所指向的对象是否为空，再比较两者对象是否同属一个class,最后依次比较两者中各项。 子类的equals方法应该先调用父类的equals方法 //显式参数是object类，比较使用object的equals boolean equals(Object other){ if(this == other){ return true; } if(other == null){ return false; } if(getClass()!=other.getClass()){ return false; } Employee otherobject = (Employee)other; return Object.equals(this.name,otherobject.name)&amp;&amp;this.salary==otherobject.salary; }二.toString方法： 返回对象的字符串表示。通常java的默认类都实现了这个方法。在如 String str = &quot;&quot; + Employee; //默认调用了Employee的toString方法 //在print的时候也是 java中数组的字符串表示用Array.toString(arrayname) 或Array.deepToString(arrayname)得到 5.7.反射：一.Class类： java为每个实例所对应的类型都生成了一个标识Class类。 一个class对象表示一种类型，不一定是类。 Emplyoee e = new Manager();// System.out.print(e.getClass.getName);//返回 Manager]]></content>
   </entry>
   <entry>
     <title><![CDATA[chapter4对象与类]]></title>
@@ -36,6 +436,17 @@
       <categories>
         <category>java</category>
       </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter1在终端中操作Mysql]]></title>
+    <url>%2F2020%2F01%2F26%2Fchapter1%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93%2F</url>
+    <content type="text"><![CDATA[如何查找每一个科目最高分的学生姓名?如何查找每一个学生的sno,cno,grade列？ add : 添加表中的字段 insert: 添加表中内容drop: 删除表或删除数据库 delete: 删除某一行change: 修改字段形式 update: 更新某一行内容 登录数据库服务器： mysql -uroot-p 显示所有数据库中的库： show databases; 选择数据库： use databasename; 查询当前所在表中的数据： select * from excelname; select name , id from tablename; select distinct fieldname from tablename;//查询表中所有不重复的某字段 select * from score where degree between 60 and 80;//60到80的闭区间 select * from score where degree in (85,86,87);//degree为85或86或87的记录 select * from score order by value1 asc;,value2 desc//升序查询，降序是desc,查询按照value1升序，value2降序（优先：value1） 显示当前库中所有表： show tables; 创建表： create table tablename(各字段 check(条件)//创建表的约束 ); //记录是表中的一行，字段是组成记录的元素 删除表： drop table tablename; 查看某个表： describe tablename; select function();//mysql中可以使用select查询字段，函数，表达式（计算表达式），常量 向表中插入字段： //第一种，支持插入多个字段,支持子查询 insert into tablename values(value1), (value2); //第二种，不支持同时插入多个字段，不支持子查询 insert into tablename set 字段1=…,字段2=.. 删除字段：delete from tablename where …;//可以roll back,假如删除了自增长的字段，字段添加时从断电开始truncate table tablename;//清空表，不能带where,且不能roll back，假如删除了自增长的字段，字段从头开始 更新字段:update tablename set field1=,filed2= … where ….;//修改单表中符合条件的某一行中的某个字段值 向表结构中添加多个字段：alter table tablename add fieldname fieldtype… or and not 统计：countselect count(*) from tablename where…..;//统计 最大值：maxselect id from tablename where(degree = select max(degree) from tablename); limit 0,1:表示从第0个数字开始查，最多查1个 avg();//平均值 group by field;//分组 where 与 having的区别where用于聚合前查询的条件，having 用于聚合后，having后的条件可以使用聚合函数select id from score group by lessonname having count(num)&gt;2; 模糊查询：like(); not like(); like ‘k%’;//查询以k开头的字符串like ‘%oo%’;//查询包含oo的字符串 union :将多个select查询结果放到一个集合中，默认删去重复的，若为 union all则包含重复值 any(): 任意一个 all(): 所有 使用as取别名 select sname, ssex,sbirthday from student union select tname, tsex,tbirthday from teacher;//得到表的字段名为sname, ssex,sbirthday//使用asselect sname as name, ssex as name,sbirthday as name from student union select tname, tsex,tbirthday from teacher; 复制表数据做条件查询 select * from score a where degree &lt; (select avg(degree) from score b where a.cno = b. cno); 将某个表中的数据复制到另一个表 insert into table1 (fieldname1,….) select field1,… from table2; 拼接字符串： select concat(lastname,firstname) as 姓名 from … 不等于： &lt;&gt; 安全等于 &lt;=&gt; , 可以判断NULL值 substr(str,pos);//截取字符串，字符串位置pos从1 开始instr(str1,str2);//返回str2在str1中的起始索引位置，找不到则返回0trim(‘str’from ‘str2’);//从str2中去除前后的str1lapd();//左填充replace()’ 数学函数 round();//四舍五入ceil();//向上取整floor();//向下取整truncate(number,位数);//截断保留几位mod();//取余 时间函数 now();//现在的日期+时间curdate();//现在的日期curtime();//现在的时间 if select if(10&gt;5,’大’,’小’);//第一个条件满足，返回第一个值，否则第二个 case: case 要判断的值when 值 = ? then 要显示的值或语句;// casewhen 条件 then ……; 单行函数：将一个数据进行处理，返回一个值分组函数：将虚拟表看做一个组，处理一组数据，返回一个值 分组查询：分组前查询：查询原始表中有的数据，条件使用where分组后查询：查询原始表中没有的数据，条件使用having exists();//返回是否存在 分页查询：select .. from … limit start,调数; 联合查询：union]]></content>
+      <categories>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>mysql</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[chapter3输入与输出]]></title>

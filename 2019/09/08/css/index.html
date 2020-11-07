@@ -54,18 +54,18 @@
   };
 </script>
 
-  <meta name="description" content="1.概念：css，即层叠样式表，是一种语言，可用来设定html中标签的各式2.css的引用：    内嵌样式表：style =    文档内嵌入：在&amp;lt;\head&amp;gt;标签内设定&amp;lt;\style&amp;gt;标签，还可以使用类型选择器    外部文档调用：在&amp;lt;\head&amp;gt;标签中链接3.类型选择器：    1.*：全部属性    2.类： 在需要套用格式的标签中套用class =">
+  <meta name="description" content="概念：css，即层叠样式表，是一种语言，可用来设定html中标签的各式  css的引用： 内嵌样式表：style = 文档内嵌入：在&amp;lt;\head&amp;gt;标签内设定&amp;lt;\style&amp;gt;标签，还可以使用类型选择器 外部文档调用：在&amp;lt;\head&amp;gt;标签中链接  层叠：满足某种规则的css，可以使修饰层叠，即多种修饰中，对某个元素只选择一种。有三个因素需要考虑，根据重要性排序如下">
 <meta name="keywords" content="css">
 <meta property="og:type" content="article">
 <meta property="og:title" content="css">
 <meta property="og:url" content="http://yoursite.com/2019/09/08/css/index.html">
 <meta property="og:site_name" content="Intere">
-<meta property="og:description" content="1.概念：css，即层叠样式表，是一种语言，可用来设定html中标签的各式2.css的引用：    内嵌样式表：style =    文档内嵌入：在&amp;lt;\head&amp;gt;标签内设定&amp;lt;\style&amp;gt;标签，还可以使用类型选择器    外部文档调用：在&amp;lt;\head&amp;gt;标签中链接3.类型选择器：    1.*：全部属性    2.类： 在需要套用格式的标签中套用class =">
+<meta property="og:description" content="概念：css，即层叠样式表，是一种语言，可用来设定html中标签的各式  css的引用： 内嵌样式表：style = 文档内嵌入：在&amp;lt;\head&amp;gt;标签内设定&amp;lt;\style&amp;gt;标签，还可以使用类型选择器 外部文档调用：在&amp;lt;\head&amp;gt;标签中链接  层叠：满足某种规则的css，可以使修饰层叠，即多种修饰中，对某个元素只选择一种。有三个因素需要考虑，根据重要性排序如下">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-09-10T15:18:20.814Z">
+<meta property="og:updated_time" content="2020-06-17T08:45:11.038Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="css">
-<meta name="twitter:description" content="1.概念：css，即层叠样式表，是一种语言，可用来设定html中标签的各式2.css的引用：    内嵌样式表：style =    文档内嵌入：在&amp;lt;\head&amp;gt;标签内设定&amp;lt;\style&amp;gt;标签，还可以使用类型选择器    外部文档调用：在&amp;lt;\head&amp;gt;标签中链接3.类型选择器：    1.*：全部属性    2.类： 在需要套用格式的标签中套用class =">
+<meta name="twitter:description" content="概念：css，即层叠样式表，是一种语言，可用来设定html中标签的各式  css的引用： 内嵌样式表：style = 文档内嵌入：在&amp;lt;\head&amp;gt;标签内设定&amp;lt;\style&amp;gt;标签，还可以使用类型选择器 外部文档调用：在&amp;lt;\head&amp;gt;标签中链接  层叠：满足某种规则的css，可以使修饰层叠，即多种修饰中，对某个元素只选择一种。有三个因素需要考虑，根据重要性排序如下">
   <link rel="canonical" href="http://yoursite.com/2019/09/08/css/">
 
 
@@ -294,7 +294,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-09-10 23:18:20" itemprop="dateModified" datetime="2019-09-10T23:18:20+08:00">2019-09-10</time>
+                <time title="修改时间：2020-06-17 16:45:11" itemprop="dateModified" datetime="2020-06-17T16:45:11+08:00">2020-06-17</time>
               </span>
             
           
@@ -323,9 +323,23 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>1.概念：css，即层叠样式表，是一种语言，可用来设定html中标签的各式<br>2.css的引用：<br>    内嵌样式表：style =<br>    文档内嵌入：在&lt;\head&gt;标签内设定&lt;\style&gt;标签，还可以使用类型选择器<br>    外部文档调用：在&lt;\head&gt;标签中链接<br>3.类型选择器：<br>    1.*：全部属性<br>    2.类： 在需要套用格式的标签中套用class =<br>    3.id<br>    4.标签属性<br>    5。根据属性选择：例如href<br>4.类型选择器中可以修改的属性：颜色，字体，边框（边框可以简写属性,可以给某个标签设置边框，默认style是none,即不显示<br>        <!DOCTYPE html><br>    <html lang="en"><br>    <head><meta name="generator" content="Hexo 3.9.0"><br>        <meta charset="UTF-8"><br>        <title>learncss</title><br>        <style type="text/css">–&gt;<br>            *{<br>                font: size 30px;<br>                color:darkorange<br>            }<br>            .class1{<br>                color:darkslategray;<br>            }<br>            #l1{<br>                color: blue<br>            }<br>        </style><br>    </head><br>    <body><br>    <a style="font-size: 10px">test</a><br>    <p>fuck</p><br>    <p class="class1">fuck <u>u</u></p><br>    <p id="l1">sss</p><br>    </body><br>    </html></p>
-<p>5.css设置文本格式：<br>    1.设置对齐方式：text-align<br>    2.direction对中文无效.<br>    3.设置间距：text-spacing,word-spacing<br>    4.行高：line-height<br>    5.首行缩进：test-indent<br>    6.字体样式：font-family<br>    7.改变字体大小写：text-transform<br>6.css过渡：<br>    1.使用标签的hover:     p:hover{}<br>    2.设置触发过渡的时间：transition-delay<br>    3.设置动画时间：transition-duration<br>    4.设置采用延迟过渡的属性：transition-propertry</p>
-
+        <ol>
+<li><p>概念：css，即层叠样式表，是一种语言，可用来设定html中标签的各式</p>
+</li>
+<li><p>css的引用：<br> 内嵌样式表：style =<br> 文档内嵌入：在&lt;\head&gt;标签内设定&lt;\style&gt;标签，还可以使用类型选择器<br> 外部文档调用：在&lt;\head&gt;标签中链接</p>
+</li>
+<li><p>层叠：<br>满足某种规则的css，可以使修饰层叠，即多种修饰中，对某个元素只选择一种。<br>有三个因素需要考虑，根据重要性排序如下，前面的更重要：<br>重要程度<br>优先级(id&gt;class)<br>资源顺序(后面的覆盖前面的)</p>
+</li>
+<li><p>继承。<br>子元素继承父元素的修饰</p>
+</li>
+<li><p><a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Building_blocks/Selectors" target="_blank" rel="noopener">选择器</a></p>
+</li>
+<li><p>盒子模型：display<br>display:inline , display:block表示该模型对外界元素的排布<br>display: flow layout,grid,flex表示该模型对内部子元素的排布<br>注意：设置未grid布局后，其中子元素的float、display: inline-block、display: table-cell、vertical-align和column-*等设置都将失效。</p>
+</li>
+</ol>
+<p>一个被定义成块级的（block）盒子会表现出以下行为:<br>盒子会在内联的方向上扩展并占据父容器在该方向上的所有可用空间，在绝大数情况下意味着盒子会和父容器一样宽<br>每个盒子都会换行<br>width 和 height 属性可以发挥作用<br>内边距（padding）, 外边距（margin） 和 边框（border） 会将其他元素从当前盒子周围“推开”<br>除非特殊指定，诸如标题(&lt; h1&gt;等)和段落(&lt; p&gt;)默认情况下都是块级的盒子。</p>
+<p>如果一个盒子对外显示为 inline，那么他的行为如下:<br>盒子不会产生换行。<br> width 和 height 属性将不起作用。<br>垂直方向的内边距、外边距以及边框会被应用但是不会把其他处于 inline 状态的盒子推开。<br>水平方向的内边距、外边距以及边框会被应用而且也会把其他处于 inline 状态的盒子推开。<br>用做链接的 &lt; a&gt; 元素、 &lt; span&gt;、 &lt; em&gt; 以及 &lt; strong&gt; 都是默认处于 inline 状态的。</p>
+<h4 id="总结：block换行，高度起作用，垂直方向上边距起作用。inline不换行，高度，垂直方向上边距不起作用"><a href="#总结：block换行，高度起作用，垂直方向上边距起作用。inline不换行，高度，垂直方向上边距不起作用" class="headerlink" title="总结：block换行，高度起作用，垂直方向上边距起作用。inline不换行，高度，垂直方向上边距不起作用"></a>总结：block换行，高度起作用，垂直方向上边距起作用。inline不换行，高度，垂直方向上边距不起作用</h4>
     </div>
 
     
@@ -394,8 +408,17 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -410,7 +433,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-count">111</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -445,7 +468,23 @@
         
           
         
-        <span class="site-state-item-count">10</span>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>
@@ -496,6 +535,23 @@
 
         </div>
       </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#总结：block换行，高度起作用，垂直方向上边距起作用。inline不换行，高度，垂直方向上边距不起作用"><span class="nav-number">1.</span> <span class="nav-text">总结：block换行，高度起作用，垂直方向上边距起作用。inline不换行，高度，垂直方向上边距不起作用</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
 
     </div>
   </aside>

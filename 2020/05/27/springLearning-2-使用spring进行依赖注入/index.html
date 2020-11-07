@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html class="theme-next pisces use-motion" lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Pisces',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":true,"show_result":true,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":true,"preload":true},
+    path: 'search.xml',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
+    }
+  };
+</script>
+
+  <meta name="description" content="说在前头：spring的工作是配置容器，然后实例化容器，由容器完成工作。  spring Ioc容器：配置容器：即提供容器配置组件的信息，这些信息叫元数据。有三种配置方法：基于java类的配置：编写各个组件，编写配置类(带有注解：@configruation),在main方法中将配置类作为参数实例化容器类基于xml的配置：在xml文件中编写配置信息，在main方法中将xml文件作为参数实例化容器类">
+<meta property="og:type" content="article">
+<meta property="og:title" content="springLearning_2:使用spring进行依赖注入">
+<meta property="og:url" content="http://yoursite.com/2020/05/27/springLearning-2-使用spring进行依赖注入/index.html">
+<meta property="og:site_name" content="Intere">
+<meta property="og:description" content="说在前头：spring的工作是配置容器，然后实例化容器，由容器完成工作。  spring Ioc容器：配置容器：即提供容器配置组件的信息，这些信息叫元数据。有三种配置方法：基于java类的配置：编写各个组件，编写配置类(带有注解：@configruation),在main方法中将配置类作为参数实例化容器类基于xml的配置：在xml文件中编写配置信息，在main方法中将xml文件作为参数实例化容器类">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2020-05-27T08:25:36.148Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="springLearning_2:使用spring进行依赖注入">
+<meta name="twitter:description" content="说在前头：spring的工作是配置容器，然后实例化容器，由容器完成工作。  spring Ioc容器：配置容器：即提供容器配置组件的信息，这些信息叫元数据。有三种配置方法：基于java类的配置：编写各个组件，编写配置类(带有注解：@configruation),在main方法中将配置类作为参数实例化容器类基于xml的配置：在xml文件中编写配置信息，在main方法中将xml文件作为参数实例化容器类">
+  <link rel="canonical" href="http://yoursite.com/2020/05/27/springLearning-2-使用spring进行依赖注入/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>springLearning_2:使用spring进行依赖注入 | Intere</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+  <div class="container">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Intere</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
+        
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
+    
+  </ul>
+
+</nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-wrapper">
+    <input autocomplete="off" autocorrect="off" autocapitalize="none"
+           placeholder="搜索..." spellcheck="false"
+           type="text" id="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result"></div>
+
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
+</div>
+    </header>
+
+    
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+            
+
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/27/springLearning-2-使用spring进行依赖注入/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">springLearning_2:使用spring进行依赖注入
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-05-27 09:09:19 / 修改时间：16:25:36" itemprop="dateCreated datePublished" datetime="2020-05-27T09:09:19+08:00">2020-05-27</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/spring/" itemprop="url" rel="index"><span itemprop="name">spring</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>说在前头：spring的工作是配置容器，然后实例化容器，由容器完成工作。</p>
+<ol>
+<li><p>spring Ioc容器：<br>配置容器：即提供容器配置组件的信息，这些信息叫元数据。有三种配置方法：<br>基于java类的配置：编写各个组件，编写配置类(带有注解：@configruation),在main方法中将配置类作为参数实例化容器类<br>基于xml的配置：在xml文件中编写配置信息，在main方法中将xml文件作为参数实例化容器类<br>两者结合： 将配置类写入xml文件中，在main方法中将xml文件作为参数实例化容器类<br>注：yml文件？</p>
+</li>
+<li><p>依赖注入：<br> //setter<br> &lt; bean id = “…” class = “”&gt;<br> &lt; !– 注入bean –&gt;<br> &lt; property name = “” ref=””/&gt;<br> &lt; !– 注入属性值 –&gt;<br> &lt; propety name =”” value = “”/&gt;<br> &lt; /bean&gt;<br> //constructor<br> &lt; bean id = “” class = “”&gt;<br> &lt; !– 指由第一个constructor方法创建 –&gt;<br> &lt; constructor-arg ref=”” index = “0”/&gt;<br> &lt; constructor-arg value = “”/&gt;<br> &lt; /bean&gt;</p>
+<p> //不建议在配置中使用循环依赖<br> //其结果是，两者拥有对方创建不完全的实例的引用<br> class A{</p>
+<pre><code> B b;
+public A(B b){
+     this.b = b;
+ }</code></pre><p> }<br>  class B{</p>
+<pre><code> A a;
+public B(A a){
+     this.a = a;
+ }</code></pre><p> }</p>
+</li>
+</ol>
+<h3 id="一个bean在未完全创建时是不会作为一个依赖项注入到其他bean中的。"><a href="#一个bean在未完全创建时是不会作为一个依赖项注入到其他bean中的。" class="headerlink" title="一个bean在未完全创建时是不会作为一个依赖项注入到其他bean中的。"></a>一个bean在未完全创建时是不会作为一个依赖项注入到其他bean中的。</h3><h3 id="容器创建过程：-先处理配置元数据，创建bean定义并验证定义。然后完成bean的创建和依赖注入"><a href="#容器创建过程：-先处理配置元数据，创建bean定义并验证定义。然后完成bean的创建和依赖注入" class="headerlink" title="容器创建过程： 先处理配置元数据，创建bean定义并验证定义。然后完成bean的创建和依赖注入"></a>容器创建过程： 先处理配置元数据，创建bean定义并验证定义。然后完成bean的创建和依赖注入</h3><ol start="3">
+<li>depends-on特性：b depend on a,使a在b前被创建</li>
+<li>自动装配：<br>@Autowired:<br>我们一般使用 @Autowired 注解让 Spring 容器帮我们自动装配 bean。要想把类标识成可用于 @Autowired 注解自动装配的 bean 的类,可以采用以下注解实现：</li>
+</ol>
+<p>@Component ：通用的注解，可标注任意类为 Spring 组件。如果一个 Bean 不知道属于哪个层，可以使用@Component 注解标注。<br>@Repository : 对应持久层即 Dao 层，主要用于数据库相关操作。<br>@Service : 对应服务层，主要涉及一些复杂的逻辑，需要用到 Dao 层。<br>@Controller : 对应 Spring MVC 控制层，主要用户接受用户请求并调用 Service 层返回数据给前端页面。</p>
+<pre><code>@Autowired
+private UserService userService;</code></pre><ol start="5">
+<li>Spring管理的bean:<br>bean的命名：具有两个特性：id和name。id只有一个，name可有多个。若同时设置id,name，则id是标识符，name是别名。设置多个name,第一个是标识，其他是别名。如何设置：xml文件中填写特性或利用注解传入string<br>标识符，别名都是唯一的</li>
+</ol>
+<p>bean的实例化：使用constrructor(通常在xml中配置),工厂方法(可使用注解)</p>
+<p>bean与component的区别：<br>component：利用spring 类路径扫描，写在类上，和类定义不分离，不需要配合 @configuration注解<br>bean:写在工厂方法上，配合@configuration的注解</p>
+<p>bean的作用域：即bean的生命周期，使用@scope或scope特性设置，分为：<br>singleton : 唯一 bean 实例，Spring 中的 bean 默认都是单例的。<br>prototype : 每次请求都会创建一个新的 bean 实例。<br>request : 每一次 HTTP 请求都会产生一个新的 bean，该 bean 仅在当前 HTTP request 内有效。<br>session : 每一次 HTTP 请求都会产生一个新的 bean，该 bean 仅在当前 HTTP session 内有效。</p>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2020/05/26/SpringLearning-1/" rel="next" title="SpringLearning_1">
+                  <i class="fa fa-chevron-left"></i> SpringLearning_1
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+                <a href="/2020/05/28/maven使用过程中碰到的各种坑/" rel="prev" title="maven使用过程中碰到的各种坑">
+                  maven使用过程中碰到的各种坑 <i class="fa fa-chevron-right"></i>
+                </a>
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image"
+      src="/images/dogHead.JPG"
+      alt="intere">
+  <p class="site-author-name" itemprop="name">intere</p>
+  <div class="site-description motion-element" itemprop="description">拒绝庸俗，爱是真理</div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">111</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+          
+            <a href="/categories/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-name">分类</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
+        
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span>
+        </a>
+      </div>
+    
+  </nav>
+
+
+
+
+        </div>
+      </div>
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#一个bean在未完全创建时是不会作为一个依赖项注入到其他bean中的。"><span class="nav-number">1.</span> <span class="nav-text">一个bean在未完全创建时是不会作为一个依赖项注入到其他bean中的。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#容器创建过程：-先处理配置元数据，创建bean定义并验证定义。然后完成bean的创建和依赖注入"><span class="nav-number">2.</span> <span class="nav-text">容器创建过程： 先处理配置元数据，创建bean定义并验证定义。然后完成bean的创建和依赖注入</span></a></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">intere</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.3.0</div>
+
+        
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        <span>0%</span>
+      </div>
+
+    
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.3.0"></script><script src="/js/motion.js?v=7.3.0"></script>
+<script src="/js/schemes/pisces.js?v=7.3.0"></script>
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/scrollspy.js?v=7.3.0"></script><script src="/js/post-details.js?v=7.3.0"></script>
+
+
+</body>
+</html>

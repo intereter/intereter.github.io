@@ -252,7 +252,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/24/chapter13mysql变量/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/21/java扫盲/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="intere">
@@ -266,7 +266,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/02/24/chapter13mysql变量/" class="post-title-link" itemprop="url">chapter13mysql变量</a>
+            <a href="/2020/05/21/java扫盲/" class="post-title-link" itemprop="url">java扫盲</a>
           
         </h1>
 
@@ -281,7 +281,7 @@
                 
               
 
-              <time title="创建时间：2020-02-24 11:29:14 / 修改时间：15:44:30" itemprop="dateCreated datePublished" datetime="2020-02-24T11:29:14+08:00">2020-02-24</time>
+              <time title="创建时间：2020-05-21 17:21:06 / 修改时间：17:29:52" itemprop="dateCreated datePublished" datetime="2020-05-21T17:21:06+08:00">2020-05-21</time>
             </span>
           
             
@@ -294,7 +294,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
 
                 
                 
@@ -314,31 +314,8 @@
 
       
           <ol>
-<li><p>变量分类：系统变量（全局，会话）,自定义变量（用户变量，局部变量）</p>
-</li>
-<li><p>系统变量：</p>
-<ol>
-<li><p>查看所有系统变量</p>
-<p>show global variables;//查看所有全局变量<br>show session variables;//查看所有会话变量，不写session默认查看会话变量<br>show global|session variables;//查看所有系统变量</p>
-</li>
-<li><p>查看指定变量</p>
-<p>select @@变量名;</p>
-</li>
-<li><p>修改变量值</p>
-<p>set @@变量名 = ;</p>
-</li>
-</ol>
-</li>
-<li><p>自定义变量：</p>
-<ol>
-<li><p>用户变量：</p>
-<p>//作用范围：一个会话<br>//创建并初始化<br>set @变量名 = ；//1<br>select @变量名:= ;//2<br>//查看<br>select @变量名;</p>
-</li>
-<li><p>局部变量：</p>
-<p>//作用范围：一个事务。<br>//定义/声明必须在begin,end中的第一句话<br>//初始化：set<br>begin;<br>declare m int default 1;//  declare type default value;<br>set m = …;<br>end;</p>
-</li>
-</ol>
-</li>
+<li>j2se,j2me,j2ee: 标准版，微型，商用。java5.0后，称为java se,me,ee</li>
+<li>版本号： java 1.8:指 jdk 8</li>
 </ol>
 
         
@@ -366,7 +343,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/24/chapter12mysql视图/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/05/20/java多线程1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="intere">
@@ -380,7 +357,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/02/24/chapter12mysql视图/" class="post-title-link" itemprop="url">chapter12视图</a>
+            <a href="/2020/05/20/java多线程1/" class="post-title-link" itemprop="url">java多线程1</a>
           
         </h1>
 
@@ -395,606 +372,7 @@
                 
               
 
-              <time title="创建时间：2020-02-24 10:46:10 / 修改时间：11:13:58" itemprop="dateCreated datePublished" datetime="2020-02-24T10:46:10+08:00">2020-02-24</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li><p>mysql视图的定义：</p>
-<p> //view,一种虚拟的表，只保存了逻辑语句的空间。封装了各种查询逻辑，方便得到查询结果<br> create view v as select * from tablename;//创建了一个视图<br> select * from v;//使用视图</p>
-</li>
-<li><p>创建视图</p>
-<p> create view viewname as 查询语句;</p>
-</li>
-<li><p>修改视图</p>
-<p> //1<br> create or replace view viewname as 查询语句;<br> //2<br> alter view viewname as 查询语句;</p>
-</li>
-<li><p>查看，删除</p>
-<p> show..<br> drop view viewname;</p>
-</li>
-<li><p>视图内容的修改</p>
-<p> insert;//增<br> delete;//删<br> update;//改<br> //对视图的修改会导致其关系到的表的修改，但是有一些视图是不能修改的，比如<br> //常量视图，使用子查询得到的视图，使用join得到的视图。<br> //一般不对视图修改</p>
-</li>
-</ol>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/19/chapter11mysql语言分类/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/dogHead.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/02/19/chapter11mysql语言分类/" class="post-title-link" itemprop="url">chapter11mysql语言分类</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-19 16:43:03 / 修改时间：16:43:36" itemprop="dateCreated datePublished" datetime="2020-02-19T16:43:03+08:00">2020-02-19</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>SQL（Structure Query Language）结构化查询语言</p>
-<p>DQL（data query language）数据查询语言 select操作</p>
-<p>DML（data manipulation language）数据操作语言，主要是数据库增删改三种操作</p>
-<p>DDL（data defination language）数据库定义语言，主要是建表、删除表、修改表字段等操作</p>
-<p>DCL（data control language）数据库控制语言，如commit，revoke之类的，在默认状态下，只有sysadmin,dbcreator,db_owner或db_securityadmin等人员才有权力执行DCL</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/19/计算机组织与体系结构chapter1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/dogHead.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/02/19/计算机组织与体系结构chapter1/" class="post-title-link" itemprop="url">计算机组织与体系结构chapter1</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-19 14:07:35 / 修改时间：14:46:38" itemprop="dateCreated datePublished" datetime="2020-02-19T14:07:35+08:00">2020-02-19</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/计算机组织与体系结构/" itemprop="url" rel="index"><span itemprop="name">计算机组织与体系结构</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li>计算机系统组成：软件系统，硬件系统</li>
-<li>硬件系统：<ol>
-<li>早期的冯诺依曼结构：以运算器为中心</li>
-<li>冯诺依曼特点：<ol>
-<li>二进制编写指令<br>。。。</li>
-</ol>
-</li>
-<li>北桥：集成高速接口与内存处理器<br>南桥：集成低速接口</li>
-</ol>
-</li>
-</ol>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/16/读书笔记-如何阅读一本书/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/dogHead.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/02/16/读书笔记-如何阅读一本书/" class="post-title-link" itemprop="url">读书笔记:如何阅读一本书</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-16 12:21:50 / 修改时间：13:28:24" itemprop="dateCreated datePublished" datetime="2020-02-16T12:21:50+08:00">2020-02-16</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/读书笔记/" itemprop="url" rel="index"><span itemprop="name">读书笔记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>##最重要的是，你通过阅读得到的知识，可以转化成怎样的措施和生活建议，可以用来做什么和怎么做。关键时阅读完这本书后，以后你会怎么做</p>
-<ol>
-<li><p>第一章阅读的活力与艺术：<br>内容： 阅读分为为了获得咨询阅读或消遣而阅读，还有为了增进理解而阅读。为了增进理解阅读需要我们去主动阅读，主动阅读需要观察力，记忆，分析，想象。主动阅读时一个主动学习的过程。</p>
-</li>
-<li><p>阅读的层次</p>
-<ol>
-<li>基础阅读：基本的阅读，明白文中的句子在说什么，要求是能认字就行。</li>
-<li>检视阅读：在有限时间内，快速了解一本书表象上给你的知识。</li>
-<li>分析阅读：深度分析一本书，将一本书变成你自己的。然而要注意的是，有些书值得这么做，有些仅仅值得浅尝辄止。</li>
-<li>主题阅读：在一个主题上阅读多本书</li>
-</ol>
-</li>
-<li><p>检视阅读：</p>
-<ol>
-<li>两种检视阅读：有系统的略读或粗读 与  粗浅的阅读</li>
-<li>检视阅读的帮助：告诉你一本书值不值得分析阅读。告诉你一本书的大概。</li>
-<li>有系统的阅读：第一步，先读书名和序，给这本书分类。第二步，读书的目录，在心里留下一个大概框架。第三步，读一读索引和出版者介绍。完成以上三步，可大概知道是否需要继续往下读。第四步，四处翻一翻，留意书的脉络是怎样递进的，绝对不要错过作者最后的总结</li>
-<li>粗浅的阅读：暂时放下不理解的地方。</li>
-<li>什么时候使用检视阅读： 想要大概了解一本书，知道其是否值得读时。阅读一本难懂的书时。</li>
-</ol>
-</li>
-</ol>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/15/chapter10mysql索引/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/dogHead.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/02/15/chapter10mysql索引/" class="post-title-link" itemprop="url">chapter10mysql索引</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-15 21:02:22 / 修改时间：23:36:05" itemprop="dateCreated datePublished" datetime="2020-02-15T21:02:22+08:00">2020-02-15</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li><p>什么是索引： 创建索引后，拥有索引的字段，mysql会在其内部创建该索引中每一项的“指针”。当搜索某一行 where name = ‘mike’; 若name这一字段创建了索引，则只需要从该列搜索，不需要遍历每一列。增大搜索速度，但增长了更新的时间</p>
-</li>
-<li><p>设置索引<br> create index indexname on tablename(fieldname);<br> create table tablename(</p>
-<pre><code>index[ idnexname ] (fieldname);</code></pre><p> )</p>
-</li>
-<li><p>primary key是索引</p>
-</li>
-</ol>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/15/chapter9mysql通配符/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/dogHead.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/02/15/chapter9mysql通配符/" class="post-title-link" itemprop="url">chapter9mysql通配符</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-15 20:30:49 / 修改时间：20:35:09" itemprop="dateCreated datePublished" datetime="2020-02-15T20:30:49+08:00">2020-02-15</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>通配符    描述</p>
-<ol>
-<li><p>%    替代 0 个或多个字符</p>
-</li>
-<li><p>_    替代一个字符</p>
-<p> like ‘_oogle’;</p>
-</li>
-<li><p>[charlist]    字符列中的任何单一字符</p>
-</li>
-<li><p>[^charlist] 或[!charlist]    不在字符列中的任何单一字符</p>
-</li>
-</ol>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/12/chapter8mysql事务/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/dogHead.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/02/12/chapter8mysql事务/" class="post-title-link" itemprop="url">chapter8mysql事务</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-12 21:12:58" itemprop="dateCreated datePublished" datetime="2020-02-12T21:12:58+08:00">2020-02-12</time>
+              <time title="创建时间：2020-05-20 20:51:29" itemprop="dateCreated datePublished" datetime="2020-05-20T20:51:29+08:00">2020-05-20</time>
             </span>
           
             
@@ -1005,7 +383,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-03-09 11:16:12" itemprop="dateModified" datetime="2020-03-09T11:16:12+08:00">2020-03-09</time>
+                <time title="修改时间：2020-05-21 21:19:11" itemprop="dateModified" datetime="2020-05-21T21:19:11+08:00">2020-05-21</time>
               </span>
             
           
@@ -1015,7 +393,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/多线程/" itemprop="url" rel="index"><span itemprop="name">多线程</span></a></span>
 
                 
                 
@@ -1035,44 +413,21 @@
 
       
           <ol>
-<li><p>什么是事务：<br>一个完整的不可拆分的工作流程。每一个语句成功时事务才算成功，有一个失败则失败。<br>分类：显式与隐式</p>
-</li>
-<li><p>自动提交：<br>mysql中默认隐式事务，即自动提交,即每一句话都看作一个事务，是不能回滚的</p>
-<p> roll back;//无效</p>
-<p> select @@autocommit;//得到 @@autocommit = 1;</p>
-<p> set autocommit = 0;//关闭自动提交，显式事务开启</p>
-<p> //任何操作后输入commit才真正有效<br> commit;//这之后roll back无效</p>
-</li>
-<li><p>使用begin 或 start transaction 手动开启事务。处于begin或。。的后方语句组成一个事务，可以回滚（就算默认事务开启）</p>
-<p> begin;<br> update….;<br> update….;<br> commit;//提交，事务结束，不可以回滚</p>
-</li>
-<li><p>事务的四大特征：<br>A： 原子性，事务是最小的单位<br>C： 一致性，要求事务中所有语句成功事务才成功<br>I:  隔离性，事务之间隔离<br>D： 持久性，事务一旦结束就不能回滚</p>
-</li>
-<li><p>事务的隔离性：</p>
-<ol>
-<li><p>read uncommitted(读未提交,副作用：脏读，不可重复读，幻读)<br>a 操作事务，事务未提交，但是b可以看到操作的结果</p>
-</li>
-<li><p>read committed(读已提交，即不可重复读，幻读)</p>
-</li>
-<li><p>repeatable read(可重复读，mysql默认级别，副作用：幻读)<br>确保事务可以多次从一个字段读取相同的值，当这个事务a在操作时，禁止其他事务对这个字段进行更新</p>
-</li>
-<li><p>serializable(串行化，无以上三个副作用，当一个事务中对于数据库操作时，这个操作完成了，其他数据库的写操作才会继续进行)</p>
-</li>
-<li><p>查看隔离性级别：</p>
-<p>//8.0<br>select @@global.transaction_isolation;//系统级别<br>select @@transaction_isolation;//会话级别<br>//5.x<br>select @@global.tx_isolation;<br>select @@tx_isolation;</p>
-</li>
-<li><p>设置隔离级别</p>
-<p>set global transcation_isolation level read uncommitted;</p>
-</li>
-<li><p>副作用<br>脏读：一个事务可以读取其他事务未提交的操作<br>不可重复读：一个事务从开始到提交前，所做任何操作其他事务是无法查看的。而更新某个字段的操作可以查看，即a修改了某个字段，b查看该字段发现该字段与之前不同<br>幻读：事务a读取表中某字段，然后事务b插入了某些行，则a再次读取时发现多了几行</p>
-</li>
-<li><p>隔离级别越高，性能越差</p>
-</li>
+<li>为什么要使用线程池：因为线程的创建于关闭开销大，不能频繁的创建，关闭。将线程放到池子中复用是一个解决方法</li>
+<li>Volatile关键字：使修饰的对象具有可见性（不同线程之间的可见。即线程a对变量t修改，线程b能立刻读到t的修改得到的最新值）<br>为什么具有可见性：对于变量t，线程a,b都只是修改了副本。真正的t存在内存中。被volatile修饰的对象能在修改后立刻同步到内存，并让线程b在读取t时到内存中读取。<br>什么时候可以使用这种看起来不是很安全的关键字：一些变量的修改与当前值无关的，比较简单的，例如某个作为标志的布尔值</li>
 </ol>
-</li>
-<li><p>savepoint;</p>
-<p> do…;<br> savepoint a;<br> do ….;<br> rollback to a;//回滚到保存点a</p>
-</li>
+<p><a href="https://hzy38324.gitbooks.io/java-concurrency-in-practice/content/volatile.html" target="_blank" rel="noopener">大佬的博客</a></p>
+<p>3.syncronized关键字：利用内部锁，使修饰的代码在同一时间只能由一个线程进入。<br>内部锁：java中，每个对象都有一个内部锁。锁的持有对象是线程，当线程持有这个锁时，其他线程不能进入这段代码。<br>用法:</p>
+<pre><code>//这个this指此时调用这个方法的实例对象的锁
+syncronized(this){
+    count++;
+}
+//也可以使用任意一个对象的锁，不过这个对象在调用的方法的对象里
+syncronized(object){
+    ...
+}</code></pre><p>显式锁：Lock lock..<br>syncrinized的原子性和可见性</p>
+<ol start="4">
+<li>Future与FutureTask，CallAble<br>CallAble是接口，要实现call方法<br>Future是接口，FutureTask是它的实现类<br>初始化需要一个CallAble对象，通过get方法获得计算结果（get返回的是CallAble的call）</li>
 </ol>
 
         
@@ -1100,7 +455,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/12/chapter7mysql连接/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/22/jdbcLearning/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="intere">
@@ -1114,7 +469,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2020/02/12/chapter7mysql连接/" class="post-title-link" itemprop="url">chapter7mysql连接</a>
+            <a href="/2020/04/22/jdbcLearning/" class="post-title-link" itemprop="url">jdbcLearning</a>
           
         </h1>
 
@@ -1129,107 +484,7 @@
                 
               
 
-              <time title="创建时间：2020-02-12 20:53:32 / 修改时间：21:05:48" itemprop="dateCreated datePublished" datetime="2020-02-12T20:53:32+08:00">2020-02-12</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li><p>内连接： inner join 或join</p>
-<p> //表示两张表通过一定的条件查询并连接<br> select * from person join card on person.id = card.id;// on后是条件</p>
-</li>
-<li><p>左外连接： left outer join 或 left join</p>
-<p> //表示两张表中左边表都查询得出，右边符合条件才得出，而连接时，右边没有则为null<br> select * from person left join card on person.id = card.id;</p>
-</li>
-<li><p>右外连接： right join</p>
-</li>
-<li><p>全外连接： full join</p>
-<p> //mysql不支持 full join.<br> //full join 表示连接两个表中所有，不符合条件的也都用null补上</p>
-</li>
-</ol>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/11/chapter6子查询/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/dogHead.JPG">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/02/11/chapter6子查询/" class="post-title-link" itemprop="url">chapter6子查询</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-02-11 17:24:58" itemprop="dateCreated datePublished" datetime="2020-02-11T17:24:58+08:00">2020-02-11</time>
+              <time title="创建时间：2020-04-22 21:35:08" itemprop="dateCreated datePublished" datetime="2020-04-22T21:35:08+08:00">2020-04-22</time>
             </span>
           
             
@@ -1240,7 +495,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-02-12 01:10:37" itemprop="dateModified" datetime="2020-02-12T01:10:37+08:00">2020-02-12</time>
+                <time title="修改时间：2020-05-04 15:16:37" itemprop="dateModified" datetime="2020-05-04T15:16:37+08:00">2020-05-04</time>
               </span>
             
           
@@ -1250,7 +505,7 @@
               </span>
               <span class="post-meta-item-text">分类于</span>
               
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/数据库/" itemprop="url" rel="index"><span itemprop="name">数据库</span></a></span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/web/" itemprop="url" rel="index"><span itemprop="name">web</span></a></span>
 
                 
                 
@@ -1269,9 +524,783 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>查询班级号为 95011的学生成绩的平均分</p>
-<pre><code>//score表中没有班级号，从student表中选取学生编号（score表中有学生编   //号）
-select avg(degree) from score where sno in (select sno from student where class = &apos;95011&apos;) group by cno;</code></pre>
+          <ol>
+<li><p>步骤：<br>导入MySQL或者Oracle驱动包(在idea中需要往项目中导入mysql的连接包，具体方法时打开file-project Structure-dependencies)<br>装载数据库驱动程序<br>获取到与数据库连接<br>获取可以执行SQL语句的对象<br>执行SQL语句<br>关闭连接</p>
+</li>
+<li><p>加载驱动：实质就是加载驱动类，完成驱动类在jvm中的加载，因此驱动类中的静态代码块被执行，而代码块中有真正注册的方法。</p>
+<p> Class.forName(“com.mysql.jdbc.Driver”);<br> //8.0<br> “com.mysql.cj.jdbc.Driver”</p>
+</li>
+<li><p>获取连接：<br>url中要注明时区： serverTimezone. 使用无密码登录时密码为空,例：<br>jdbc:mysql//localhost:dbname?serverTimezone=UTC;  //UTC是全球标准时间<br> //1<br> DriverManager.getConnection(url);<br> //2<br> DriverManager.getConnection(url,infos);<br> //3<br> DriverManager.getConnection(url,user,password);</p>
+</li>
+<li><p>preparedStatement: 预编译sql语句，填写占位符，执行(通过preparedStatement可以防注入)。对于单个sql语句来说是单例的<br>pre = connection.getPreparedStatement(sql);<br>pre.setInt(序号,number);<br>pre.excuteQuery();<br>//批处理： Batch<br>pre.addBatch();<br>pre.executeBatch();</p>
+</li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/20/会话技术/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/04/20/会话技术/" class="post-title-link" itemprop="url">会话技术</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-04-20 21:06:31" itemprop="dateCreated datePublished" datetime="2020-04-20T21:06:31+08:00">2020-04-20</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-22 21:18:05" itemprop="dateModified" datetime="2020-04-22T21:18:05+08:00">2020-04-22</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/web/" itemprop="url" rel="index"><span itemprop="name">web</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li><p>什么是会话： 浏览器访问服务器，直到关闭浏览器，这是一次会话</p>
+</li>
+<li><p>cookie: 客户端会话技术。相当于服务器暂存在浏览器的数据。当服务器需要浏览器的一些用户信息时，会使用responce向浏览器发送cookie,浏览器将cookie保存。下次访问服务器时将请求的网址和cookie一起交给服务器。cookie只能存储字符串(ascll编码)，session能存储任何类型数据<br>几个属性：<br>MaxAge: cookie存在的最大时间。为正数，保存在浏览器本地，在小于该时间内该cookie有效。为0，删除该cookie,为负数，临时cookie。<br>domain: cookie的域名。不能跨域名提供cookie。<br>path: 决定某个cookie当访问某个路径下资源时才提供给服务器</p>
+</li>
+<li><p>session: 保存在服务器内存中的域对象，当用户访问服务器的servlet会生成，servlet间共享，超过超时时间会被删除。session通过cookie(名称：JESSIONID)识别用户</p>
+</li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/20/url-uri/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/04/20/url-uri/" class="post-title-link" itemprop="url">url,uri</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-04-20 17:02:18 / 修改时间：17:04:50" itemprop="dateCreated datePublished" datetime="2020-04-20T17:02:18+08:00">2020-04-20</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/web/" itemprop="url" rel="index"><span itemprop="name">web</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li>uri: 统一资源标志符。指的是资源的在某个规则下独一无二的名字</li>
+<li>url: 资源的位置，也同样是唯一的，可以表示一个资源的身份。url相当于uri的子集。一个url包括协议+访问主机的名字，端口号等+资源的具体位置和参数</li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/17/计网实验课1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/04/17/计网实验课1/" class="post-title-link" itemprop="url">计网实验课1</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-04-17 14:42:54 / 修改时间：16:07:32" itemprop="dateCreated datePublished" datetime="2020-04-17T14:42:54+08:00">2020-04-17</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/计网/" itemprop="url" rel="index"><span itemprop="name">计网</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>实验1 访问cisco网络设备</p>
+<p>路由器：2611<br>交换机：2960 enabl进入授权模式<br>mac地址：网络设备的物理地址<br>ip地址：网络设备的虚拟地址</p>
+<p>路由器与路由器，交换机遇交换机用虚线连接<br>路由器与交换机有平行线连接</p>
+<p>在子网内才能ping通</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/16/ServletLearning-0/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/04/16/ServletLearning-0/" class="post-title-link" itemprop="url">ServletLearning</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-04-16 21:19:08" itemprop="dateCreated datePublished" datetime="2020-04-16T21:19:08+08:00">2020-04-16</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-06-01 20:38:53" itemprop="dateModified" datetime="2020-06-01T20:38:53+08:00">2020-06-01</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/web/" itemprop="url" rel="index"><span itemprop="name">web</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li><p>定义 ： 什么是servlet<br>服务器与数据库的中间层。已经有Servlet的类实现。其用于处理浏览器的请求和发送回复</p>
+</li>
+<li><p>一个servlet程序(类)的结构：<br>init()：初始化<br>service():服务逻辑<br>destroy():销毁。当关闭tomcat服务器时才调用<br>ServletConfig：Servlet配置<br>getServletInfo：Servlet信息</p>
+</li>
+<li><p>servlet配置：告诉tomcat服务器使用哪个类做servlet. servlet的映射路径。外界访问servlet的路径</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--        servlet容器的名字和类名(存放位置)--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>HelloServlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">servlet-class</span>&gt;</span>HelloServlet<span class="tag">&lt;/<span class="name">servlet-class</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">servlet</span>&gt;</span></span><br><span class="line"></span><br><span class="line">        <span class="tag">&lt;<span class="name">servlet-mapping</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--        servlet容器的映射路径--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">servlet-name</span>&gt;</span>HelloServlet<span class="tag">&lt;/<span class="name">servlet-name</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--        外界访问servlet容器的路径--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">url-pattern</span>&gt;</span>/HelloServlet<span class="tag">&lt;/<span class="name">url-pattern</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">servlet-mapping</span>&gt;</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>tomcat生命周期：<br>加载Servlet。当Tomcat第一次访问Servlet的时候，Tomcat会负责创建Servlet的实例<br>初始化。当Servlet被实例化后，Tomcat会调用init()方法初始化这个对象<br>处理服务。当浏览器访问Servlet的时候，Servlet 会调用service()方法处理请求<br>销毁。当Tomcat关闭时或者检测到Servlet要从Tomcat删除的时候会自动调用destroy()方法，让该实例释放掉所占的资源。一个Servlet如果长时间不被使用的话，也会被Tomcat自动销毁<br>卸载。当Servlet调用完destroy()方法后，等待垃圾回收。如果有需要再次使用这个Servlet，会重新调用init()方法进行初始化操作。<br>简单总结：**只要访问Servlet，service()就会被调用。init()只有第一次访问Servlet的时候才会被调用。<br>destroy()只有在Tomcat关闭的时候才会被调用。</p>
+</li>
+<li><p>servlet细节：</p>
+</li>
+<li><p>一个servlet可以被多个url映射。<br>在web.xml中的&lt; url-pattern &gt;标签中，填写的是用户访问servlet的url。一个servlet可以用不同的url。但访问的都是同一个servlet</p>
+</li>
+<li><p>servlet是单例的：<br>在访问一个servlet后，就创建它的对象，保存在内存中</p>
+</li>
+<li><p>用户每次访问servlet服务器都会为其开一个线程</p>
+</li>
+<li><p>load-on-startup标签</p>
+</li>
+<li><p>在web上访问任何资源都是在访问servlet。</p>
+</li>
+<li><p>缺省servlet。<br>对应缺省的映射路径：<br>&lt; url-pattern&gt;/&lt; /url-pattern&gt;。<br>当访问一个没有映射servlet的资源时，会将其交给使用缺省映射路径的servlet。<br>问题： URL输入<a href="http://localhost:8080/thirdSample/index.html" target="_blank" rel="noopener">http://localhost:8080/thirdSample/index.html</a></p>
+</li>
+</ol>
+<p>1）到当前thirdSample应用下的web.xml文件查找是否有匹配的url-pattern。<br>    2）如果没有匹配的url-pattern，则交给tomcat的内置的DefaultServlet处理<br>    3）DefaultServlet程序到thirdSample应用的根目录下查找是存在一个名称为index.html的静态文件。<br>    4）如果找到该文件，则读取该文件内容，返回给浏览器。<br>    5）如果找不到该文件，则返回404错误页面。</p>
+<ol start="7">
+<li><p>servletconfig:<br>配置文件中的信息。一个servlet有一个。servlet对象可以使用getServletconfig得到。</p>
+</li>
+<li><p>servletContext:<br>一个应用中所有servlet共享的域。也有get,set方法</p>
+</li>
+<li><p>如何读取文件？<br>使用配置文件</p>
+</li>
+</ol>
+<ol start="6">
+<li>request 和 responce</li>
+</ol>
+<p>HttpRequest, HttpResponce实现了请求和响应类。</p>
+<ol>
+<li><p>编码问题：如何告诉浏览器我们使用什么编码？<br>为reponce在响应头中设置编码格式。</p>
+<p> responce.setHeader(“Content-Type”,”text/html;charset=UTF-8”);</p>
+</li>
+</ol>
+<p>同样，在向浏览器传输文件时，文件名使用utf-8编码：</p>
+<pre><code>URLEncoder.encode(filename,&quot;UTF-8&quot;);</code></pre><ol start="2">
+<li><p>实现自动刷新：网页中所谓的自动跳转，是使用自动刷新实现的</p>
+<p> response.setContentType(“text/html;charset=UTF-8”);</p>
+<pre><code>response.getWriter().write(&quot;3秒后跳转页面.....&quot;);
+
+//三秒后跳转到index.jsp页面去，web应用的映射路径我设置成/，url没有写上应用名
+response.setHeader(&quot;Refresh&quot;, &quot;3;url=&apos;/index.jsp&apos;&quot;);</code></pre></li>
+<li><p>重定向跳转：地址栏变化。重定向是发生在浏览器，是新的请求，可以去往任意资源</p>
+<p> httpResponce.senRedirect(url);//302状态码码表示临时重定向，即访问这个网页，跳转到另一个网页</p>
+</li>
+<li><p>refferer</p>
+</li>
+<li><p>转发：将某个请求转向另一个servlet,地址栏未变化。转发是发生在服务器的，只能去往当前Web应用的资源<br>使用RequestDispatcher<br><a href="https://segmentfault.com/a/1190000013124026" target="_blank" rel="noopener">大佬的博客1</a><br><a href="https://segmentfault.com/a/1190000013124143" target="_blank" rel="noopener">大佬的博客2</a></p>
+</li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/13/HTTP协议/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/04/13/HTTP协议/" class="post-title-link" itemprop="url">HTTP协议</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-04-13 15:54:57 / 修改时间：16:01:08" itemprop="dateCreated datePublished" datetime="2020-04-13T15:54:57+08:00">2020-04-13</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/web/" itemprop="url" rel="index"><span itemprop="name">web</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li><p>版本号：</p>
+</li>
+<li><p>0： 短链接，获取资源后就断开(内部怎么实现的？每次发送和接受报文都要连接和断开？)</p>
+</li>
+<li><p>1： 保持连接，在一个连接上获取多个web资源</p>
+</li>
+<li><p>请求报文结构：<br>分为：<br>请求行(方法+资源地址+版本号)<br>消息头(请求头)<br>空行<br>请求数据</p>
+</li>
+<li><p>响应报文结构：<br>响应状态(状态码分为5类，哪5类？)<br>响应消息头<br>空行<br>响应数据</p>
+</li>
+</ol>
+<p><a href="https://segmentfault.com/a/1190000013124026" target="_blank" rel="noopener">大佬的博客</a></p>
+<p>防丢失copy..</p>
+<p>HTTP协议<br>什么是HTPP协议<br>超文本传输协议（HTTP，HyperText Transfer Protocol)是互联网上应用最为广泛的一种网络协议。所有的WWW文件都必须遵守这个标准。它是TCP/IP协议的一个应用层协议<br>简单来说，HTTP协议就是客户端和服务器交互的一种通迅的格式。</p>
+<p>例子:在浏览器点击一个链接，浏览器就为我打开这个链接的网页。</p>
+<p>原理：当在浏览器中点击这个链接的时候，浏览器会向服务器发送一段文本，告诉服务器请求打开的是哪一个网页。服务器收到请求后，就返回一段文本给浏览器，浏览器会将该文本解析，然后显示出来。这段文本就是遵循HTTP协议规范的。</p>
+<p>HTTP1.0和HTTP1.1的区别<br>HTTP1.0协议中，客户端与web服务器建立连接后，只能获得一个web资源【短连接，获取资源后就断开连接】</p>
+<p>HTTP1.1协议，允许客户端与web服务器建立连接后，在一个连接上获取多个web资源【保持连接】</p>
+<p>HTTP请求<br>浏览器向服务器请求某个web资源时，称之为浏览器向服务器发送了一个http请求。</p>
+<p>一个完整http请求应该包含三个部分：</p>
+<p>请求行【描述客户端的请求方式、请求的资源名称，以及使用的HTTP协议版本号】<br>多个消息头【描述客户端请求哪台主机，以及客户端的一些环境信息等】<br>一个空行<br>请求行<br>请求行：GET /java.html HTTP/1.1</p>
+<p>请求行中的GET称之为请求方式，请求方式有：POST,GET,HEAD,OPTIONS,DELETE,TRACE,PUT。</p>
+<p>常用的有：POST,GET</p>
+<p>一般来说，当我们点击超链接，通过地址栏访问都是get请求方式。通过表单提交的数据一般是post方式。</p>
+<p>可以简单理解GET方式用来查询数据,POST方式用来提交数据，get的提交速度比post快</p>
+<p>GET方式：在URL地址后附带的参数是有限制的，其数据容量通常不能超过1K。</p>
+<p>POST方式：可以在请求的实体内容中向服务器发送数据，传送的数据量无限制。</p>
+<p>请求头<br>Accept: text/html,image/* 【浏览器告诉服务器，它支持的数据类型】<br>Accept-Charset: ISO-8859-1 【浏览器告诉服务器，它支持哪种字符集】<br>Accept-Encoding: gzip,compress 【浏览器告诉服务器，它支持的压缩格式】<br>Accept-Language: en-us,zh-cn 【浏览器告诉服务器，它的语言环境】<br>Host: <a href="http://www.it315.org:80【浏览器告诉服务器，它的想访问哪台主机】" target="_blank" rel="noopener">www.it315.org:80【浏览器告诉服务器，它的想访问哪台主机】</a><br>If-Modified-Since: Tue, 11 Jul 2000 18:23:51 GMT【浏览器告诉服务器，缓存数据的时间】<br>Referer: <a href="http://www.it315.org/index.jsp【浏览器告诉服务器，客户机是从那个页面来的---反盗链】" target="_blank" rel="noopener">http://www.it315.org/index.jsp【浏览器告诉服务器，客户机是从那个页面来的---反盗链】</a><br>8.User-Agent: Mozilla/4.0 (compatible; MSIE 5.5; Windows NT 5.0)【浏览器告诉服务器，浏览器的内核是什么】<br>Cookie【浏览器告诉服务器，带来的Cookie是什么】<br>Connection: close/Keep-Alive 【浏览器告诉服务器，请求完后是断开链接还是保持链接】<br>Date: Tue, 11 Jul 2000 18:23:51 GMT【浏览器告诉服务器，请求的时间】<br>HTTP响应<br>一个HTTP响应代表着服务器向浏览器回送数据</p>
+<p>一个完整的HTTP响应应该包含四个部分:</p>
+<p>一个状态行【用于描述服务器对请求的处理结果。】<br>多个消息头【用于描述服务器的基本信息，以及数据的描述，服务器通过这些数据的描述信息，可以通知客户端如何处理等一会儿它回送的数据】<br>一个空行<br>实体内容【服务器向客户端回送的数据】<br>状态行<br>格式： HTTP版本号　状态码　原因叙述</p>
+<p>状态行：HTTP/1.1 200 OK</p>
+<p>状态码用于表示服务器对请求的处理结果，它是一个三位的十进制数。响应状态码分为5类</p>
+<p>响应头<br>Location: <a href="http://www.it315.org/index.jsp" target="_blank" rel="noopener">http://www.it315.org/index.jsp</a> 【服务器告诉浏览器要跳转到哪个页面】<br>Server:apache tomcat【服务器告诉浏览器，服务器的型号是什么】<br>Content-Encoding: gzip 【服务器告诉浏览器数据压缩的格式】<br>Content-Length: 80 【服务器告诉浏览器回送数据的长度】<br>Content-Language: zh-cn 【服务器告诉浏览器，服务器的语言环境】<br>Content-Type: text/html; charset=GB2312 【服务器告诉浏览器，回送数据的类型】<br>Last-Modified: Tue, 11 Jul 2000 18:23:51 GMT【服务器告诉浏览器该资源上次更新时间】<br>Refresh: 1;url=<a href="http://www.it315.org【服务器告诉浏览器要定时刷新】" target="_blank" rel="noopener">http://www.it315.org【服务器告诉浏览器要定时刷新】</a><br>Content-Disposition: attachment; filename=aaa.zip【服务器告诉浏览器以下载方式打开数据】<br>Transfer-Encoding: chunked 【服务器告诉浏览器数据以分块方式回送】<br>Set-Cookie:SS=Q0=5Lb_nQ; path=/search【服务器告诉浏览器要保存Cookie】<br>Expires: -1【服务器告诉浏览器不要设置缓存】<br>Cache-Control: no-cache 【服务器告诉浏览器不要设置缓存】<br>Pragma: no-cache 【服务器告诉浏览器不要设置缓存】<br>Connection: close/Keep-Alive 【服务器告诉浏览器连接方式】<br>Date: Tue, 11 Jul 2000 18:23:51 GMT【服务器告诉浏览器回送数据的时间】</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/04/13/TomcatLearning/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/04/13/TomcatLearning/" class="post-title-link" itemprop="url">TomcatLearning</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-04-13 11:48:07" itemprop="dateCreated datePublished" datetime="2020-04-13T11:48:07+08:00">2020-04-13</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-16 21:16:34" itemprop="dateModified" datetime="2020-04-16T21:16:34+08:00">2020-04-16</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/web/" itemprop="url" rel="index"><span itemprop="name">web</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li>设置虚拟站点以分开存储webapp：</li>
+</ol>
+<p>在tomcat的配置文件夹的server.xml中找到host标签，添加：<br>    &lt; context path=”” docBase=”绝对地址”/&gt;</p>
+<ol start="2">
+<li><p><a href="https://segmentfault.com/a/1190000013122831" target="_blank" rel="noopener">大佬的博客</a></p>
+</li>
+<li><p>怎样在idea中配置tomcat:<br>run<br>edit configruation</p>
+</li>
+</ol>
+<ul>
+<li>templates: tomcat :<br>server页面： configrue 配置本地tomcat文件夹位置。注意tomcat10.0会出现找不到libralies的问题。 且对于所有版本，要先访问tomcat文件夹，给它能够被访问的权利<br>deployment页面：  部署本地的项目。application contexts是默认的项目虚拟路径。<br><a href="https://juejin.im/post/5d6e22dee51d453c12504e59" target="_blank" rel="noopener">大佬的博客</a></li>
+</ul>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/03/22/依赖注入/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/dogHead.JPG">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/03/22/依赖注入/" class="post-title-link" itemprop="url">依赖注入</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-03-22 23:01:13" itemprop="dateCreated datePublished" datetime="2020-03-22T23:01:13+08:00">2020-03-22</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-04-13 11:17:33" itemprop="dateModified" datetime="2020-04-13T11:17:33+08:00">2020-04-13</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>就是传入符合一定规范的接口的实例？？</p>
+<p><a href="https://www.zhihu.com/question/32108444" target="_blank" rel="noopener">戏精演绎什么是依赖注入</a></p>
+
         
       
     </div>
@@ -1294,7 +1323,7 @@ select avg(degree) from score where sno in (select sno from student where class 
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/9/">9</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/4/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1330,7 +1359,7 @@ select avg(degree) from score where sno in (select sno from student where class 
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">81</span>
+          <span class="site-state-item-count">111</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1365,7 +1394,23 @@ select avg(degree) from score where sno in (select sno from student where class 
         
           
         
-        <span class="site-state-item-count">10</span>
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">18</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>

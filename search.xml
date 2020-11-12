@@ -1,6 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Stream]]></title>
+    <url>%2F2020%2F11%2F11%2FStream%2F</url>
+    <content type="text"><![CDATA[什么是Stream:Stream是java中的一个类，是java8的新特性。Stream相当于java对象的流。这个流内产生的对象不是事先分配的，而是随调用计算产生的,即调用forEach()时。如12Stream&lt;Integer&gt; stream = createRes();stream.map((n-&gt;&#123;...&#125;)).limit(100).forEach((la)-&gt;&#123;...&#125;)]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[lambda]]></title>
+    <url>%2F2020%2F11%2F11%2Flambda%2F</url>
+    <content type="text"><![CDATA[什么是lambda表达式：匿名函数，java 8 的新特性。构造如下 1234//值得注意的是，参数s1,s2不需指定类型，编译器可以自动推断(s1, s2) -&gt; &#123; return s1.compareTo(s2);&#125; FunctionalInterface： 只有1个函数需要实现的接口对于这样的接口的传入，可以传入：(符合方法签名：方法参数，返回类型相同)接口的实现类（传统写法，代码较繁琐）；Lambda表达式（只需列出参数名，由编译器推断类型）；符合方法签名的静态方法；符合方法签名的实例方法（实例类型被看做第一个参数类型）；符合方法签名的构造方法（实例类型被看做返回类型）。]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[IO]]></title>
+    <url>%2F2020%2F11%2F08%2FIO%2F</url>
+    <content type="text"><![CDATA[什么是IO：一种流式的数据输入输出模型。在java中可以分为字节流与字符流，或者同步IO，异步IO File:在java中，File表示的是一个文件或目录。构造器需要传入一个相对路径或绝对路径。(路径的表示：.表示当前目录，..表示上级目录;在windows中，用\作为路径分隔符，而在java中是\ ,在linux是/)常用方法有createNewFile,delete，mkdir,mkdirs InputStream: java中的同步字节流，是一个抽象类而不是接口。 1.申请使用： IO是系统中的资源，使用需要申请。在文件不存在时或其他原因下，申请IO可能会有异常。因此要在try…catch…finaly语句下使用IO,保证正确的关闭IO，当然也可以使用java 7的新特性 try(source) 12345678910111213try&#123; InputStream in = new FileInputStream(file);&#125;catch(...)&#123;&#125;finaly&#123; if(in != null) in.close();&#125;//编译器会为我们自动关闭IOtry(InputStream in = new FileInputStream(file))&#123;&#125; 2.常用API： read,返回一个字节表示的int值(0 ~ 255)，当为-1表示读完了 3.实现类：FileInputStream,ByteArrayInputStream OutputStream:write,缓冲区，flush Filter模式： 1234//内层是可以提供数据的基础IO实现类，如FileInputStream,将该类的实例传给增添功能的IO，如BufferedInputStream,GZIPInputStream，最后gzip有了缓冲和解压缩的能力InputStream file = new FileInputStream(path);InputStream buffered = new BufferedInputStream(flie);InputStream gzip = new GZIPInputStream(buffered); 读取classpath资源：什么是classpath: jvm读取.class文件的环境变量，是一个路径的集合，决定了在哪寻找.class文件以及寻找的顺序。ide上的classpath是当前工程的bin目录和jar包 在项目中，存放文件至classpath所指的位置，可用如下方法获得IO 12345try(InputStream in = getClass().getResourceAsStream(file))&#123;&#125;catch(..)&#123;&#125; 序列化： 让对象变成byte数组，从而可保存到文件中或者传输要能够序列化的类必须实现java.io.Serializable接口，其是一个空接口，即标记接口，只需implement即可传输对象的IO实现类为ObjectInputStream和ObjectOutputStream 123456class Person implement Serializable&#123;&#125;try(ObujectOutputStream o = new ObujectOutputStream(...))&#123;&#125;catch(..) Reader以字符为单位的读取流。注意的是，在构造时尽量传入编码格式，防止乱码出现read()返回的是字符表示的int,为-1时读完read(char[] c)返回读了几个字符的int 1234//InputStreamReader将inputStream转换成readertry (Reader reader = new InputStreamReader(new FileInputStream("src/readme.txt"), "UTF-8")) &#123; // TODO:&#125; Files,Paths工具类可用Files工具类读取小的文件，如配置文件]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[注解]]></title>
+    <url>%2F2020%2F11%2F08%2F%E6%B3%A8%E8%A7%A3-1%2F</url>
+    <content type="text"><![CDATA[什么是注解：注解是定义数据属性的数据，即一种元数据。在java中，它有三种： 给编译器使用的注解，如@Override,让编译器检查该处代码是否正确的覆写 由工具处理某些class 程序运行期间能够读取的注解 注解的定义：1234@Repeatable //元注解public @interface report&#123;int type() default 0; //type是注解在使用时需要的参数，default 0指默认值为0&#125;]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[写微信小程序碰到的一些问题]]></title>
+    <url>%2F2020%2F11%2F08%2F%E5%86%99%E5%BE%AE%E4%BF%A1%E5%B0%8F%E7%A8%8B%E5%BA%8F%E7%A2%B0%E5%88%B0%E7%9A%84%E4%B8%80%E4%BA%9B%E9%97%AE%E9%A2%98%2F</url>
+    <content type="text"><![CDATA[如何获取用户授权：使用组件button,使其open-type为”getUserInfo” 如何获取用户的openid:使用云数据库： cloud.getWXContext 如何新建云函数：在云函数根目录cloudfunctions上右键新建云函数，在该云函数文件夹的index.js中添加如下代码 12345// export.main即函数入口的意思export.main = (event,context)&#123; ... return ....&#125; 如何调用云函数：wx.cloud.callFunction 如何展现提示框：wx.showToast 云开发控制台如何存储图片：在存储区存储而不是数据库。每一个文件有唯一标识fileID 微信小程序如何在页面间传递数据：使用全局变量： 12345globalData:&#123; userInfo: null&#125;var app = getApp();var userInfo = app.globalData.userInfo; 使用缓存 1234wx.setStorage(&#123; key:"ca"&#125;)wx.getStorage() 怎样保持登录状态]]></content>
+      <categories>
+        <category>微信小程序</category>
+      </categories>
+  </entry>
+  <entry>
+    <title><![CDATA[集合]]></title>
+    <url>%2F2020%2F11%2F05%2F%E9%9B%86%E5%90%88%2F</url>
+    <content type="text"><![CDATA[java.util包提供了集合类：collection,其是除map外所有集合的根接口。还主要提供了三类接口：list,map,set 注：有一小部分集合类是遗留类，如HashTable,Stack,Vector,不应继续使用在自己创建的类中，为了良好的使用，通常要： 实现iterator接口： 1234567891011121314151617181920212223242526272829303132class ReverseList&lt;T&gt; implements Iterable&lt;T&gt; &#123; private List&lt;T&gt; list = new ArrayList&lt;&gt;(); public void add(T t) &#123; list.add(t); &#125; @Override public Iterator&lt;T&gt; iterator() &#123; return new ReverseIterator(list.size()); &#125; class ReverseIterator implements Iterator&lt;T&gt; &#123; int index; ReverseIterator(int index) &#123; this.index = index; &#125; @Override public boolean hasNext() &#123; return index &gt; 0; &#125; @Override public T next() &#123; index--; return ReverseList.this.list.get(index); &#125; &#125;&#125; 实现equals方法： 1234567public boolean equals(Object o) &#123; if (o instanceof Person) &#123; Person p = (Person) o; return Objects.equals(this.name, p.name) &amp;&amp; this.age == p.age; &#125; return false;&#125; List：有序列表，每个元素都有索引有两种实现：ArrayList,LinkedList对比： set方法： 只有ArrayList有 isEmpty,size,get,add,remove,contains:共有 add,remove,get调用时都需传入索引。对于linkedlist,其有特殊的方法可以得到，插入，删除头或尾的元素，如addLast,addFirst对List有几个常见问题： 遍历List。List.get(i)方法可以返回对应序号的元素，但这样非常慢。应该记住的是，我们要始终使用迭代器Intertor遍历。即 1234Iterator&lt;T&gt; i = list.iterator();for(i;;i.hasNext())&#123; System.out.printlin(i.next());&#125; 也可以直接使用for each 循环。在java中，实现了Iterator的类，对其使用for each循环，都默认调用它的iterator。 123for(int i:list)&#123; ...&#125; list与array的转换 12list = List.of(array);//返回的list实现类不一定是arraylist或linklistarray = list.toArray(new T[list.size()]);//T是list内元素类型。toArray方法若不传参则默认是object数组 Map使用Map时，也会遇到遍历的问题，答案是使用keyset,entryset进行foreach遍历 12345678910111213public class Main &#123; public static void main(String[] args) &#123; Map&lt;String, Integer&gt; map = new HashMap&lt;&gt;(); map.put("apple", 123); map.put("pear", 456); map.put("banana", 789); for (Map.Entry&lt;String, Integer&gt; entry : map.entrySet()) &#123; String key = entry.getKey(); Integer value = entry.getValue(); System.out.println(key + " = " + value); &#125; &#125;&#125; HashMap:不支持线程同步常用方法：添加：put 删除：remove 得到：get实现：一个entry&lt;k,v&gt;数组和链表的组合常见问题： 两个参数：capacity,容量，即数组大小。loadFactor,装载因子，即数组填满的多少 使用默认构造器时，hashmap的容量为16，装载因子为0.75。当entry数量等于capacity*loadFactor时，扩容数组为原来的两倍 capacity通常为2的幂次。这与如何得到索引有关。在hashmap中索引的计算是hash &amp; (length-1)。为2的幂次可以使(length-1)为全1的二进制数 使用自己创建的类对象当做key,需要重写类的equals，hashcode方法 当key为null时，entry存储在数组开头 总结不错的博文 2. TreeMap: 与HashMap不同的是，它是内部key有序的。在创建一个TreeMap时，要么其key对象实现了Comparable接口，要么为其传入一个自定义排序算法 3.Properties: 本质上是一个HashTable Set实现类：HashSet,是对HashMap的简单封装。对于放入Set中的对象，同样要实现equals,hashcode Queue:队列，支持队尾添加： add(); 取队首而不删除: element(); 取队首，删除:remove()实现类：LinkedList,PriorityQueue等 Collections工具类：提供许多有效的方法，如创建空集：emptyList(),emptyMap(); 如对list排序或洗牌：Collections.sort(list),Collections.shuffle(list)]]></content>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[有限状态机]]></title>
+    <url>%2F2020%2F11%2F05%2F%E6%9C%89%E9%99%90%E7%8A%B6%E6%80%81%E6%9C%BA%2F</url>
+    <content type="text"><![CDATA[什么是有限状态机?有限状态机是一个计算模型，其中包含有限的状态，状态可转向下一个状态(如果合法)在代码中表示状态和状态的转移关系，可以使用map和数组。数组存储状态(实际上状态是一个map),map中存储可转移的状态(用数组中的下标表示)例题：剑指Offer20.表示数值的字符串请实现一个函数用来判断字符串是否表示数值（包括整数和小数）。例如，字符串”+100”、”5e2”、”-123”、”3.1416”、”-1E-16”、”0123”都表示数值，但”12e”、”1a3.14”、”1.2.3”、”+-5”及”12e+5.4”都不是。 搬运大佬题解解：按照字符串从左到右的顺序，定义以下 9 种状态。 开始的空格 幂符号前的正负号 小数点前的数字 小数点、小数点后的数字 当小数点前为空格时，小数点、小数点后的数字 幂符号 幂符号后的正负号 幂符号后的数字 结尾的空格合法的结束状态由2,3,7,8 记录字符类型 tt ： 分为四种情况。当 c 为正负号时，执行 t = ‘s’ ;当 c 为数字时，执行 t = ‘d’ ;当 c 为 e , E 时，执行 t = ‘e’ ;当 c 为 . , 空格 时，执行 t = c （即用字符本身表示字符类型）;否则，执行 t = ‘?’ ，代表为不属于判断范围的非法字符，后续直接返回 falsefalse 。 123456789101112131415161718192021222324252627class Solution &#123; public boolean isNumber(String s) &#123; Map[] states = &#123; new HashMap&lt;&gt;() &#123;&#123; put(' ', 0); put('s', 1); put('d', 2); put('.', 4); &#125;&#125;, // 0. new HashMap&lt;&gt;() &#123;&#123; put('d', 2); put('.', 4); &#125;&#125;, // 1. new HashMap&lt;&gt;() &#123;&#123; put('d', 2); put('.', 3); put('e', 5); put(' ', 8); &#125;&#125;, // 2. new HashMap&lt;&gt;() &#123;&#123; put('d', 3); put('e', 5); put(' ', 8); &#125;&#125;, // 3. new HashMap&lt;&gt;() &#123;&#123; put('d', 3); &#125;&#125;, // 4. new HashMap&lt;&gt;() &#123;&#123; put('s', 6); put('d', 7); &#125;&#125;, // 5. new HashMap&lt;&gt;() &#123;&#123; put('d', 7); &#125;&#125;, // 6. new HashMap&lt;&gt;() &#123;&#123; put('d', 7); put(' ', 8); &#125;&#125;, // 7. new HashMap&lt;&gt;() &#123;&#123; put(' ', 8); &#125;&#125; // 8. &#125;; int p = 0; char t; for(char c : s.toCharArray()) &#123; if(c &gt;= '0' &amp;&amp; c &lt;= '9') t = 'd'; else if(c == '+' || c == '-') t = 's'; else if(c == 'e' || c == 'E') t = 'e'; else if(c == '.' || c == ' ') t = c; else t = '?'; if(!states[p].containsKey(t)) return false; p = (int)states[p].get(t); &#125; return p == 2 || p == 3 || p == 7 || p == 8; &#125;&#125;]]></content>
+      <categories>
+        <category>剑指offer</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[动态规划]]></title>
     <url>%2F2020%2F10%2F21%2F%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%2F</url>
     <content type="text"><![CDATA[在使用动态规划前，要明白两点： 动态规划是将大问题分成小问题。 动态规划采取数组存储各种情况下问题的解。因此，使用动态规划即要回答以下问题： 数组的元素代表什么？ 数组元素之间的关系式？ 初始条件。某些数组元素是否可以直接得到而不用计算？ 例题：lc: 最长回文子串回答3个问题： 数组dp[][]中每个元素代表字符串中下标i到下标j是否为一个回文串 关系式：dp[i][j] = (charArray[i]==charArray[j] &amp;&amp; dp[i+1][j-1])即若字符串为回文串，则其首尾字符相等，且去除首尾后的子串也是回文串 初始条件：长度为1的字符串都是回文串。 123456789101112131415161718192021222324252627282930class Solution &#123; public String longestPalindrome(String s) &#123; char[] charArray = s.toCharArray(); int n = charArray.length; boolean array[][] = new boolean[n][n]; int maxLength = 1; int begin=0,end=0; for(int i=0;i&lt;n;i++)&#123; array[i][i] = true; &#125; for(int j=1;j&lt;n;j++)&#123; for(int i=0;i&lt;j;i++)&#123; if(charArray[j]!=charArray[i])&#123; array[i][j] = false; continue; &#125;else if(j-i&lt;3)&#123;//首尾相等，且该串的子串长度为1或2 array[i][j] = true; &#125;else&#123; array[i][j] = array[i+1][j-1]; &#125; if(array[i][j]&amp;&amp;(j-i+1)&gt;maxLength)&#123; maxLength = j-i+1; begin = i; end = j; &#125; &#125; &#125; return s.substring(begin,begin+maxLength); &#125;&#125;]]></content>
@@ -236,14 +292,6 @@
     <title><![CDATA[依赖注入]]></title>
     <url>%2F2020%2F03%2F22%2F%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5%2F</url>
     <content type="text"><![CDATA[就是传入符合一定规范的接口的实例？？ 戏精演绎什么是依赖注入]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[注解]]></title>
-    <url>%2F2020%2F03%2F22%2F%E6%B3%A8%E8%A7%A3%2F</url>
-    <content type="text"><![CDATA[什么是注解官方解释：Java 注解用于为 Java 代码提供元数据。作为元数据，注解不直接影响你的代码执行，但也有一些类型的注解实际上可以用于这一目的。Java 注解是从 Java5 开始添加到 Java 的。 形象解释：注解好像一个标签。这个标签可以贴在类，方法，甚至一个变量上。贴上了这个标签的类或方法拥有了标签内的属性，如果是一个变量(值类型)，那么它的值是注解中对应参数的值 注解内有什么： 属性。即成员变量。但是没有方法 实现： 反射机制 注解怎么用 定义注解: @interface test{ }注解可以用来修饰注解，这种注解称为元注解。java中有@Retention、@Documented、@Target、@Inherited、@Repeatable 注解也可以被引用 TestAnnotation testAnnotation = Test.class.getAnnotation(TestAnnotation.class);// TestAnnotation是一个注解注解不是代码的一部分！ 大佬的博客更详细]]></content>
       <categories>
         <category>java</category>
       </categories>
@@ -670,6 +718,14 @@
       </categories>
   </entry>
   <entry>
+    <title><![CDATA[chapter3大实数]]></title>
+    <url>%2F2020%2F01%2F26%2Fchapter3%E5%A4%A7%E5%AE%9E%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[BigInteger integer = BigInteger.valueOf(1);//创造一个数值等于1的整型大实数 add,substract,devide,multiply(BigInteger) //BigDecimal]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
+  </entry>
+  <entry>
     <title><![CDATA[chapter1在终端中操作Mysql]]></title>
     <url>%2F2020%2F01%2F26%2Fchapter1%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93%2F</url>
     <content type="text"><![CDATA[如何查找每一个科目最高分的学生姓名?如何查找每一个学生的sno,cno,grade列？ add : 添加表中的字段 insert: 添加表中内容drop: 删除表或删除数据库 delete: 删除某一行change: 修改字段形式 update: 更新某一行内容 登录数据库服务器： mysql -uroot-p 显示所有数据库中的库： show databases; 选择数据库： use databasename; 查询当前所在表中的数据： select * from excelname; select name , id from tablename; select distinct fieldname from tablename;//查询表中所有不重复的某字段 select * from score where degree between 60 and 80;//60到80的闭区间 select * from score where degree in (85,86,87);//degree为85或86或87的记录 select * from score order by value1 asc;,value2 desc//升序查询，降序是desc,查询按照value1升序，value2降序（优先：value1） 显示当前库中所有表： show tables; 创建表： create table tablename(各字段 check(条件)//创建表的约束 ); //记录是表中的一行，字段是组成记录的元素 删除表： drop table tablename; 查看某个表： describe tablename; select function();//mysql中可以使用select查询字段，函数，表达式（计算表达式），常量 向表中插入字段： //第一种，支持插入多个字段,支持子查询 insert into tablename values(value1), (value2); //第二种，不支持同时插入多个字段，不支持子查询 insert into tablename set 字段1=…,字段2=.. 删除字段：delete from tablename where …;//可以roll back,假如删除了自增长的字段，字段添加时从断电开始truncate table tablename;//清空表，不能带where,且不能roll back，假如删除了自增长的字段，字段从头开始 更新字段:update tablename set field1=,filed2= … where ….;//修改单表中符合条件的某一行中的某个字段值 向表结构中添加多个字段：alter table tablename add fieldname fieldtype… or and not 统计：countselect count(*) from tablename where…..;//统计 最大值：maxselect id from tablename where(degree = select max(degree) from tablename); limit 0,1:表示从第0个数字开始查，最多查1个 avg();//平均值 group by field;//分组 where 与 having的区别where用于聚合前查询的条件，having 用于聚合后，having后的条件可以使用聚合函数select id from score group by lessonname having count(num)&gt;2; 模糊查询：like(); not like(); like ‘k%’;//查询以k开头的字符串like ‘%oo%’;//查询包含oo的字符串 union :将多个select查询结果放到一个集合中，默认删去重复的，若为 union all则包含重复值 any(): 任意一个 all(): 所有 使用as取别名 select sname, ssex,sbirthday from student union select tname, tsex,tbirthday from teacher;//得到表的字段名为sname, ssex,sbirthday//使用asselect sname as name, ssex as name,sbirthday as name from student union select tname, tsex,tbirthday from teacher; 复制表数据做条件查询 select * from score a where degree &lt; (select avg(degree) from score b where a.cno = b. cno); 将某个表中的数据复制到另一个表 insert into table1 (fieldname1,….) select field1,… from table2; 拼接字符串： select concat(lastname,firstname) as 姓名 from … 不等于： &lt;&gt; 安全等于 &lt;=&gt; , 可以判断NULL值 substr(str,pos);//截取字符串，字符串位置pos从1 开始instr(str1,str2);//返回str2在str1中的起始索引位置，找不到则返回0trim(‘str’from ‘str2’);//从str2中去除前后的str1lapd();//左填充replace()’ 数学函数 round();//四舍五入ceil();//向上取整floor();//向下取整truncate(number,位数);//截断保留几位mod();//取余 时间函数 now();//现在的日期+时间curdate();//现在的日期curtime();//现在的时间 if select if(10&gt;5,’大’,’小’);//第一个条件满足，返回第一个值，否则第二个 case: case 要判断的值when 值 = ? then 要显示的值或语句;// casewhen 条件 then ……; 单行函数：将一个数据进行处理，返回一个值分组函数：将虚拟表看做一个组，处理一组数据，返回一个值 分组查询：分组前查询：查询原始表中有的数据，条件使用where分组后查询：查询原始表中没有的数据，条件使用having exists();//返回是否存在 分页查询：select .. from … limit start,调数; 联合查询：union]]></content>
@@ -679,14 +735,6 @@
       <tags>
         <tag>mysql</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[chapter3大实数]]></title>
-    <url>%2F2020%2F01%2F26%2Fchapter3%E5%A4%A7%E5%AE%9E%E6%95%B0%2F</url>
-    <content type="text"><![CDATA[BigInteger integer = BigInteger.valueOf(1);//创造一个数值等于1的整型大实数 add,substract,devide,multiply(BigInteger) //BigDecimal]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
   </entry>
   <entry>
     <title><![CDATA[chapter3输入与输出]]></title>

@@ -252,6 +252,1044 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/11/lambda/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/rick.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/11/11/lambda/" class="post-title-link" itemprop="url">lambda</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-11-11 21:07:11 / 修改时间：21:16:47" itemprop="dateCreated datePublished" datetime="2020-11-11T21:07:11+08:00">2020-11-11</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li><p>什么是lambda表达式：<br>匿名函数，java 8 的新特性。构造如下</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//值得注意的是，参数s1,s2不需指定类型，编译器可以自动推断</span></span><br><span class="line">(s1, s2) -&gt; &#123;</span><br><span class="line">    <span class="keyword">return</span> s1.compareTo(s2);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>FunctionalInterface： 只有1个函数需要实现的接口<br>对于这样的接口的传入，可以传入：<br>(符合方法签名：方法参数，返回类型相同)<br>接口的实现类（传统写法，代码较繁琐）；<br>Lambda表达式（只需列出参数名，由编译器推断类型）；<br>符合方法签名的静态方法；<br>符合方法签名的实例方法（实例类型被看做第一个参数类型）；<br>符合方法签名的构造方法（实例类型被看做返回类型）。</p>
+</li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/08/IO/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/rick.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/11/08/IO/" class="post-title-link" itemprop="url">IO</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-11-08 21:12:17" itemprop="dateCreated datePublished" datetime="2020-11-08T21:12:17+08:00">2020-11-08</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-10 21:21:30" itemprop="dateModified" datetime="2020-11-10T21:21:30+08:00">2020-11-10</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li><p>什么是IO：<br>一种流式的数据输入输出模型。在java中可以分为字节流与字符流，或者同步IO，异步IO</p>
+</li>
+<li><p>File:<br>在java中，File表示的是一个文件或目录。构造器需要传入一个相对路径或绝对路径。<br>(路径的表示：.表示当前目录，..表示上级目录;在windows中，用\作为路径分隔符，而在java中是\ ,在linux是/)<br>常用方法有createNewFile,delete，mkdir,mkdirs</p>
+</li>
+<li><p>InputStream: java中的同步字节流，是一个抽象类而不是接口。</p>
+<p> 1.申请使用：<br> IO是系统中的资源，使用需要申请。在文件不存在时或其他原因下，申请IO可能会有异常。因此要在try…catch…finaly语句下使用IO,保证正确的关闭IO，当然也可以使用java 7的新特性 try(source)</p>
+</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>&#123;</span><br><span class="line">    InputStream in = <span class="keyword">new</span> FileInputStream(file);</span><br><span class="line">&#125;<span class="keyword">catch</span>(...)&#123;</span><br><span class="line"></span><br><span class="line">&#125;finaly&#123;</span><br><span class="line">    <span class="keyword">if</span>(in != <span class="keyword">null</span>)</span><br><span class="line">    in.close();</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//编译器会为我们自动关闭IO</span></span><br><span class="line"><span class="keyword">try</span>(InputStream in = <span class="keyword">new</span> FileInputStream(file))&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<pre><code>2.常用API： read,返回一个字节表示的int值(0 ~ 255)，当为-1表示读完了
+3.实现类：FileInputStream,ByteArrayInputStream </code></pre><ol start="3">
+<li><p>OutputStream:<br>write,缓冲区，flush</p>
+</li>
+<li><p>Filter模式： </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//内层是可以提供数据的基础IO实现类，如FileInputStream,将该类的实例传给增添功能的IO，如BufferedInputStream,GZIPInputStream，最后gzip有了缓冲和解压缩的能力</span></span><br><span class="line">InputStream file = <span class="keyword">new</span> FileInputStream(path);</span><br><span class="line">InputStream buffered = <span class="keyword">new</span> BufferedInputStream(flie);</span><br><span class="line">InputStream gzip = <span class="keyword">new</span> GZIPInputStream(buffered);</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>读取classpath资源：<br>什么是classpath: jvm读取.class文件的环境变量，是一个路径的集合，决定了在哪寻找.class文件以及寻找的顺序。ide上的classpath是当前工程的bin目录和jar包</p>
+</li>
+</ol>
+<p>在项目中，存放文件至classpath所指的位置，可用如下方法获得IO</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">try</span>(InputStream in = getClass().getResourceAsStream(file))&#123;</span><br><span class="line"></span><br><span class="line">&#125;<span class="keyword">catch</span>(..)&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="6">
+<li><p>序列化： 让对象变成byte数组，从而可保存到文件中或者传输<br>要能够序列化的类必须实现java.io.Serializable接口，其是一个空接口，即标记接口，只需implement即可<br>传输对象的IO实现类为ObjectInputStream和ObjectOutputStream</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> <span class="title">implement</span> <span class="title">Serializable</span></span>&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">try</span>(ObujectOutputStream o = <span class="keyword">new</span> ObujectOutputStream(...))&#123;</span><br><span class="line"></span><br><span class="line">&#125;<span class="keyword">catch</span>(..)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Reader<br>以字符为单位的读取流。注意的是，在构造时尽量传入编码格式，防止乱码出现<br>read()返回的是字符表示的int,为-1时读完<br>read(char[] c)返回读了几个字符的int</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//InputStreamReader将inputStream转换成reader</span></span><br><span class="line"><span class="keyword">try</span> (Reader reader = <span class="keyword">new</span> InputStreamReader(<span class="keyword">new</span> FileInputStream(<span class="string">"src/readme.txt"</span>), <span class="string">"UTF-8"</span>)) &#123;</span><br><span class="line">    <span class="comment">// <span class="doctag">TODO:</span></span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>Files,Paths工具类<br>可用Files工具类读取小的文件，如配置文件</p>
+</li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/08/注解-1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/rick.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/11/08/注解-1/" class="post-title-link" itemprop="url">注解</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-11-08 20:40:01 / 修改时间：20:50:29" itemprop="dateCreated datePublished" datetime="2020-11-08T20:40:01+08:00">2020-11-08</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/java/" itemprop="url" rel="index"><span itemprop="name">java</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li>什么是注解：<br>注解是定义数据属性的数据，即一种元数据。在java中，它有三种：<ol>
+<li>给编译器使用的注解，如@Override,让编译器检查该处代码是否正确的覆写</li>
+<li>由工具处理某些class</li>
+<li>程序运行期间能够读取的注解</li>
+</ol>
+</li>
+<li>注解的定义：<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Repeatable</span> <span class="comment">//元注解</span></span><br><span class="line"><span class="keyword">public</span> <span class="meta">@interface</span> report&#123;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">type</span><span class="params">()</span> <span class="keyword">default</span> 0</span>; <span class="comment">//type是注解在使用时需要的参数，default 0指默认值为0</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/08/写微信小程序碰到的一些问题/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/rick.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/11/08/写微信小程序碰到的一些问题/" class="post-title-link" itemprop="url">写微信小程序碰到的一些问题</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-11-08 13:06:19" itemprop="dateCreated datePublished" datetime="2020-11-08T13:06:19+08:00">2020-11-08</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-18 10:00:36" itemprop="dateModified" datetime="2020-11-18T10:00:36+08:00">2020-11-18</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/微信小程序/" itemprop="url" rel="index"><span itemprop="name">微信小程序</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li><p>如何获取用户授权：<br>使用组件button,使其open-type为”getUserInfo”</p>
+</li>
+<li><p>如何获取用户的openid:<br>使用云数据库： cloud.getWXContext</p>
+</li>
+<li><p>如何新建云函数：<br>在云函数根目录cloudfunctions上右键新建云函数，在该云函数文件夹的index.js中添加如下代码</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// export.main即函数入口的意思</span></span><br><span class="line"><span class="keyword">export</span>.main = (event,context)&#123;</span><br><span class="line">    ...</span><br><span class="line">    <span class="keyword">return</span> ....</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>如何调用云函数：<br>wx.cloud.callFunction</p>
+</li>
+<li><p>如何展现提示框：<br>wx.showToast</p>
+</li>
+<li><p>云开发控制台如何存储图片：<br>在存储区存储而不是数据库。每一个文件有唯一标识fileID</p>
+</li>
+<li><p>微信小程序如何在页面间传递数据：<br>使用全局变量：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">globalData:&#123;</span><br><span class="line">    userInfo: <span class="literal">null</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">var</span> app = getApp();</span><br><span class="line"><span class="keyword">var</span> userInfo = app.globalData.userInfo;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<p>使用缓存</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">wx.setStorage(&#123;</span><br><span class="line">    key:<span class="string">"ca"</span></span><br><span class="line">&#125;)</span><br><span class="line">wx.getStorage()</span><br></pre></td></tr></table></figure>
+
+<ol start="8">
+<li><p>怎样保持登录状态</p>
+</li>
+<li><p>globalData:<br>是微信小程序中的全局变量，存储在内存中，当小程序关闭后则消失。因此在确认登陆状态时，需要请求wx.getSetting，而不能利用登录后的globalData<br>要使用globalData,在app.js中声明</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">globalData:&#123;</span><br><span class="line">    userInfo: <span class="literal">null</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>组件数据的双向绑定</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//当value改变，this.data.value也改变</span></span><br><span class="line">&lt;input model:value=<span class="string">"&#123;&#123;value&#125;&#125;"</span> /&gt;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在函数中，若要修改data中的数据，如</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> value = <span class="keyword">this</span>.data.value;</span><br><span class="line">value = .....</span><br><span class="line"><span class="comment">//最后要setData</span></span><br><span class="line"><span class="keyword">this</span>.setData(&#123;</span><br><span class="line">    value : value</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>列表循环时，如何获得触发点击事件的组件的index</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">//wxml: data-index表示该组件的触发点击事件的数据集data中的index</span><br><span class="line">&lt;view wx:for=&quot;&#123;array&#125;&quot; data-index = &quot;&#123;&#123;index&#125;&#125;&quot; bindtap=&quot;func&quot;&gt;&lt;/view&gt;</span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">func : <span class="function"><span class="keyword">function</span>(<span class="params">e</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//e.currentTarget 代表的是，注册了监听点击事件的组件,e.target 代表的是，实际触发了点击事件的组件。</span></span><br><span class="line">    index = e.currentTarget.dataset.index;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol start="13">
+<li><p>chooseImage后，若不上传，怎么预览图片？<br>chooseImage后，其会返回tempFilePaths,是一个链接的数组</p>
+</li>
+<li><p>怎样在小程序中使用npm导入第三方库</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">找到project.config.json文件,确认miniprogramRoot位置，若没有则添加字段</span><br><span class="line">&quot;miniprogramRoot&quot;: &quot;miniprogram/&quot;，使小程序根目录在miniprogram</span><br><span class="line">如果添加字段后失败，提示找不到app.json，检查项目结构是否此时根目录是顶层</span><br><span class="line"></span><br><span class="line">cmd进入小程序根目录，输入命令npm init，初始化</span><br><span class="line">在根目录使用npm install....下载包</span><br><span class="line">打开微信小程序开发工具，点击工具--构建npm, 然后在详情(右上方)--本地设置--使用npm模块</span><br><span class="line"></span><br><span class="line">上面操作完后，在需要使用第三方库的js文件里，可以导入模块，如</span><br><span class="line">var sm2 = require(&apos;包名&apos;).sm2; //是包名不是包在小程序中的路径</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用fileID当做src渲染图片报错：网络渲染出错，state 500<br>可能是coloudPath(云文件路径)的命名包含了不该包含的字符，比如”:”</p>
+</li>
+<li><p>使用url传递参数</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//就用这个方式从列表中一列跳转到详情页</span></span><br><span class="line">url = <span class="string">'/page/detail/detail?id='</span>+ id</span><br><span class="line">在detail页面中的onload函数，使用options.id可以获得参数id</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>怎样做到小程序页面内选项卡页面切换：<br>选项卡，如tab，改变this.data中的current,从而切换swiper中的item。看起来就像切换页面，其实是swiper-item的切换</p>
+</li>
+<li><p>为什么组件的border不显示：<br>可能是组件占了空间大小百分百</p>
+</li>
+<li><p>checkbox-group的bindChange返回的e.detail.value返回其包含的checkbox的value的数组。不能通过checkbox直接获得它的checked,应该想办法从checkbox-group的value数组判断其是否被选中</p>
+</li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/05/集合/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/rick.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/11/05/集合/" class="post-title-link" itemprop="url">集合</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-11-05 14:49:32" itemprop="dateCreated datePublished" datetime="2020-11-05T14:49:32+08:00">2020-11-05</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-11-07 21:50:11" itemprop="dateModified" datetime="2020-11-07T21:50:11+08:00">2020-11-07</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>java.util包提供了集合类：collection,其是除map外所有集合的根接口。还主要提供了三类接口：list,map,set</p>
+<p>注：有一小部分集合类是遗留类，如HashTable,Stack,Vector,不应继续使用<br>在自己创建的类中，为了良好的使用，通常要：</p>
+<ol>
+<li><p>实现iterator接口：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ReverseList</span>&lt;<span class="title">T</span>&gt; <span class="keyword">implements</span> <span class="title">Iterable</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> List&lt;T&gt; list = <span class="keyword">new</span> ArrayList&lt;&gt;();</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">add</span><span class="params">(T t)</span> </span>&#123;</span><br><span class="line">        list.add(t);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Iterator&lt;T&gt; <span class="title">iterator</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">new</span> ReverseIterator(list.size());</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="class"><span class="keyword">class</span> <span class="title">ReverseIterator</span> <span class="keyword">implements</span> <span class="title">Iterator</span>&lt;<span class="title">T</span>&gt; </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> index;</span><br><span class="line"></span><br><span class="line">        ReverseIterator(<span class="keyword">int</span> index) &#123;</span><br><span class="line">            <span class="keyword">this</span>.index = index;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">hasNext</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            <span class="keyword">return</span> index &gt; <span class="number">0</span>;</span><br><span class="line">        &#125;</span><br><span class="line"></span><br><span class="line">        <span class="meta">@Override</span></span><br><span class="line">        <span class="function"><span class="keyword">public</span> T <span class="title">next</span><span class="params">()</span> </span>&#123;</span><br><span class="line">            index--;</span><br><span class="line">            <span class="keyword">return</span> ReverseList.<span class="keyword">this</span>.list.get(index);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>实现equals方法：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(Object o)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (o <span class="keyword">instanceof</span> Person) &#123;</span><br><span class="line">        Person p = (Person) o;</span><br><span class="line">        <span class="keyword">return</span> Objects.equals(<span class="keyword">this</span>.name, p.name) &amp;&amp; <span class="keyword">this</span>.age == p.age;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>List：有序列表，每个元素都有索引<br>有两种实现：ArrayList,LinkedList<br>对比：</p>
+<ol>
+<li><p>set方法： 只有ArrayList有</p>
+</li>
+<li><p>isEmpty,size,get,add,remove,contains:共有</p>
+</li>
+<li><p>add,remove,get调用时都需传入索引。对于linkedlist,其有特殊的方法可以得到，插入，删除头或尾的元素，如addLast,addFirst<br>对List有几个常见问题：</p>
+</li>
+<li><p>遍历List。<br>List.get(i)方法可以返回对应序号的元素，但这样非常慢。应该记住的是，我们要始终使用迭代器Intertor遍历。即</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Iterator&lt;T&gt; i = list.iterator();</span><br><span class="line"><span class="keyword">for</span>(i;;i.hasNext())&#123;</span><br><span class="line">    System.out.printlin(i.next());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>也可以直接使用for each 循环。在java中，实现了Iterator的类，对其使用for each循环，都默认调用它的iterator。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> i:list)&#123;</span><br><span class="line">    ...</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>list与array的转换</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">list = List.of(array);<span class="comment">//返回的list实现类不一定是arraylist或linklist</span></span><br><span class="line">array = list.toArray(<span class="keyword">new</span> T[list.size()]);<span class="comment">//T是list内元素类型。toArray方法若不传参则默认是object数组</span></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+</li>
+<li><p>Map<br>使用Map时，也会遇到遍历的问题，答案是使用keyset,entryset进行foreach遍历</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">        Map&lt;String, Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        map.put(<span class="string">"apple"</span>, <span class="number">123</span>);</span><br><span class="line">        map.put(<span class="string">"pear"</span>, <span class="number">456</span>);</span><br><span class="line">        map.put(<span class="string">"banana"</span>, <span class="number">789</span>);</span><br><span class="line">        <span class="keyword">for</span> (Map.Entry&lt;String, Integer&gt; entry : map.entrySet()) &#123;</span><br><span class="line">            String key = entry.getKey();</span><br><span class="line">            Integer value = entry.getValue();</span><br><span class="line">            System.out.println(key + <span class="string">" = "</span> + value);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<ol>
+<li>HashMap:<br>不支持线程同步<br>常用方法：添加：put 删除：remove 得到：get<br>实现：一个entry&lt;k,v&gt;数组和链表的组合<br>常见问题：</li>
+<li>两个参数：capacity,容量，即数组大小。loadFactor,装载因子，即数组填满的多少</li>
+<li>使用默认构造器时，hashmap的容量为16，装载因子为0.75。当entry数量等于capacity*loadFactor时，扩容数组为原来的两倍</li>
+<li>capacity通常为2的幂次。这与如何得到索引有关。在hashmap中索引的计算是hash &amp; (length-1)。为2的幂次可以使(length-1)为全1的二进制数</li>
+<li>使用自己创建的类对象当做key,需要重写类的equals，hashcode方法</li>
+<li>当key为null时，entry存储在数组开头</li>
+</ol>
+</li>
+</ol>
+<p><a href="https://juejin.im/post/6844904018733432845" target="_blank" rel="noopener">总结不错的博文</a></p>
+<pre><code>2. TreeMap:
+与HashMap不同的是，它是内部key有序的。在创建一个TreeMap时，要么其key对象实现了Comparable接口，要么为其传入一个自定义排序算法
+
+3.Properties:
+本质上是一个HashTable</code></pre><ol start="3">
+<li><p>Set<br>实现类：HashSet,是对HashMap的简单封装。对于放入Set中的对象，同样要实现equals,hashcode</p>
+</li>
+<li><p>Queue:<br>队列，支持队尾添加： add(); 取队首而不删除: element(); 取队首，删除:remove()<br>实现类：LinkedList,PriorityQueue等</p>
+</li>
+<li><p>Collections工具类：<br>提供许多有效的方法，如创建空集：emptyList(),emptyMap(); 如对list排序或洗牌：Collections.sort(list),Collections.shuffle(list)</p>
+</li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/11/05/有限状态机/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/rick.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/11/05/有限状态机/" class="post-title-link" itemprop="url">有限状态机</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-11-05 12:41:58 / 修改时间：12:48:57" itemprop="dateCreated datePublished" datetime="2020-11-05T12:41:58+08:00">2020-11-05</time>
+            </span>
+          
+            
+
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/剑指offer/" itemprop="url" rel="index"><span itemprop="name">剑指offer</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>什么是有限状态机?<br>有限状态机是一个计算模型，其中包含有限的状态，状态可转向下一个状态(如果合法)<br>在代码中表示状态和状态的转移关系，可以使用map和数组。数组存储状态(实际上状态是一个map),map中存储可转移的状态(用数组中的下标表示)<br>例题：剑指Offer20.表示数值的字符串<br>请实现一个函数用来判断字符串是否表示数值（包括整数和小数）。例如，字符串”+100”、”5e2”、”-123”、”3.1416”、”-1E-16”、”0123”都表示数值，但”12e”、”1a3.14”、”1.2.3”、”+-5”及”12e+5.4”都不是。</p>
+<p><a href="https://leetcode-cn.com/problems/biao-shi-shu-zhi-de-zi-fu-chuan-lcof/solution/mian-shi-ti-20-biao-shi-shu-zhi-de-zi-fu-chuan-y-2/" target="_blank" rel="noopener">搬运大佬题解</a><br>解：<br>按照字符串从左到右的顺序，定义以下 9 种状态。</p>
+<ol>
+<li>开始的空格</li>
+<li>幂符号前的正负号</li>
+<li>小数点前的数字</li>
+<li>小数点、小数点后的数字</li>
+<li>当小数点前为空格时，小数点、小数点后的数字</li>
+<li>幂符号</li>
+<li>幂符号后的正负号</li>
+<li>幂符号后的数字</li>
+<li>结尾的空格<br>合法的结束状态由2,3,7,8</li>
+</ol>
+<p>记录字符类型 tt ： 分为四种情况。<br>当 c 为正负号时，执行 t = ‘s’ ;<br>当 c 为数字时，执行 t = ‘d’ ;<br>当 c 为 e , E 时，执行 t = ‘e’ ;<br>当 c 为 . , 空格 时，执行 t = c （即用字符本身表示字符类型）;<br>否则，执行 t = ‘?’ ，代表为不属于判断范围的非法字符，后续直接返回 falsefalse 。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isNumber</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        Map[] states = &#123;</span><br><span class="line">            <span class="keyword">new</span> HashMap&lt;&gt;() &#123;&#123; put(<span class="string">' '</span>, <span class="number">0</span>); put(<span class="string">'s'</span>, <span class="number">1</span>); put(<span class="string">'d'</span>, <span class="number">2</span>); put(<span class="string">'.'</span>, <span class="number">4</span>); &#125;&#125;, <span class="comment">// 0.</span></span><br><span class="line">            <span class="keyword">new</span> HashMap&lt;&gt;() &#123;&#123; put(<span class="string">'d'</span>, <span class="number">2</span>); put(<span class="string">'.'</span>, <span class="number">4</span>); &#125;&#125;,                           <span class="comment">// 1.</span></span><br><span class="line">            <span class="keyword">new</span> HashMap&lt;&gt;() &#123;&#123; put(<span class="string">'d'</span>, <span class="number">2</span>); put(<span class="string">'.'</span>, <span class="number">3</span>); put(<span class="string">'e'</span>, <span class="number">5</span>); put(<span class="string">' '</span>, <span class="number">8</span>); &#125;&#125;, <span class="comment">// 2.</span></span><br><span class="line">            <span class="keyword">new</span> HashMap&lt;&gt;() &#123;&#123; put(<span class="string">'d'</span>, <span class="number">3</span>); put(<span class="string">'e'</span>, <span class="number">5</span>); put(<span class="string">' '</span>, <span class="number">8</span>); &#125;&#125;,              <span class="comment">// 3.</span></span><br><span class="line">            <span class="keyword">new</span> HashMap&lt;&gt;() &#123;&#123; put(<span class="string">'d'</span>, <span class="number">3</span>); &#125;&#125;,                                        <span class="comment">// 4.</span></span><br><span class="line">            <span class="keyword">new</span> HashMap&lt;&gt;() &#123;&#123; put(<span class="string">'s'</span>, <span class="number">6</span>); put(<span class="string">'d'</span>, <span class="number">7</span>); &#125;&#125;,                           <span class="comment">// 5.</span></span><br><span class="line">            <span class="keyword">new</span> HashMap&lt;&gt;() &#123;&#123; put(<span class="string">'d'</span>, <span class="number">7</span>); &#125;&#125;,                                        <span class="comment">// 6.</span></span><br><span class="line">            <span class="keyword">new</span> HashMap&lt;&gt;() &#123;&#123; put(<span class="string">'d'</span>, <span class="number">7</span>); put(<span class="string">' '</span>, <span class="number">8</span>); &#125;&#125;,                           <span class="comment">// 7.</span></span><br><span class="line">            <span class="keyword">new</span> HashMap&lt;&gt;() &#123;&#123; put(<span class="string">' '</span>, <span class="number">8</span>); &#125;&#125;                                         <span class="comment">// 8.</span></span><br><span class="line">        &#125;;</span><br><span class="line">        <span class="keyword">int</span> p = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">char</span> t;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">char</span> c : s.toCharArray()) &#123;</span><br><span class="line">            <span class="keyword">if</span>(c &gt;= <span class="string">'0'</span> &amp;&amp; c &lt;= <span class="string">'9'</span>) t = <span class="string">'d'</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(c == <span class="string">'+'</span> || c == <span class="string">'-'</span>) t = <span class="string">'s'</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(c == <span class="string">'e'</span> || c == <span class="string">'E'</span>) t = <span class="string">'e'</span>;</span><br><span class="line">            <span class="keyword">else</span> <span class="keyword">if</span>(c == <span class="string">'.'</span> || c == <span class="string">' '</span>) t = c;</span><br><span class="line">            <span class="keyword">else</span> t = <span class="string">'?'</span>;</span><br><span class="line">            <span class="keyword">if</span>(!states[p].containsKey(t)) <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">            p = (<span class="keyword">int</span>)states[p].get(t);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> p == <span class="number">2</span> || p == <span class="number">3</span> || p == <span class="number">7</span> || p == <span class="number">8</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/10/21/动态规划/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/rick.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/10/21/动态规划/" class="post-title-link" itemprop="url">动态规划</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-10-21 13:15:55" itemprop="dateCreated datePublished" datetime="2020-10-21T13:15:55+08:00">2020-10-21</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-12-15 09:35:31" itemprop="dateModified" datetime="2020-12-15T09:35:31+08:00">2020-12-15</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/剑指offer/" itemprop="url" rel="index"><span itemprop="name">剑指offer</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>在使用动态规划前，要明白两点：</p>
+<ol>
+<li>动态规划是将大问题分成小问题。</li>
+<li>动态规划采取数组存储各种情况下问题的解。<br>因此，使用动态规划即要回答以下问题：</li>
+<li>数组的元素代表什么？</li>
+<li>数组元素之间的关系式？</li>
+<li>初始条件。某些数组元素是否可以直接得到而不用计算？</li>
+</ol>
+<p>例题：<br>lc: 最长回文子串<br>回答3个问题：</p>
+<ol>
+<li>数组dp[][]中每个元素代表字符串中下标i到下标j是否为一个回文串</li>
+<li>关系式：dp[i][j] = (charArray[i]==charArray[j] &amp;&amp; dp[i+1][j-1])<br>即若字符串为回文串，则其首尾字符相等，且去除首尾后的子串也是回文串</li>
+<li>初始条件：长度为1的字符串都是回文串。</li>
+</ol>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">longestPalindrome</span><span class="params">(String s)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">char</span>[] charArray = s.toCharArray();</span><br><span class="line">        <span class="keyword">int</span> n = charArray.length;</span><br><span class="line">        <span class="keyword">boolean</span> array[][] = <span class="keyword">new</span> <span class="keyword">boolean</span>[n][n];</span><br><span class="line">        <span class="keyword">int</span> maxLength = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> begin=<span class="number">0</span>,end=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;n;i++)&#123;</span><br><span class="line">            array[i][i] = <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">1</span>;j&lt;n;j++)&#123;</span><br><span class="line">            <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;j;i++)&#123;</span><br><span class="line">                <span class="keyword">if</span>(charArray[j]!=charArray[i])&#123;</span><br><span class="line">                    array[i][j] = <span class="keyword">false</span>;</span><br><span class="line">                    <span class="keyword">continue</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span> <span class="keyword">if</span>(j-i&lt;<span class="number">3</span>)&#123;<span class="comment">//首尾相等，且该串的子串长度为1或2</span></span><br><span class="line">                    array[i][j] = <span class="keyword">true</span>;</span><br><span class="line">                &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">                    array[i][j] = array[i+<span class="number">1</span>][j-<span class="number">1</span>];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span>(array[i][j]&amp;&amp;(j-i+<span class="number">1</span>)&gt;maxLength)&#123;</span><br><span class="line">                    maxLength = j-i+<span class="number">1</span>;</span><br><span class="line">                    begin = i;</span><br><span class="line">                    end = j;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> s.substring(begin,begin+maxLength);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>例题：丑数<br>得到提示：求第n个符合某条件的数，不是判断常数中哪个数符合条件，而是求符合该条件的数的序列，取其中第n个<br>题目描述：<br>我们把只包含质因子 2、3 和 5 的数称作丑数（Ugly Number）。求按从小到大的顺序的第 n 个丑数。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">nthUglyNumber</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> dp[] = <span class="keyword">new</span> <span class="keyword">int</span>[n];</span><br><span class="line">        <span class="keyword">int</span> a= <span class="number">0</span>,b=<span class="number">0</span>,c=<span class="number">0</span>;</span><br><span class="line">        dp[<span class="number">0</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">int</span> n1,n2,n3;</span><br><span class="line">        <span class="comment">//int num;</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">1</span>;i&lt;n;i++)&#123;</span><br><span class="line">            n1 = dp[a]*<span class="number">2</span>;</span><br><span class="line">            n2 = dp[b]*<span class="number">3</span>;</span><br><span class="line">            n3 = dp[c]*<span class="number">5</span>;</span><br><span class="line">            dp[i] = Math.min(Math.min(n1,n2),n3);</span><br><span class="line">            <span class="keyword">if</span>(dp[i] == n1)</span><br><span class="line">            a++;</span><br><span class="line">            <span class="keyword">if</span>(dp[i] == n2)</span><br><span class="line">            b++;</span><br><span class="line">            <span class="keyword">if</span>(dp[i] == n3)</span><br><span class="line">            c++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> dp[n-<span class="number">1</span>];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/10/05/递归/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/rick.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/10/05/递归/" class="post-title-link" itemprop="url">递归</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-10-05 18:30:59" itemprop="dateCreated datePublished" datetime="2020-10-05T18:30:59+08:00">2020-10-05</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-10-14 13:23:55" itemprop="dateModified" datetime="2020-10-14T13:23:55+08:00">2020-10-14</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/剑指offer/" itemprop="url" rel="index"><span itemprop="name">剑指offer</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>递归是一种常见的解决问题的方法。问题是，我们怎么实现递归以及分析算法的复杂度呢？<br>先看复杂度的分析:<br>空间复杂度通常与是否递归没有必然联系。空间复杂度至少是O(递归深度)，当然，一些编译(如c,c++，但是java,python不支持)可以对尾递归(即递归调用是递归函数的最后一条指令。尾递归函数可以节省递归调用栈。因为递归调用是函数的最后一条语句，递归调用返回后直接返回而不用进行其他操作，每个递归函数的执行的栈空间大小是一样的，因此栈空间可以重用，进而节省了栈空间)进行优化，使得空间复杂度为O(1)。<br>时间复杂度的分析可以看是否得出时间复杂度的递归关系式。如果没有，时间复杂度可使用O(m)O(n)计算，m为调用次数，n为每次调用的操作次数。如果有，可采用迭代，代入，公式，母函数，差分方程法等，<a href="https://www.cnblogs.com/python27/archive/2011/12/09/2282486.html" target="_blank" rel="noopener">具体如下</a></p>
+<p>现在来看递归的实现：<br>递归的实现通常要有两个条件：基线条件(跳出递归的条件)和递归条件(函数调用自己的条件)。因此，在实现递归时，不要忘了某些特殊点，它们通常用于跳出。另外，在写递归的算法时，要记得执行先后顺序是最底层被调用的先执行</p>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/23/js函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="intere">
+      <meta itemprop="description" content="拒绝庸俗，爱是真理">
+      <meta itemprop="image" content="/images/rick.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Intere">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2020/09/23/js函数/" class="post-title-link" itemprop="url">js函数</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              
+                
+              
+
+              <time title="创建时间：2020-09-23 21:28:24" itemprop="dateCreated datePublished" datetime="2020-09-23T21:28:24+08:00">2020-09-23</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-10-05 20:54:40" itemprop="dateModified" datetime="2020-10-05T20:54:40+08:00">2020-10-05</time>
+              </span>
+            
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/javaScript/" itemprop="url" rel="index"><span itemprop="name">javaScript</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <ol>
+<li><p>在js中，函数也是一个对象。函数可以接受任意个数的参数，可以多于定义的，也可以少于。多于的参数存在函数的rest关键字中，少的以undefined表示。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> abs = <span class="function"><span class="keyword">function</span> (<span class="params">x</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (x &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> x;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> -x;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>函数有两个重要的关键字：arguments,rest<br>arguments类似array但不是array,其中包含了函数所接受到的所有参数。<br>多余的参数以数组的形式交给rest</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">abs</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">arguments</span>.length === <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> x = <span class="built_in">arguments</span>[<span class="number">0</span>];</span><br><span class="line">    <span class="keyword">return</span> x &gt;= <span class="number">0</span> ? x : -x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">abs(); <span class="comment">// 0</span></span><br><span class="line">abs(<span class="number">10</span>); <span class="comment">// 10</span></span><br><span class="line">abs(<span class="number">-9</span>); <span class="comment">// 9</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params">a, b</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> i, rest = [];</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">arguments</span>.length &gt; <span class="number">2</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (i = <span class="number">2</span>; i&lt;<span class="built_in">arguments</span>.length; i++) &#123;</span><br><span class="line">            rest.push(<span class="built_in">arguments</span>[i]);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'a = '</span> + a);</span><br><span class="line">    <span class="built_in">console</span>.log(<span class="string">'b = '</span> + b);</span><br><span class="line">    <span class="built_in">console</span>.log(rest);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>全局作用域。<br>js只有一个全局作用域。定义的全局对象，如变量，函数都将被绑定到默认的全局对象:window上，作为它的一个属性</p>
+</li>
+<li><p>局部作用域：<br>通常局部块中的变量作用域是局部作用域。但是js中的var有个奇怪的特性：在for循环中无法使用var定义局部变量.解决方法是用let代替var：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">foo</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i=<span class="number">0</span>; i&lt;<span class="number">100</span>; i++) &#123;</span><br><span class="line">        <span class="comment">//</span></span><br><span class="line">    &#125;</span><br><span class="line">    i += <span class="number">100</span>; <span class="comment">// 仍然可以引用变量i</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>使用未声明的变量：<br>该变量为undefined,且作用域为全局</p>
+</li>
+<li><p>结构赋值</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> [x, [y, z]] = [<span class="string">'hello'</span>, [<span class="string">'JavaScript'</span>, <span class="string">'ES6'</span>]];</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>奇怪的this:<br>this是一个特殊变量，其始终指向当前对象。然而，当前对象是依照情况而定的。在全局中，this指向window。在函数内部的函数，若没有使用strict模式，其指向window,否则指向undefined.解决方法是使用that</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> xiaoming = &#123;</span><br><span class="line">    name: <span class="string">'小明'</span>,</span><br><span class="line">    birth: <span class="number">1990</span>,</span><br><span class="line">    age: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">getAgeFromBirth</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> y = <span class="keyword">new</span> <span class="built_in">Date</span>().getFullYear();</span><br><span class="line">            <span class="keyword">return</span> y - <span class="keyword">this</span>.birth;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> getAgeFromBirth();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">xiaoming.age(); <span class="comment">// Uncaught TypeError: Cannot read property 'birth' of undefined</span></span><br><span class="line"></span><br><span class="line"><span class="meta">'use strict'</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> xiaoming = &#123;</span><br><span class="line">    name: <span class="string">'小明'</span>,</span><br><span class="line">    birth: <span class="number">1990</span>,</span><br><span class="line">    age: <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> that = <span class="keyword">this</span>; <span class="comment">// 在方法内部一开始就捕获this</span></span><br><span class="line">        <span class="function"><span class="keyword">function</span> <span class="title">getAgeFromBirth</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">            <span class="keyword">var</span> y = <span class="keyword">new</span> <span class="built_in">Date</span>().getFullYear();</span><br><span class="line">            <span class="keyword">return</span> y - that.birth; <span class="comment">// 用that而不是this</span></span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> getAgeFromBirth();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">xiaoming.age(); <span class="comment">// 25</span></span><br></pre></td></tr></table></figure>
+
+</li>
+</ol>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/23/js快速入门/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -348,937 +1386,11 @@
   </article>
 
     
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/23/s通过前序遍历和中序遍历构造二叉树/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/rick.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/09/23/s通过前序遍历和中序遍历构造二叉树/" class="post-title-link" itemprop="url">通过前序遍历和中序遍历构造二叉树</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-09-23 11:25:51 / 修改时间：11:34:37" itemprop="dateCreated datePublished" datetime="2020-09-23T11:25:51+08:00">2020-09-23</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/剑指offer/" itemprop="url" rel="index"><span itemprop="name">剑指offer</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>使用递归法可以很简单的解决该问题。递归的大致思路是：先生成根，再构造左子树和右子树。<br>在做这道题时，我也很快想到了该方法，但疑问的是，仅仅通过知道左子树的前序，中序集合和右子树的前序，中序集合，怎样连接二叉树呢？<br>答案是递归的最底层：当只有一个节点,生成该节点，在这一层的上层递归会连接该节点，从而一步步递归成为树。下面是解决该问题的代码。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">rebuildTree</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">buildTree</span><span class="params">(<span class="keyword">int</span>[] preorder, <span class="keyword">int</span>[] inorder)</span> </span>&#123;</span><br><span class="line">        Map&lt;Integer,Integer&gt; map = <span class="keyword">new</span> HashMap&lt;&gt;();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;inorder.length;i++)&#123;</span><br><span class="line">            map.put(inorder[i],i);</span><br><span class="line">        &#125;</span><br><span class="line">        TreeNode root = buildTree(preorder,<span class="number">0</span>,preorder.length-<span class="number">1</span>,inorder,<span class="number">0</span>,inorder.length-<span class="number">1</span>,map);</span><br><span class="line">        <span class="keyword">return</span>  root;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> TreeNode <span class="title">buildTree</span><span class="params">(<span class="keyword">int</span>[] preorder, <span class="keyword">int</span> preStart, <span class="keyword">int</span> preEnd, <span class="keyword">int</span> [] inorder, <span class="keyword">int</span> inStart, <span class="keyword">int</span> inEnd, Map&lt;Integer,Integer&gt; map)</span></span>&#123;</span><br><span class="line">        TreeNode root = <span class="keyword">new</span> TreeNode(preorder[preStart]);</span><br><span class="line">        <span class="comment">//通过这个判断可以解决一个问题：在前序遍历中，与root右边相邻的是左子树根节点还是右子树根节点。若start&gt;end,虽然在下面有构造左子树的操作，但通过这里的判断可知左子树是不存在的，返回null</span></span><br><span class="line">        <span class="keyword">if</span>(preStart &gt; preEnd)&#123;</span><br><span class="line">            <span class="keyword">return</span>  <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">if</span>(preStart == preStart)</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">new</span> TreeNode(preorder[preStart]);</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">int</span> rootNum = map.get(preorder[preStart]);</span><br><span class="line">            <span class="keyword">int</span> leftNum = rootNum - inStart;</span><br><span class="line">            <span class="keyword">int</span> rightNum = inEnd - rootNum;</span><br><span class="line">            TreeNode leftNode = buildTree(preorder,preStart+<span class="number">1</span>,preStart+leftNum,inorder,inStart,rootNum-<span class="number">1</span>,map);</span><br><span class="line">            TreeNode rightNode = buildTree(preorder,preStart+leftNum+<span class="number">1</span>,preEnd,inorder,rootNum+<span class="number">1</span>,inEnd,map);</span><br><span class="line">            root.left = leftNode;</span><br><span class="line">            root.right = rightNode;</span><br><span class="line">            <span class="keyword">return</span> root;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>时间复杂度：O(n)。对于每个节点都有创建过程以及根据左右子树重建过程。<br>空间复杂度：O(n)。存储整棵树的开销。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/02/斐波那契数列/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/rick.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/09/02/斐波那契数列/" class="post-title-link" itemprop="url">斐波那契数列</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-09-02 21:25:41" itemprop="dateCreated datePublished" datetime="2020-09-02T21:25:41+08:00">2020-09-02</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-09-03 18:36:33" itemprop="dateModified" datetime="2020-09-03T18:36:33+08:00">2020-09-03</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/剑指offer/" itemprop="url" rel="index"><span itemprop="name">剑指offer</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>求斐波那契数列的值与1e9+7的模 ，使用递归太耗费时间，可以采用动态规划<br>什么是动态规划，一言以蔽之就是将问题拆分为多个子问题，得到f(n)与f(n-1),f(n-2)….的关系式(可用这么理解，要得到f(n)就先考虑f(n-1)，比如青蛙跳台阶问题。青蛙可一次跳两层，也可一次跳一层，所以对应f(n)，青蛙可以从n-1或n-2跳上来，因此青蛙跳上n层台阶的方法总数为f(n) = f(n-1)+f(n-2))，并求得初始值(指不满足关系式，必须人工求得的值)，即可求得题目要求的f(n)<br><a href="https://zhuanlan.zhihu.com/p/91582909?utm_source=qq&utm_medium=social&utm_oi=747095289134878720&utm_content=first" target="_blank" rel="noopener">更好的动态规划的解释</a><br>例如这里的求斐波那契数列的值，题目已经给出关系式f(n)=f(n-1)+f(n-2)和初始值f(0) = 0,f(1) = 1。<br>我们可以利用数组存储f(0)到f(n)的值，只要顺序遍历i=2到i=n,利用关系式即可求出f(n)<br>当然，这道题不仅仅只考动态规划，还考了大数处理。当f(n)很大时，其可能超过int所能表示的值，造成所得为负数，所以这里我们需要利用模运算的性质可得，<br>f(n)%(1e9+7) = (f(n-1)+f(n-2))%(1e9+7) = (f(n-1)%(1e9+7)+f(n-2)%(1e9+7))</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">fib</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> []array = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">101</span>];</span><br><span class="line">        array[<span class="number">0</span>] = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(n&gt;=<span class="number">1</span>)</span><br><span class="line">        array[<span class="number">1</span>] = <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i =<span class="number">2</span>;i&lt;n+<span class="number">1</span>;i++)&#123;</span><br><span class="line">            array[i] = array[i-<span class="number">1</span>] + array[i-<span class="number">2</span>];</span><br><span class="line">            array[i] = array[i]%<span class="number">1000000007</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> array[n];</span><br><span class="line">        </span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">``` </span><br><span class="line"></span><br><span class="line">也可以不用数组存储，因为只要求f(n),可用a,b两值分别代表f(n-<span class="number">2</span>),f(n-<span class="number">1</span>),并迭代</span><br><span class="line">```java</span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">fib</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> a=<span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> b=<span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">0</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">if</span>(n==<span class="number">1</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">while</span>(n&gt;=<span class="number">2</span>)&#123;</span><br><span class="line">            <span class="keyword">int</span> temp = b%<span class="number">1000000007</span>;</span><br><span class="line">            b = (a+b)%<span class="number">1000000007</span>;</span><br><span class="line">            a= temp%<span class="number">1000000007</span>;</span><br><span class="line">            n--;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> b;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/09/01/数组中重复的数字/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/rick.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/09/01/数组中重复的数字/" class="post-title-link" itemprop="url">数组中重复的数字</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-09-01 19:38:29 / 修改时间：19:47:53" itemprop="dateCreated datePublished" datetime="2020-09-01T19:38:29+08:00">2020-09-01</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/剑指offer/" itemprop="url" rel="index"><span itemprop="name">剑指offer</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>题目：找出数组中重复的数字。<br>在一个长度为 n 的数组 nums 里的所有数字都在 0～n-1 的范围内。数组中某些数字是重复的，但不知道有几个数字重复了，也不知道每个数字重复了几次。请找出数组中任意一个重复的数字。</p>
-<p>这是一道简单题。下面记录两种解题方法：</p>
-<ol>
-<li><p>利用for循环遍历数组，对每个数字尝试添加到hash表，添加失败即为重复。<br>时间复杂度为o(n),其中遍历为o(n)，hash的add操作是时间复杂度为o(1)的操作。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findRepeatNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span> num = <span class="number">0</span>;</span><br><span class="line">        Set set = <span class="keyword">new</span> HashSet();</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i: nums)&#123;</span><br><span class="line">            <span class="keyword">if</span>(!set.add(i))&#123;</span><br><span class="line">                num = i ;</span><br><span class="line">              <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> num;&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>剑指offer的标准答案：<br>在给出的数组中遍历，如nums[ i ] == i,跳过，i++，否则继续。判断是否满足nums[ i ] == nums[ nums[ i ]],如果满足则说明重复，否则继续。将nums[ i]与 nums[ nums[ i]]交换。<br>时间复杂度也是o(n),关键在于相对于上面的解法，没有开辟新的表，空间复杂度是常数。<br>这是一个很好的思路： 在给定的数组中操作可以节省空间</p>
-</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">findRepeatNumber</span><span class="params">(<span class="keyword">int</span>[] nums)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> repeat = -<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;nums.length)&#123;</span><br><span class="line">        <span class="keyword">if</span>(nums[i] == i)&#123;</span><br><span class="line">            i++;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">       <span class="keyword">if</span>(  nums[i] == nums[nums[i]])</span><br><span class="line">       <span class="keyword">return</span> nums[i];</span><br><span class="line">                </span><br><span class="line">            </span><br><span class="line">                <span class="keyword">int</span> temp = nums[i];</span><br><span class="line">                nums[i] = nums[temp];</span><br><span class="line">                nums[temp] = temp;</span><br><span class="line">            </span><br><span class="line">        </span><br><span class="line">    </span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> repeat;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/07/操作系统实验1/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/rick.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/07/07/操作系统实验1/" class="post-title-link" itemprop="url">操作系统实验1</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-07-07 15:54:36" itemprop="dateCreated datePublished" datetime="2020-07-07T15:54:36+08:00">2020-07-07</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-08 16:29:21" itemprop="dateModified" datetime="2020-07-08T16:29:21+08:00">2020-07-08</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/操作系统/" itemprop="url" rel="index"><span itemprop="name">操作系统</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li><p>Linux 本身只是操作系统的内核。内核是使其它程序能够运行的基础。它实现了多任务和硬件管理，用户或者系统管理员交互运行的所有程序实际上都运行在内核之上。其中有些程序是必需的，比如说，命令行解释器（shell），它用于用户交互和编写 shell 脚本。 Linus 没有自己去开发这些应用程序，而是使用已有的自由软件。</p>
-</li>
-<li><p>Linux 本身只是操作系统的内核。内核是使其它程序能够运行的基础。它实现了多任务和硬件管理，用户或者系统管理员交互运行的所有程序实际上都运行在内核之上。其中有些程序是必需的，比如说，命令行解释器（shell），它用于用户交互和编写 shell 脚本。 Linus 没有自己去开发这些应用程序，而是使用已有的自由软件。</p>
-</li>
-<li><p>Linux 本身只是操作系统的内核。内核是使其它程序能够运行的基础。它实现了多任务和硬件管理，用户或者系统管理员交互运行的所有程序实际上都运行在内核之上。其中有些程序是必需的，比如说，命令行解释器（shell），它用于用户交互和编写 shell 脚本。 Linus 没有自己去开发这些应用程序，而是使用已有的自由软件。</p>
-</li>
-<li><p>Linux桌面环境介绍：<br>Linux没有图形界面，现在所在桌面上看到的图形界面实际上是运行在Linux系统上的一套软件，过去是XFree86，现在是xorg(实现了X协议规范的一个提供图形界面服务的服务器)。有了服务器，还有油客户端。我们称为X Client</p>
-</li>
-<li><p>终端：<br>通常我们在使用 Linux 时，并不是直接与系统打交道，而是通过一个叫做 Shell( 提供给使用者使用界面”的软件（命令解析器），类似于 DOS 下的 command（命令行）和后来的 cmd.exe 。) 的中间程序来完成的，在图形界面下为了实现让我们在一个窗口中完成用户输入和显示输出，Linux 系统还提供了一个叫做终端模拟器的程序（Terminal）。 终端本质上是对应着 Linux 上的 /dev/tty 设备，Linux 的多用户登录就是通过不同的 /dev/tty 设备完成的，Linux 默认提供了 6 个纯命令行界面的 “terminal”（准确的说这里应该是 6 个 virtual consoles）来让用户登录。（一个用户打开多个终端，产生的是伪终端）</p>
-</li>
-<li><p>Shell<br>通常在图形界面中对实际体验带来差异的不是上述的不同发行版的各种终端模拟器，而是这个 Shell（壳）。有壳就有核，这里的核就是指 UNIX/Linux 内核，Shell 是指“提供给使用者使用界面”的软件（命令解析器），类似于 DOS 下的 command（命令行）和后来的 cmd.exe 。<br>UNIX/Linux 操作系统下的 Shell 既是用户交互的界面，也是控制系统的脚本语言。在 UNIX/Linux 中比较流行的常见的 Shell 有 bash、zsh、ksh、csh 等等，Ubuntu 终端默认使用的是 bash。</p>
-</li>
-<li><p>Linux用户管理<br>查看用户：whoami</p>
-</li>
-<li><p>文件:linux中一切皆文件。在 Linux 中文件的类型不是根据文件后缀来判断的。当你在文件里输入内容后才会显示文件类型。<br>列出文件: ls -l<br>查看文件： cat filename</p>
-</li>
-<li><p>Linux目录结构<br>Linux 的目录与 Windows 的目录的区别，或许对于一般操作上的感受来说没有多大不同，但从它们的实现机制来说是完全不同的。</p>
-</li>
-</ol>
-<p>一种不同是体现在目录与存储介质（磁盘，内存，DVD 等）的关系上，以往的 Windows 一直是以存储介质为主的，主要以盘符（C 盘，D 盘…）及分区来实现文件管理，然后之下才是目录，目录就显得不是那么重要，除系统文件之外的用户文件放在任何地方任何目录也是没有多大关系。所以通常 Windows 在使用一段时间后，磁盘上面的文件目录会显得杂乱无章（少数善于整理的用户除外吧）。然而 UNIX/Linux 恰好相反，UNIX 是以目录为主的，Linux 也继承了这一优良特性。 Linux 是以树形目录结构的形式来构建整个系统的，可以理解为树形目录是一个用户可操作系统的骨架。虽然本质上无论是目录结构还是操作系统内核都是存储在磁盘上的，但从逻辑上来说 Linux 的磁盘是“挂在”（挂载在）目录上的，每一个目录不仅能使用本地磁盘分区的文件系统，也可以使用网络上的文件系统。举例来说，可以利用网络文件系统（Network File System，NFS）服务器载入某特定目录等。</p>
-<p>Linux目录结构采用FHS标准</p>
-<ol start="10">
-<li><p>Linux文件操作<br>创建文件： touch<br>创建文件夹： mkdir<br>复制： cp<br>移动(重命名)： mv<br>删除: rm</p>
-</li>
-<li><p>linux查看帮助文档<br>进入bash, 例如ls –help<br>或使用man,例如 man ls<br>或使用info,例如 info ls</p>
-</li>
-</ol>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/17/js西电学堂/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/rick.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/06/17/js西电学堂/" class="post-title-link" itemprop="url">js西电学堂</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-06-17 19:28:10 / 修改时间：19:37:32" itemprop="dateCreated datePublished" datetime="2020-06-17T19:28:10+08:00">2020-06-17</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/javaScript/" itemprop="url" rel="index"><span itemprop="name">javaScript</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li><p>数据类型<br>js中数字只有浮点数类型<br>undifined类型</p>
-</li>
-<li><p>==引起的类型转换使得它不常用</p>
-</li>
-<li><p>变量类型：动态可变</p>
-</li>
-</ol>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/17/css常用实现/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/rick.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/06/17/css常用实现/" class="post-title-link" itemprop="url">css常用实现</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-06-17 09:54:58" itemprop="dateCreated datePublished" datetime="2020-06-17T09:54:58+08:00">2020-06-17</time>
-            </span>
-          
-            
-
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-06-21 17:26:19" itemprop="dateModified" datetime="2020-06-21T17:26:19+08:00">2020-06-21</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/css/" itemprop="url" rel="index"><span itemprop="name">css</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li><p>如何实现圆角边框：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.testRadius</span>&#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">150px</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">20px</span> solid red;    </span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">100px</span>;</span><br><span class="line">    <span class="comment">/* 设置border-radius为100px即可    */</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>类选择器</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test</span>&#123;</span><br><span class="line">    <span class="comment">/*test类的修饰*/</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">li</span><span class="selector-class">.test</span>&#123;</span><br><span class="line">    <span class="comment">/*test类的li元素修饰*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>根据元素位置确定样式</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* li内部的em元素 */</span></span><br><span class="line"><span class="selector-tag">li</span> <span class="selector-tag">em</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: rebeccapurple;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">/* 出现在h1后面，并与h1有相同层级的修饰 */</span></span><br><span class="line"><span class="selector-tag">h1</span> + <span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">font-size</span>: <span class="number">200%</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>根据元素状态确定样式</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* a标签未访问，访问，悬停三个状态的修饰 */</span></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:link</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: pink;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:visited</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: green;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">a</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">  <span class="attribute">text-decoration</span>: none;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置字体居中</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">text-align</span> : <span class="selector-tag">center</span></span><br></pre></td></tr></table></figure>
-</li>
-<li><p>字体自适应大小：了解rem,vw</p>
-</li>
-<li><p>设置组件居中</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 弹性盒子布局 */</span></span><br><span class="line"><span class="selector-class">.dayCase</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">    <span class="attribute">justify-items</span>: center;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>设置文字居中: text-align: center 是使文字水平居中。若要垂直居中，则使文字包裹在块级元素内，再使用第七条</p>
-</li>
-<li><p>设计一个有遮罩层的弹窗：<br>弹窗实际上是设计一个覆盖整个页面的容器，容器内包含的内容即我们眼睛看到的弹窗。在这个设计中，我们把覆盖的容器叫做弹窗。将该容器的背景颜色设计为半透明，则是遮罩层。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"popUpWindows"</span>&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"popUpWindowsContent"</span> <span class="attr">id</span>=<span class="string">"chefPopUpWindow"</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">h1</span>&gt;</span>招聘新厨师<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></span><br><span class="line">                <span class="tag">&lt;<span class="name">p</span>&gt;</span>招聘一名新厨师可以帮你更快的为顾客烹饪菜肴，<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">                增加餐厅收入。你最多可以拥有六名厨师。<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">            但每个厨师需要你每周支付工资￥100<span class="tag">&lt;<span class="name">br</span>&gt;</span></span><br><span class="line">        请问你确认新招聘一名厨师吗？<span class="tag">&lt;/<span class="name">p</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.popUpwindows</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: none;</span><br><span class="line">    <span class="comment">/* display: flex; */</span></span><br><span class="line">    <span class="attribute">position</span>: fixed; <span class="comment">/* 固定定位 */</span></span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1</span>; <span class="comment">/* 设置在顶层 */</span></span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>; </span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: auto; </span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(0,0,0); </span><br><span class="line">    <span class="comment">/* rgba,a指alpha，是不透明度参数 */</span></span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgba</span>(0,0,0,0.4); </span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">    <span class="attribute">justify-items</span>: center;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.popUpwindowsContent</span>&#123;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">margin</span>: auto;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">90%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">35%</span>;</span><br><span class="line">    <span class="comment">/* display: flex; */</span></span><br><span class="line">    <span class="attribute">flex-direction</span>: column;</span><br><span class="line">    <span class="attribute">align-items</span>: center;</span><br><span class="line">    <span class="comment">/* justify-content: center; */</span></span><br><span class="line">    <span class="attribute">text-align</span>: left;</span><br><span class="line">    <span class="attribute">background-color</span>:<span class="built_in">rgb</span>(243, 213, 41) ;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">20px</span> solid white;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">50px</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<ol start="10">
-<li><p>实现颜色的突变：使用linear-gradient渐变</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.test</span>&#123;</span><br><span class="line"><span class="attribute">background-image</span>: <span class="built_in">linear-gradient</span>(to right, rgb(255, 166, 0) <span class="number">50%</span>, <span class="built_in">rgb</span>(238, 120, 10) <span class="number">50%</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>实现右上角的叉叉：实际上是+号旋转45度</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.fireChef</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">80%</span>;</span><br><span class="line">    <span class="attribute">bottom</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">80px</span>;</span><br><span class="line">    <span class="attribute">transform</span>: <span class="built_in">rotate</span>(45deg);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>实现进度条：怎样实现动态加载？怎样使文字固定在进度条中间？</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* 进度条由三部分组成：进度条容器，进度，文字</span></span><br><span class="line"><span class="comment">实现动态加载是为进度添加一个动画</span></span><br><span class="line"><span class="comment">使文字处于进度条中间需要相对定位，文字容器的width=100%和z-index处于较大而优先 */</span></span><br><span class="line"><span class="selector-class">.chefProgressBar</span>&#123;</span><br><span class="line">    <span class="attribute">margin-left</span>: auto;</span><br><span class="line">    <span class="attribute">margin-right</span>: auto;</span><br><span class="line">    <span class="attribute">margin-top</span>: -<span class="number">15%</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">80%</span>;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">15%</span>;</span><br><span class="line">    <span class="attribute">text-align</span>: center;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(255, 166, 0);</span><br><span class="line">    <span class="attribute">color</span>:white;</span><br><span class="line">    <span class="attribute">border</span>: <span class="number">5px</span> solid white;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">10px</span>;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.chefFill</span>&#123;</span><br><span class="line">    <span class="attribute">animation</span>: move <span class="number">10s</span>;</span><br><span class="line">    <span class="attribute">background-color</span>: <span class="built_in">rgb</span>(238, 120, 10);</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">1</span>;</span><br><span class="line">&#125;</span><br><span class="line">@<span class="keyword">keyframes</span> move&#123;</span><br><span class="line">    0%&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">0%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    100%&#123;</span><br><span class="line">        <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.chefDish</span>&#123;</span><br><span class="line">    <span class="attribute">position</span>: absolute;</span><br><span class="line">    <span class="attribute">left</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">top</span>: <span class="number">0</span>;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">     <span class="attribute">height</span>: <span class="number">100%</span>; </span><br><span class="line">    <span class="attribute">z-index</span>: <span class="number">10</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">30px</span>;</span><br><span class="line">   </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chefProgressBar"</span>&gt;</span></span><br><span class="line">                           <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chefDish"</span>&gt;</span>小程序奶茶<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">                           <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"chefFill"</span>&gt;</span></span><br><span class="line">                           <span class="tag">&lt;/<span class="name">div</span>&gt;</span>                   </span><br><span class="line">                   <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/15/chrome搜索技巧/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/rick.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/06/15/chrome搜索技巧/" class="post-title-link" itemprop="url">chrome搜索技巧</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-06-15 20:38:19 / 修改时间：20:47:32" itemprop="dateCreated datePublished" datetime="2020-06-15T20:38:19+08:00">2020-06-15</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/前置技能/" itemprop="url" rel="index"><span itemprop="name">前置技能</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>这篇文章主要记录搜索中的技巧。通过在搜索内容中使用一定的格式搜索而得到特定范围的搜索内容。</p>
-<ol>
-<li>“关键字”<br>作用：关键字限定</li>
-<li>关键字 空格 减号关键字<br>例：key -anotherkey<br>搜索不包含anotherkey的内容</li>
-<li>关键字 site:网站<br>例：key site:zhihu.com<br>仅在知乎内搜索key</li>
-<li>关键字 filetype:type<br>例： 算法导论 filetype:pdf<br>搜索某种格式的文件</li>
-<li>intext:  /  allintext:<br>例：intext:海绵宝宝  正文中一定出现海绵宝宝这个关键字<br>例 allintext:海绵宝宝 派大星 正文中同时出现海绵宝宝，派大星两个关键字</li>
-<li>inurl:key<br>顾名思义，不再解释  </li>
-<li>intitle:key<br>同上</li>
-</ol>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/14/远见：如何规划职业生涯三大阶段/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/rick.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/06/14/远见：如何规划职业生涯三大阶段/" class="post-title-link" itemprop="url">远见：如何规划职业生涯三大阶段</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-06-14 16:12:42 / 修改时间：18:01:08" itemprop="dateCreated datePublished" datetime="2020-06-14T16:12:42+08:00">2020-06-14</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/读书笔记/" itemprop="url" rel="index"><span itemprop="name">读书笔记</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h4 id="part1-远见思维与工具箱"><a href="#part1-远见思维与工具箱" class="headerlink" title="part1:远见思维与工具箱"></a>part1:远见思维与工具箱</h4><ol>
-<li>多行动，少忧虑</li>
-<li>职业生涯很长，重要的是能力的培养而不是一时的升职加薪。不要单单把职场生活视为一份工作，而是一段职业生涯，不断锻炼自己的能力</li>
-<li>职业生涯分为3个阶段：<br>强势开局： 锻炼应该有的能力，补足短板，建立良好的早期习惯,建立关系网，积攒经验<br>聚焦长板：专注于自己的核心优势，寻找热爱，擅长，世界所需要的交集<br>持续的影响力：</li>
-<li>职场燃料：可迁移技能，有意义的经验，持久的关系<br>可迁移技能：解决问题的能力，说服力，人才引力，快速学习的能力和应试能力，如何通过呼吸来放松于专注，帮助他人的能力(付出是建立信任的好方法)，搜索信息的能力<br>有意义的经验：项目<br>持久的关系：上司，雇主，身边的人才，同类，商业伙伴</li>
-<li>职业生涯的时间投资：如何通过刻意练习成为大师？我的时间都放在了哪里?</li>
-<li>四大黄金问题：<br>是否正在学习与成长？ 是否得到了奖励，创造了经济价值，是否体验到乐趣，是否对人，公司，社会拥有影响力</li>
-</ol>
-<p>总结：找到理想目标，多行动，少忧虑。培养专业技能，可迁移技能，有意义的经验和持久的关系。运用合理的时间投资，刻意练习自己的技能。人生很长，不仅仅是码农而已，也不仅仅是互联网。</p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
-      
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/06/09/springLearning-6-spring-thymeleaf/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="intere">
-      <meta itemprop="description" content="拒绝庸俗，爱是真理">
-      <meta itemprop="image" content="/images/rick.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Intere">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-            
-            <a href="/2020/06/09/springLearning-6-spring-thymeleaf/" class="post-title-link" itemprop="url">springLearning_5:spring-thymeleaf</a>
-          
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              
-                
-              
-
-              <time title="创建时间：2020-06-09 22:18:30 / 修改时间：22:35:43" itemprop="dateCreated datePublished" datetime="2020-06-09T22:18:30+08:00">2020-06-09</time>
-            </span>
-          
-            
-
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/spring/" itemprop="url" rel="index"><span itemprop="name">spring</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <ol>
-<li>thymeleaf的配置：<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!-- pom.xml --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.thymeleaf<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>thymeleaf-spring5<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- thymeleaf-spring&#123;$version&#125; --&gt;</span></span><br><span class="line">      <span class="comment">&lt;!-- version与spring当前使用的版本一代 --&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.0.11.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-</li>
-</ol>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// config</span></span><br><span class="line"><span class="meta">@Autowired</span></span><br><span class="line"><span class="keyword">private</span> ApplicationContext applicationContext;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> SpringResourceTemplateResolver <span class="title">templateResolver</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">// SpringResourceTemplateResolver automatically integrates with Spring's own</span></span><br><span class="line">        <span class="comment">// resource resolution infrastructure, which is highly recommended.</span></span><br><span class="line">        SpringResourceTemplateResolver templateResolver = <span class="keyword">new</span> SpringResourceTemplateResolver();</span><br><span class="line">        templateResolver.setApplicationContext(<span class="keyword">this</span>.applicationContext);</span><br><span class="line">        templateResolver.setPrefix(<span class="string">"/WEB-INF/templates/"</span>);</span><br><span class="line">        templateResolver.setSuffix(<span class="string">".html"</span>);</span><br><span class="line">        <span class="comment">// HTML is the default value, added here for the sake of clarity.</span></span><br><span class="line">        templateResolver.setTemplateMode(<span class="string">"HTML5"</span>);</span><br><span class="line">        <span class="comment">// Template cache is true by default. Set to false if you want</span></span><br><span class="line">        <span class="comment">// templates to be automatically updated when modified.</span></span><br><span class="line">        templateResolver.setCacheable(<span class="keyword">true</span>);</span><br><span class="line">        <span class="keyword">return</span> templateResolver;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> SpringTemplateEngine <span class="title">templateEngine</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">// SpringTemplateEngine automatically applies SpringStandardDialect and</span></span><br><span class="line">        <span class="comment">// enables Spring's own MessageSource message resolution mechanisms.</span></span><br><span class="line">        SpringTemplateEngine templateEngine = <span class="keyword">new</span> SpringTemplateEngine();</span><br><span class="line">        templateEngine.setTemplateResolver(templateResolver());</span><br><span class="line">        <span class="comment">// Enabling the SpringEL compiler with Spring 4.2.4 or newer can</span></span><br><span class="line">        <span class="comment">// speed up execution in most scenarios, but might be incompatible</span></span><br><span class="line">        <span class="comment">// with specific cases when expressions in one template are reused</span></span><br><span class="line">        <span class="comment">// across different data types, so this flag is "false" by default</span></span><br><span class="line">        <span class="comment">// for safer backwards compatibility.</span></span><br><span class="line">        templateEngine.setEnableSpringELCompiler(<span class="keyword">true</span>);</span><br><span class="line">        <span class="keyword">return</span> templateEngine;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Bean</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> ThymeleafViewResolver <span class="title">viewResolver</span><span class="params">()</span></span>&#123;</span><br><span class="line">        ThymeleafViewResolver viewResolver = <span class="keyword">new</span> ThymeleafViewResolver();</span><br><span class="line">        viewResolver.setTemplateEngine(templateEngine());</span><br><span class="line">        <span class="comment">// NOTE 'order' and 'viewNames' are optional</span></span><br><span class="line">        viewResolver.setOrder(<span class="number">1</span>);</span><br><span class="line">        <span class="comment">//setViewNames这里注释掉，与官网不一样。似乎是导致view后缀重复？</span></span><br><span class="line">        <span class="comment">//viewResolver.setViewNames(new String[] &#123;".html", ".xhtml"&#125;);</span></span><br><span class="line">        <span class="keyword">return</span> viewResolver;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://juejin.im/post/5c271fbde51d451b1c6ded58" target="_blank" rel="noopener">基本用法</a><br><a href="https://www.thymeleaf.org/documentation.html" target="_blank" rel="noopener">官方文档</a></p>
-
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-          <div class="post-eof"></div>
-        
-      </footer>
-  </div>
-  
-  
-  
-  </article>
-
-    
   </section>
 
   
   <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/12/">12</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span><a class="page-number" href="/page/3/">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/">13</a><a class="extend next" rel="next" href="/page/3/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
   </nav>
 
 
@@ -1314,7 +1426,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">117</span>
+          <span class="site-state-item-count">126</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1365,7 +1477,11 @@
         
           
         
-        <span class="site-state-item-count">18</span>
+          
+        
+          
+        
+        <span class="site-state-item-count">20</span>
         <span class="site-state-item-name">分类</span>
         </a>
       </div>

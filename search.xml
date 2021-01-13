@@ -716,14 +716,6 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[chapter3大实数]]></title>
-    <url>%2F2020%2F01%2F26%2Fchapter3%E5%A4%A7%E5%AE%9E%E6%95%B0%2F</url>
-    <content type="text"><![CDATA[BigInteger integer = BigInteger.valueOf(1);//创造一个数值等于1的整型大实数 add,substract,devide,multiply(BigInteger) //BigDecimal]]></content>
-      <categories>
-        <category>java</category>
-      </categories>
-  </entry>
-  <entry>
     <title><![CDATA[chapter1在终端中操作Mysql]]></title>
     <url>%2F2020%2F01%2F26%2Fchapter1%E5%9C%A8%E7%BB%88%E7%AB%AF%E4%B8%AD%E6%93%8D%E4%BD%9C%E6%95%B0%E6%8D%AE%E5%BA%93%2F</url>
     <content type="text"><![CDATA[如何查找每一个科目最高分的学生姓名?如何查找每一个学生的sno,cno,grade列？ add : 添加表中的字段 insert: 添加表中内容drop: 删除表或删除数据库 delete: 删除某一行change: 修改字段形式 update: 更新某一行内容 登录数据库服务器： mysql -uroot-p 显示所有数据库中的库： show databases; 选择数据库： use databasename; 查询当前所在表中的数据： select * from excelname; select name , id from tablename; select distinct fieldname from tablename;//查询表中所有不重复的某字段 select * from score where degree between 60 and 80;//60到80的闭区间 select * from score where degree in (85,86,87);//degree为85或86或87的记录 select * from score order by value1 asc;,value2 desc//升序查询，降序是desc,查询按照value1升序，value2降序（优先：value1） 显示当前库中所有表： show tables; 创建表： create table tablename(各字段 check(条件)//创建表的约束 ); //记录是表中的一行，字段是组成记录的元素 删除表： drop table tablename; 查看某个表： describe tablename; select function();//mysql中可以使用select查询字段，函数，表达式（计算表达式），常量 向表中插入字段： //第一种，支持插入多个字段,支持子查询 insert into tablename values(value1), (value2); //第二种，不支持同时插入多个字段，不支持子查询 insert into tablename set 字段1=…,字段2=.. 删除字段：delete from tablename where …;//可以roll back,假如删除了自增长的字段，字段添加时从断电开始truncate table tablename;//清空表，不能带where,且不能roll back，假如删除了自增长的字段，字段从头开始 更新字段:update tablename set field1=,filed2= … where ….;//修改单表中符合条件的某一行中的某个字段值 向表结构中添加多个字段：alter table tablename add fieldname fieldtype… or and not 统计：countselect count(*) from tablename where…..;//统计 最大值：maxselect id from tablename where(degree = select max(degree) from tablename); limit 0,1:表示从第0个数字开始查，最多查1个 avg();//平均值 group by field;//分组 where 与 having的区别where用于聚合前查询的条件，having 用于聚合后，having后的条件可以使用聚合函数select id from score group by lessonname having count(num)&gt;2; 模糊查询：like(); not like(); like ‘k%’;//查询以k开头的字符串like ‘%oo%’;//查询包含oo的字符串 union :将多个select查询结果放到一个集合中，默认删去重复的，若为 union all则包含重复值 any(): 任意一个 all(): 所有 使用as取别名 select sname, ssex,sbirthday from student union select tname, tsex,tbirthday from teacher;//得到表的字段名为sname, ssex,sbirthday//使用asselect sname as name, ssex as name,sbirthday as name from student union select tname, tsex,tbirthday from teacher; 复制表数据做条件查询 select * from score a where degree &lt; (select avg(degree) from score b where a.cno = b. cno); 将某个表中的数据复制到另一个表 insert into table1 (fieldname1,….) select field1,… from table2; 拼接字符串： select concat(lastname,firstname) as 姓名 from … 不等于： &lt;&gt; 安全等于 &lt;=&gt; , 可以判断NULL值 substr(str,pos);//截取字符串，字符串位置pos从1 开始instr(str1,str2);//返回str2在str1中的起始索引位置，找不到则返回0trim(‘str’from ‘str2’);//从str2中去除前后的str1lapd();//左填充replace()’ 数学函数 round();//四舍五入ceil();//向上取整floor();//向下取整truncate(number,位数);//截断保留几位mod();//取余 时间函数 now();//现在的日期+时间curdate();//现在的日期curtime();//现在的时间 if select if(10&gt;5,’大’,’小’);//第一个条件满足，返回第一个值，否则第二个 case: case 要判断的值when 值 = ? then 要显示的值或语句;// casewhen 条件 then ……; 单行函数：将一个数据进行处理，返回一个值分组函数：将虚拟表看做一个组，处理一组数据，返回一个值 分组查询：分组前查询：查询原始表中有的数据，条件使用where分组后查询：查询原始表中没有的数据，条件使用having exists();//返回是否存在 分页查询：select .. from … limit start,调数; 联合查询：union]]></content>
@@ -733,6 +725,14 @@
       <tags>
         <tag>mysql</tag>
       </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[chapter3大实数]]></title>
+    <url>%2F2020%2F01%2F26%2Fchapter3%E5%A4%A7%E5%AE%9E%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[BigInteger integer = BigInteger.valueOf(1);//创造一个数值等于1的整型大实数 add,substract,devide,multiply(BigInteger) //BigDecimal]]></content>
+      <categories>
+        <category>java</category>
+      </categories>
   </entry>
   <entry>
     <title><![CDATA[chapter3输入与输出]]></title>

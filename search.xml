@@ -393,80 +393,6 @@
       </categories>
   </entry>
   <entry>
-    <title><![CDATA[maven初学]]></title>
-    <url>%2F2020%2F03%2F09%2Fmaven%E5%88%9D%E5%AD%A6%2F</url>
-    <content type="text"><![CDATA[命名规范：groupid: 隶属组织.项目名artifactID: 表示该模块是于该项目的哪个模块，构建名必须是小写字母，没有其他字符]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>maven</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[springbootchapter1简介]]></title>
-    <url>%2F2020%2F03%2F09%2Fspringbootchapter1%E7%AE%80%E4%BB%8B%2F</url>
-    <content type="text"><![CDATA[简介：基于spring框架的再封装,spring技术栈的整合 优点：快速创建独立运行的spring项目及主流框架集合使用嵌入式的servlet容器(servlet原理？)starter自动依赖和版本控制大量的自动配置无需配置xml 微服务(一种架构风格)一个应用由一组微小服务构成，每一个服务是一个独立的，可替换的软件单元，它们之间通过http互通]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>spring boot</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[jdbcchapter5DAO]]></title>
-    <url>%2F2020%2F03%2F09%2Fjdbcchapter5DAO%2F</url>
-    <content type="text"><![CDATA[定义： 一种模式，包括Data Accessor 和 Data Object? 一个完整的DAO模式： 数据库连接类，封装了对数据库的操作 VO类，对应的数据库中的表，每个bean的属性都是其中的元素 DAO接口，定义了数据库操作的接口 DAO实现类，实现DAO接口 DAO工厂类，用于获取DAO实现类的实例]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-  </entry>
-  <entry>
-    <title><![CDATA[jdbcchapter4事务]]></title>
-    <url>%2F2020%2F03%2F09%2Fjdbcchapter4%E4%BA%8B%E5%8A%A1%2F</url>
-    <content type="text"><![CDATA[自动提交的操作：DDL断开数据库连接后]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>jdbc</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[jdbcchapter3jdbccrud操作]]></title>
-    <url>%2F2020%2F03%2F04%2Fjdbcchapter3jdbccrud%E6%93%8D%E4%BD%9C%2F</url>
-    <content type="text"><![CDATA[疑问：每次批处理crud都要获取连接和断开？频繁获取连接是否会降低效率 为什么不用statement类：会造成sql语句注入sql语句拼接，麻烦 什么是crud:c: create r: read u: update d: delete 使用preparedStatement类（Statement的子类）： public class LearnCreate { public static void main(String args[]){ LearnCreate learnCreate = new LearnCreate(); learnCreate.connectest(); } //测试插入，不过方法名懒得改了 void connectest(){ try { Class.forName(&quot;com.mysql.cj.jdbc.Driver&quot;); String url = &quot;jdbc:mysql://localhost:3306/learnjdbc?user=root&amp;password=&amp;serverTimezone=UTC&quot;; try { //1.连接 Connection connection = DriverManager.getConnection(url); //System.out.print(connection); //2.预编译preparedStatement String sql = &quot;insert into person(id,name)values(?,?)&quot;;//??是占位符 //获得sql的预编译PreparedStatement PreparedStatement preparedStatement = connection.prepareStatement(sql); //3.填充占位符 //parameterindex是索引号，与sql语句中依次填写的顺序一致 preparedStatement.setInt(1,0); preparedStatement.setString(2,&quot;hh&quot;); //通用：setObject //例如封装通用方法时 void update(string sql, Object ... args){ for(int i=0;i &lt; args.length; i++){ preparedStatements.setObject(i+1, args[ i ]); //索引从1开始 } } //4.执行 preparedStatement.execute(); //5.关闭资源 if (preparedStatement!=null){ preparedStatement.close(); } if (connection!=null){ connection.close(); } } catch (SQLException e) { e.printStackTrace(); } } catch (ClassNotFoundException e) { e.printStackTrace(); } } } //测试查询：有返回的结果集，对象名是ResultSet //与前面步骤一致，连接，预编译sql语句，但不使用excecute ResultSet result = preparedStatements.excecuteQuery; 一个表中通用的查询： ResultSet result = preparedStatements.excecuteQuery; //结果集的元数据，包含结果集的列数，列名等信息 ResultSetMetaData metadata = result.get ResultSetMetaData(); int columncount = metadata.getcolumncount(); //next方法，返回布尔值，判断结果集此行是否存在，存在则返回true，指针下移 if(result.next){ //最好使用一个对象来封装对应查询表的属性值 //结果是返回这个对象 Customer cust = new Customer(); for(int i=0;i &lt; columncount;i++){ Object columnvalue = result.getObject(i+1); String columnname = metadata.getColumnname(i+1); //使用列名反射，填充对象中对应的属性值 Field field = Customer.Class.getDeclaredField(columnname); field.setAccessible(true); field.set(cust,columnvalue);//设置值 } return cust; } 不同表中通用的查询： //使用泛型返回 // &lt; T&gt;: 泛型参数申明 &lt; T &gt; T getQuery(Class&lt; T&gt; clazz , String sql , Object … args){ } Blob类型(二进制文件)操作 四种Blob: TinyBlob(255bit) Blob(65k) MediumBlob(16M) LongBlob(4G)//前面写的都是最大容量 存储文件过大会使数据库性能下降 操作Blob //setBlob()插入//读取与保存：采用二进制文件读取与保存的方法Blob blob = resultSet.getBlob(“valuename”);InputStream in = blob.getBinaryStream(); 批量操作：使用Batch //使用前：在url中添加?rewriteBatchedStatements=true //执行完sql语句后再提交而不是自动提交，提高速率 connection.setAutoCommit(false); ps = connection.preparedStatement(sql);//预编译 … ps.setObject(..);//填充 ps.addBatch(); if… ps.excecuteBatch();//执行 ps.clearBatch();//清空 … connection.commit();]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>jdbc</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[jdbcchapter2数据库连接]]></title>
-    <url>%2F2020%2F03%2F04%2Fjdbcchapter2%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%2F</url>
-    <content type="text"><![CDATA[优点： 配置文件和代码分开，解耦 打包方便 连接步骤： 通过配置文件获得四个基本量： 用户名，密码，url，驱动名 Inputstream in = MainClassName.getClassLoader.getresource(配置文件url);Properties p = new Properties();p.load(in);String user = p.getProperties(username);…//String url = “jdbc:mysql://localhost:3306/dbname?useSSL=false&amp;//serverTimezone=UTC”; 注册驱动: Class.forname(driver); 连接： Connection conn = DriverManerger.getConnection(url);]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>jdbc</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[jdbcchapter1jdbc概述和程序编写]]></title>
-    <url>%2F2020%2F03%2F02%2Fjdbcchapter1jdbc%E6%A6%82%E8%BF%B0%E5%92%8C%E7%A8%8B%E5%BA%8F%E7%BC%96%E5%86%99%2F</url>
-    <content type="text"><![CDATA[什么是jdbc: 一组java的，独立于所有数据库的，用于使用java语言操作数据库的api 程序编写步骤： 导入java.sql包 附加相应数据库厂商的驱动 加载驱动程序 创建connection对象： 连接数据库 创建statement对象： 操作 创建resultset对象： 返回操作结果 关闭statement,connection]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
-      <tags>
-        <tag>jdbc</tag>
-      </tags>
-  </entry>
-  <entry>
     <title><![CDATA[计网chapter1绪论]]></title>
     <url>%2F2020%2F02%2F29%2F%E8%AE%A1%E7%BD%91chapter1%E7%BB%AA%E8%AE%BA%2F</url>
     <content type="text"><![CDATA[1.1 数据通信数据通信是,具有4个特点。数据通信系统包括5个部分。数据表示有。数据流有3中方式__。1.2 网络1.2.1 分布式处理1.2.2 网络具有3个准则：性能，可靠性，安全性。性能可以通过吞吐量和延迟来度量。1.2.3 物理结构：包括连接类型和拓扑结构。1.2.4 网络分类与模型 1.3 因特网是一种互联网]]></content>
@@ -883,14 +809,6 @@
       <tags>
         <tag>css</tag>
       </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[web 的基础知识]]></title>
-    <url>%2F2019%2F09%2F03%2Fweb-%E7%9A%84%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86%2F</url>
-    <content type="text"><![CDATA[1. web:1. web资源：动态（程序生成数据，有交互功能），静态（数据不变）2. web应用：多个web资源放到同一个目录，要想供外界使用，就放到web服务器上]]></content>
-      <categories>
-        <category>web</category>
-      </categories>
   </entry>
   <entry>
     <title><![CDATA[静态链表]]></title>
